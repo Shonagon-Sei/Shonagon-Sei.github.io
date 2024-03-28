@@ -242,7 +242,8 @@ select,
 .crs,
 .gs,
 .si,
-.sh {
+.sh,
+.trigger {
   position: absolute;
   z-index: 4;
   display: flex;

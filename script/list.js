@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var trigger1 = document.getElementById('trg');
   var grade = document.getElementById('g');
   var grade1 = document.getElementById('g_');
+  var triggerImage = document.getElementById('trigger')
   var image0 = document.getElementById('si');
   var image1 = document.getElementById('gs'); 
   var image2 = document.getElementById('si1');
@@ -31,10 +32,13 @@ window.addEventListener('DOMContentLoaded', function() {
     if (select1 === "tu") {
       tri = "flex";
       tri1 = "none";
+      im = `assets/${trigger1.value}.png`
+      
     }
     else {
       tri = "none";
       tri1 = "flex";
+      im = "assets/none_.png"
     }
 
     image.src = src_;
@@ -42,7 +46,7 @@ window.addEventListener('DOMContentLoaded', function() {
     grade1.style.display = tri1;
     trigger.style.display = tri;
     trigger1.style.display = tri;
-    
+    triggerImage.src = im
   }
 });
 
@@ -55,6 +59,19 @@ window.addEventListener('DOMContentLoaded', function() {
   
   function update() {
     var select = cri.value;
+    var src_ = "assets/" + select + ".png";
+    image.src = src_;
+  }
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var trg = document.getElementById('trg');
+  var image = document.getElementById('trigger');
+  
+  trg.addEventListener('change', update);
+  
+  function update() {
+    var select = trg.value;
     var src_ = "assets/" + select + ".png";
     image.src = src_;
   }
