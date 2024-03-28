@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>CFV Easy Proxy</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="icon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <div id="h_1" class="h_1">
+
+    <p>Cardfight ! ! Vanguard - Easy Proxy (Demo)</p>
+
+  </div>
+
+  <div class="main_">
+    <div class="pv">
+      <div id="img_" class="img_">
+
+        <img class="gn" id=gn src="assets/nlnu.png">
+        <img class="gs" id=gs src="assets/_0.png">
+        <img class="si" id=si1 src="assets/none_.png">
+        <img class="si" id=si src="assets/bts.png">
+        <img class="crs" id=crs src="assets/_1_.png">
+        <img class="sh" id=sh src="assets/none_.png">
+
+        <div class="nub" id="nub">
+          <div class="se_" id="se_">
+            <p class="se" id="se"></p>
+          </div>
+          <div class="cns_" id="cns_">
+            <p class="cns" id="cns">Card Name</p>
+          </div>
+          <p class="_sh1" id="_sh1"></p>
+          <p class="_sh" id="_sh"></p>
+          <p class="rec1" id="rec1">Card Race</p>
+          <p class="rec" id="rec">Card Race</p>
+          <p class="pw1" id="pw1">0</p>
+          <p class="pw" id="pw">0</p>
+
+        </div>
+        <img class="eb" id=eb src="assets/textbox/textbox_0.png">
+        <div class="in">
+          <div id=imh class="imh">
+            <img id="dpim" src="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="li__"></div>
+    <div class=cfg>
+
+      <div class="main_x">
+        <div class="b_inf">
+          <label for="cts">Card Types</label>
+          <select id="cts">
+            <option value="nu">Normal</option>
+            <option value="tu">Trigger</option>
+          </select>
+
+          <label class="trg_" id="trg_" for="cts">Trigger</label>
+          <select class="trg" id="trg">
+            <option value="#">*Not for now</option>
+            <option value="ct">Critical</option>
+            <option value="dr">Draw</option>
+            <option value="fn">Front</option>
+            <option value="he">Heal</option>
+            <option value="ov">Over</option>
+          </select>
+
+          <label for="ns">Nation</label>
+          <select id="ns">
+            <option value="nl">No Nation</option>
+            <option value="de">Dragon Empire</option>
+            <option value="ds">Dark States</option>
+            <option value="bg">Brandt Gate</option>
+            <option value="ks">Keter Sanctuary</option>
+            <option value="sc">Stocheia</option>
+            <option value="lm">Lyrical Monasterio</option>
+            <!--  <option value="test">Test</option> -->
+          </select>
+
+          <label calss="g_" id="g_" for="g">Grade</label>
+          <select class="g" id="g">
+            <option value="_0">0</option>
+            <option value="_1">1</option>
+            <option value="_2">2</option>
+            <option value="_3">3</option>
+            <option value="_3P">3 + Persona Ride</option>
+            <option value="_4">4</option>
+            <option value="_4P">4 + Persona Ride</option>
+            <option value="_5">5</option>
+            <option value="_5P">5 + Persona Ride</option>
+            <option value="_10">10</option>
+            <option value="_10P">10 + Persona Ride</option>
+          </select>
+
+          <label for="c">Critical</label>
+          <select id="c">
+            <option value="_1_">Default</option>
+            <option value="_0_">0</option>
+            <option value="_1_">1</option>
+            <option value="_2_">2</option>
+          </select>
+
+          <label>Power</label>
+          <input type="number" id=power class="ipb" placeholder="Power">
+
+          <label>Shield</label>
+          <input type="number" id=shield class="ipb" placeholder="Shield">
+
+          <label>Race</label>
+          <input type="text" id=race class="ipb" placeholder="Card Race">
+
+        </div>
+
+        <div class="ability">
+
+          <label>Card Name</label>
+          <input type="text" id="cn" class="cn" placeholder="Card Name"></textarea>
+
+          <label>Flavor (Not Working Yet)</label>
+          <input type="text" class="flb" placeholder="Work In Progress"></textarea>
+
+          <label>Ability</label>
+          <textarea type="text" id="teb" class="teb" placeholder="Card Effect"></textarea>
+
+          <label>Illust (Not Working Yet)</label>
+          <input type="text" class="il" placeholder="Work In Progress"></textarea>
+
+          <label>Set (Not Working Yet)</label>
+          <input type="text" class="s" placeholder="Work In Progress"></textarea>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="li_"></div>
+  <div class="config">
+    <button class="imp" id="imp">Upload Image</button>
+    <button class="exp" id="exp">Export (Main)</button>
+    <button class="exp" id="exp1">Export (Mirror)</button>
+  </div>
+
+  <script src="script/lfb.js"></script>
+  <script src="script/list.js"></script>
+  <script src="script/img.js"></script>
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="script/exp.js"></script>
+  <script src="script/lc-mouse-drag.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    lc_mouseDrag('#img_', 0, false, false);
+  </script>
+
+</body>
+
+</html>
