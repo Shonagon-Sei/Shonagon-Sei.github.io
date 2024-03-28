@@ -1,4 +1,4 @@
-//Types//
+//Type//
 window.addEventListener('DOMContentLoaded', function() {
   var type = document.getElementById('cts');
   var nation = document.getElementById('ns');
