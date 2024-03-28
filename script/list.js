@@ -31,14 +31,10 @@ window.addEventListener('DOMContentLoaded', function() {
     if (select1 === "tu") {
       tri = "flex";
       tri1 = "none";
-      im1 = "assets/bts.png";
-      im2 = "assets/none_.png"
     }
     else {
       tri = "none";
       tri1 = "flex";
-      im1 = "assets/bts.png";
-      im2 = "assets/none_.png"
     }
 
     image.src = src_;
@@ -46,8 +42,6 @@ window.addEventListener('DOMContentLoaded', function() {
     grade1.style.display = tri1;
     trigger.style.display = tri;
     trigger1.style.display = tri;
-    image1.src = im1;
-    image2.src = im2;
     
   }
 });
