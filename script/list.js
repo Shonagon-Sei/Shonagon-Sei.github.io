@@ -31,14 +31,14 @@ window.addEventListener('DOMContentLoaded', function() {
     if (select1 === "tu") {
       tri = "flex";
       tri1 = "none";
-      im = "assets/_0.png";
+      im = "assets/grade_0.png";
       im1 = "assets/bts.png";
       im2 = "assets/none_.png"
     }
     else {
       tri = "none";
       tri1 = "flex";
-      im = "assets/_0.png";
+      im = "assets/grade_0.png";
       im1 = "assets/bts.png";
       im2 = "assets/none_.png"
     }
@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
   function update() {
     var select = grade.value;
-    var _src_ = "assets/" + select + ".png";
+    var _src_ = "assets/grade" + select + ".png";
     var src_ = "";
     var src__ = "assets/none_.png";
     var ty = type.value;
@@ -103,7 +103,7 @@ window.addEventListener('DOMContentLoaded', function() {
       src__ = "assets/none_.png";
     }
     else if (select === "_3P") {
-      _src_ = "assets/_3.png";
+      _src_ = "assets/grade_3.png";
       src_ = "assets/twd.png";
       src__ = "assets/psr.png";
     }
@@ -112,16 +112,7 @@ window.addEventListener('DOMContentLoaded', function() {
       src__ = "assets/none_.png";
     }
     else if (select === "_4P") {
-      _src_ = "assets/_4.png";
-      src_ = "assets/twd.png";
-      src__ = "assets/psr.png";
-    }
-    else if (select === "_5") {
-      src_ = "assets/twd.png";
-      src__ = "assets/none_.png";
-    }
-    else if (select === "_5P") {
-      _src_ = "assets/_5.png";
+      _src_ = "assets/grade_4.png";
       src_ = "assets/twd.png";
       src__ = "assets/psr.png";
     }
@@ -130,11 +121,19 @@ window.addEventListener('DOMContentLoaded', function() {
       src__ = "assets/none_.png";
     }
     else if (select === "_10P") {
-      _src_ = "assets/_10.png";
+      _src_ = "assets/grade_10.png";
       src_ = "assets/twd.png";
       src__ = "assets/psr.png";
     }
-    
+    else if (select === "_11") {
+      src_ = "assets/twd.png";
+      src__ = "assets/none_.png";
+    }
+    else if (select === "_11P") {
+      _src_ = "assets/grade_11.png";
+      src_ = "assets/twd.png";
+      src__ = "assets/psr.png";
+    }
     image.src = _src_;
     image1.src = src_;
     image2.src = src__;

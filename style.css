@@ -254,7 +254,9 @@ select,
   user-select: none;
 }
 
-
+.crs{
+  transform: translate(0, -2px);
+}
 
 .nub ._sh,
 .nub ._sh1 {
@@ -297,7 +299,7 @@ select,
   height: 50px;
   width: 80px;
   font-size: 32px;
-  transform: translate(83px, 0px) skewX(-13deg);
+  transform: translate(83px, -2px) skewX(-13deg);
   color: #cfc44c;
   white-space: nowrap;
   overflow: hidden;
@@ -336,7 +338,7 @@ select,
   width: 100%;
   display: flex;
   justify-content: center;
-  transform: translate(0, -53px);
+  transform: translate(0, -55px);
 }
 
 .nub .cns {
@@ -358,7 +360,7 @@ select,
   position: absolute;
   height: 12px;
   font-size: 9px;
-  transform: translate(242.75px, -18px);
+  transform: translate(242.75px, -21px);
   color: #ffffff;
   white-space: nowrap;
   overflow: hidden;
