@@ -1,3 +1,4 @@
+/// <reference lib="es2021" />
 //Input//
 var ip1 = document.getElementById('power');
 var ip2 = document.getElementById('cn');
@@ -67,8 +68,45 @@ ip3.addEventListener('input', function() {
 //Card Effect | Update//
 teb.addEventListener('input', function() {
   var eb = document.getElementById('eb');
+  /** @type{string}*/
+  var effect = teb.value;
+
+  //Box Icons
+  effect = effect.replaceAll('AUTO', '<span class="image-wrapper"><img src="assets/AUTO.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('ACT', '<span class="image-wrapper"><img src="assets/ACT.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('CONT', '<span class="image-wrapper"><img src="assets/CONT.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Stand', '<span class="image-wrapper"><img src="assets/Stand Icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Rest', '<span class="image-wrapper"><img src="assets/Rest Icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('1/Turn', '<span class="image-wrapper"><img src="assets/1 per turn.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('1/Fight', '<span class="image-wrapper"><img src="assets/1 per fight.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Critical Trigger', '<span class="image-wrapper"><img src="assets/Trigger Crit mini icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Draw Trigger', '<span class="image-wrapper"><img src="assets/Trigger Draw mini icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Heal Trigger', '<span class="image-wrapper"><img src="assets/Trigger Heal mini icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Front Trigger', '<span class="image-wrapper"><img src="assets/Trigger Front mini icon-29.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Over Trigger', '<span class="image-wrapper"><img src="assets/Trigger Over mini icon.png" alt="Image" class="skill" id="auto"></span>');
+
+  //Specific
+  effect = effect.replaceAll('Regalis Piece', '<span class="image-wrapper"><img src="assets/Regalis Piece Icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Revoldress', '<span class="image-wrapper"><img src="assets/RevolDress Icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Overdress', '<span class="image-wrapper"><img src="assets/o-Dress Icon EN.png" alt="Image" class="skill" id="auto"></span>');
+
+  //Power Shield Critical
+  effect = effect.replaceAll('Power', '<span class="image-wrapper"><img src="assets/Power Icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Shield', '<span class="image-wrapper"><img src="assets/Shield Icon.png" alt="Image" class="skill" id="auto"></span>');
+  effect = effect.replaceAll('Critical', '<span class="image-wrapper"><img src="assets/Critical Icon.png" alt="Image" class="skill" id="auto"></span>');
   
-  se.textContent = teb.value;
+  //Circles
+  effect = effect.replaceAll('VC', '<span class="image-wrapper"><img src="assets/VC.png" alt="Image" class="circle" id="auto"></span>');
+  effect = effect.replaceAll('RC', '<span class="image-wrapper"><img src="assets/RC.png" alt="Image" class="circle" id="auto"></span>');
+  effect = effect.replaceAll('GC', '<span class="image-wrapper"><img src="assets/RC.png" alt="Image" class="circle" id="auto"></span>');
+  effect = effect.replaceAll('COST', '<span class="image-wrapper"><img src="assets/COST.png" alt="Image" class="circle" id="auto"></span>');
+
+  //【
+  effect = effect.replaceAll('(', '<span class="image-wrapper"><img src="assets/LSB.png" alt="Image" class="brack" id="auto"></span>');
+  effect = effect.replaceAll(')', '<span class="image-wrapper"><img src="assets/RSB.png" alt="Image" class="brack" id="auto"></span>');
+  
+
+  se.innerHTML = effect;
   var lines = se.getClientRects().length;
   const linesCount = Math.round(se.offsetHeight / 15.8);
   eb.src = `assets/textbox/textbox_${linesCount}.png`
