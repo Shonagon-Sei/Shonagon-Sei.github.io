@@ -7,8 +7,8 @@ function div_img() {
   d_.style.border = '0';
   n_.style.transform = "translate(0 , -1.2px)";
   s.style.transform = "translate(0 , 0)";
-  s_.style.transform = "translate(0 , 0)";
-  
+
+
   html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
     var image = new Image();
     image.src = canvas.toDataURL();
