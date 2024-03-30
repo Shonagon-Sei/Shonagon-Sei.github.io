@@ -196,8 +196,9 @@ select,
   left:0;
 }
 
+
 .brack{
-  height:13px;
+  height:11px;
   margin-left: 1px;
   margin-right: 1px;
   /*transform: translate(0, 2px);*/
