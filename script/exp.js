@@ -2,11 +2,10 @@ function div_img() {
   var d_ = document.getElementById('img_');
   var n_ = document.getElementById('nub');
   var s = document.getElementById('se');
-  var s_ = document.getElementById('se_');
 
   d_.style.border = '0';
   n_.style.transform = "translate(0 , -1.2px)";
-  s.style.transform = "translate(0 , 0)";
+  //s.style.transform = "translate(0 , 0)";
 
 
   html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
