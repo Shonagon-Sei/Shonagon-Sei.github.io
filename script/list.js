@@ -117,12 +117,12 @@ window.addEventListener('DOMContentLoaded', function() {
       src__ = "assets/psr.png";
     }
     else if (select === "_4") {
-      src_ = "assets/twd.png";
+      src_ = "assets/tpd.png";
       src__ = "assets/none_.png";
     }
     else if (select === "_4P") {
       _src_ = "assets/grade_4.png";
-      src_ = "assets/twd.png";
+      src_ = "assets/tpd.png";
       src__ = "assets/psr.png";
     }
     else if (select === "_10") {
