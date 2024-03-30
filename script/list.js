@@ -31,15 +31,13 @@ window.addEventListener('DOMContentLoaded', function() {
     
     if (select1 === "tu") {
       tri = "flex";
-      tri1 = "none";
+      tri1 = "flex";
       im = `assets/${trigger1.value}.png`
-      grade.src = "assets/grade_0.png"
     }
     else {
       tri = "none";
       tri1 = "flex";
       im = "assets/none_.png"
-      grade1.src = `assets/grade_${grade.value}.png`
     }
 
     image.src = src_;
