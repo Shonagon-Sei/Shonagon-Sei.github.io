@@ -156,6 +156,9 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('/*', '<span class=\'red-text\'>');
   effect = effect.replaceAll('*/', '</span>');
 
+  effect = effect.replaceAll('[', '<span class=\'under-line\'>[');
+  effect = effect.replaceAll(']', ']</span>');
+
   //fcm
   effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
 
@@ -170,6 +173,20 @@ teb.addEventListener('input', function() {
   const linesCount = Math.round(se.offsetHeight / 15.8);
   eb.src = `assets/textbox/textbox_${linesCount}.png`
 });
+
+function overDress()
+{
+  var checkBox = document.getElementById("oD");
+  // Get the output text
+  var img = document.getElementById("frame");
+
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    img.src = "assets/OverDress Frame Remastered.png"
+  } else {
+    img.src = "assets/none_.png"
+  }
+}
 
 //Shield | Update//
 ip4.addEventListener('input', function() {
