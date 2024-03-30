@@ -50,3 +50,28 @@ function div_img1() {
 }
 
 document.getElementById('exp1').addEventListener('click', div_img1);
+
+const hbutton = document.getElementById('how');
+const cbutton = document.getElementById('close');
+const overlay = document.getElementById('overlay');
+const modal = document.getElementById('modal');
+
+hbutton.addEventListener('click', () => openModal())
+cbutton.addEventListener('click', () => closeModal())
+
+function openModal(){
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(){
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+
+overlay.addEventListener('click', () => {
+  const modals = document.querySelectorAll('.modal.active')
+  modals.forEach(modal => {
+    closeModal(modal)
+  })
+})
