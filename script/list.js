@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var trigger = document.getElementById('trg_');
   var trigger1 = document.getElementById('trg');
   var grade = document.getElementById('g');
-  var grade1 = document.getElementById('g_');
+  var grade1 = document.getElementById('gs');
   var triggerImage = document.getElementById('trigger')
   var image0 = document.getElementById('si');
   var image1 = document.getElementById('gs'); 
@@ -33,12 +33,13 @@ window.addEventListener('DOMContentLoaded', function() {
       tri = "flex";
       tri1 = "none";
       im = `assets/${trigger1.value}.png`
-      
+      grade.src = "assets/grade_0.png"
     }
     else {
       tri = "none";
       tri1 = "flex";
       im = "assets/none_.png"
+      grade1.src = `assets/grade_${grade.value}.png`
     }
 
     image.src = src_;
