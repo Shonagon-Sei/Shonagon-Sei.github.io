@@ -5,6 +5,8 @@ window.addEventListener('DOMContentLoaded', function() {
   var image = document.getElementById('gn');
   var trigger = document.getElementById('trg_');
   var trigger1 = document.getElementById('trg');
+  var crs = document.getElementById('crs');
+  var c = document.getElementById('c');
   var grade = document.getElementById('g');
   var grade1 = document.getElementById('gs');
   var triggerImage = document.getElementById('trigger')
@@ -12,7 +14,8 @@ window.addEventListener('DOMContentLoaded', function() {
   var image1 = document.getElementById('gs'); 
   var image2 = document.getElementById('si1');
 
-  var se = document.getElementById('se');
+  var se = document.getElementById('nub');
+  var nuborder = document.getElementById('nubo');
   
   type.addEventListener('change', update);
   nation.addEventListener('change', update);
@@ -33,11 +36,41 @@ window.addEventListener('DOMContentLoaded', function() {
       tri = "flex";
       tri1 = "flex";
       im = `assets/${trigger1.value}.png`
+      se.style.display = 'flex'
+      nuborder.style.display = 'none'
+      crs.style.display = 'flex'
     }
-    else {
+    else if (select1 === 'nu') {
       tri = "none";
       tri1 = "flex";
       im = "assets/none_.png"
+      se.style.display = 'flex'
+      nuborder.style.display = 'none'
+      crs.style.display = 'flex'
+    }
+    else if (select1 === 'no') {
+      tri = "none";
+      tri1 = "flex";
+      im = "assets/none_.png"
+      se.style.display = 'none'
+      nuborder.style.display = 'flex'
+      crs.style.display = 'none'
+    }
+    else if (select1 === 'bo') {
+      tri = "none";
+      tri1 = "flex";
+      im = "assets/none_.png"
+      se.style.display = 'none'
+      nuborder.style.display = 'flex'
+      crs.style.display = 'none'
+    }
+    else if (select1 === 'so') {
+      tri = "none";
+      tri1 = "flex";
+      im = "assets/none_.png"
+      se.style.display = 'none'
+      nuborder.style.display = 'flex'
+      crs.style.display = 'none'
     }
 
     image.src = src_;

@@ -9,6 +9,7 @@ var teb = document.getElementById('teb');
 //Effect//
 var se = document.getElementById('se');
 var se1 = document.getElementById('se_');
+var seo = document.getElementById('seo');
 
 //Power//
 var pw = document.getElementById('pw');
@@ -26,6 +27,8 @@ var tc = cn.textContent;
 //Race//
 var rec = document.getElementById('rec');
 var rec1 = document.getElementById('rec1');
+
+var type = document.getElementById('cts');
 
 //Power | Update//
 ip1.addEventListener('input', function() {
@@ -67,7 +70,8 @@ ip3.addEventListener('input', function() {
 
 //Card Effect | Update//
 teb.addEventListener('input', function() {
-  var eb = document.getElementById('eb');
+  
+  
   /** @type{string}*/
   var effect = teb.value;
 
@@ -169,9 +173,21 @@ teb.addEventListener('input', function() {
   
 
   se.innerHTML = effect;
-  var lines = se.getClientRects().length;
-  const linesCount = Math.round(se.offsetHeight / 15.8);
-  eb.src = `assets/textbox/textbox_${linesCount}.png`
+  seo.innerHTML = effect;
+
+  var eb = document.getElementById('eb');
+    
+  if (type.value === 'tu' || type.value === 'nu')
+  {
+    const linesCount = Math.round(se.offsetHeight / 15.8);    
+    eb.src = `assets/textbox/textbox_${linesCount}.png`
+  }
+  else
+  {
+    const linesCount = Math.round(seo.offsetHeight / 15.8);
+    eb.src = `assets/textbox/otextbox_${linesCount}.png`
+  }
+  
 });
 
 function overDress()
@@ -185,6 +201,20 @@ function overDress()
     img.src = "assets/OverDress Frame Remastered.png"
   } else {
     img.src = "assets/none_.png"
+  }
+}
+
+function SP(){
+  var checkBox = document.getElementById("sp");
+  var eb = document.getElementById("eb");
+  var se = document.getElementById("se");
+
+  if (checkBox.checked == true){
+    eb.style.display = 'none'
+    se.classList.add('SP')
+  } else {
+    eb.style.display = 'flex'
+    se.classList.remove('SP')
   }
 }
 

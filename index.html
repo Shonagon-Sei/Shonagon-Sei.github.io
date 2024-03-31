@@ -44,8 +44,17 @@
           <p class="rec" id="rec">Card Race</p>
           <p class="pw1" id="pw1">0</p>
           <p class="pw" id="pw">0</p>
-
         </div>
+
+        <div class="nubo" id="nubo">
+          <div class="se_" id="se_">
+            <p class="se" id="seo"></p>
+          </div>
+          <div class="cns_" id="cns_">
+            <p class="cns" id="cns">Card Name</p>
+          </div>
+        </div>
+
         <img class="eb" id=eb src="assets/textbox/textbox_0.png">
         <div class="in">
           <div id=imh class="imh">
@@ -105,6 +114,9 @@
           <select id="cts">
             <option value="nu">Normal</option>
             <option value="tu">Trigger</option>
+            <option value="no">Normal Order</option>
+            <option value="bo">Blitz Order</option>
+            <option value="so">Set Order</option>            
           </select>
 
           <label class="trg_" id="trg_" for="cts">Trigger</label>
@@ -160,6 +172,13 @@
           <label>Race</label>
           <input type="text" id=race class="ipb" placeholder="Card Race">
           <!--
+          <label>SP Rarity</label>
+          <div class="checkbox-wrapper-7">
+            <input class="tgl tgl-ios" id="sp" type="checkbox" onclick="SP()"/>
+            <label class="tgl-btn" for="sp">
+          </div>
+         <input type="checkbox" id="sp" onclick="SP()">
+          
           <label>Overdress Frame?</label>
           <input type="checkbox" id="oD" onclick="overDress()">
           -->
