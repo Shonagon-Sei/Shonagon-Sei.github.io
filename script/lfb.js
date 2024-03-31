@@ -22,6 +22,7 @@ var sh3 = document.getElementById('_sh1');
 
 //Card Name//
 var cn = document.getElementById('cns');
+var cno = document.getElementById('cnso');
 var tc = cn.textContent;
 
 //Race//
@@ -51,8 +52,12 @@ ip2.addEventListener('input', function() {
 
   cn.textContent = ip2.value;
 
-  cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg";
+  cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
   cn.style.width = scl + "px";
+  cno.textContent = ip2.value;
+
+  cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+  cno.style.width = scl + "px";
   console.log(tpx_);
 });
 
