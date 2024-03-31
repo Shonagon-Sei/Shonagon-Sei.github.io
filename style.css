@@ -391,7 +391,7 @@ select,
   width: 100%;
   display: flex;
   justify-content: center;
-  transform: translate(0, -32px);
+  transform: translate(0, -31px);
 }
 
 .nubo .se{

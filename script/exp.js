@@ -1,10 +1,12 @@
 function div_img() {
   var d_ = document.getElementById('img_');
   var n_ = document.getElementById('nub');
+  var no = document.getElementById('nubo');
   var s = document.getElementById('eb');
 
   d_.style.border = '0';
   n_.style.transform = "translate(0 , -1.2px)";
+  no.style.transform = "translate(0 , -1.2px)";
   s.style.transform = "translate(0 , -1.2px)";
   //
 
@@ -18,7 +20,8 @@ function div_img() {
     link.click();
 
     d_.style.border = '';
-    n_.style.transform = '';
+    n_.style.transform = 'translate(0, 0.5px)';
+    no.style.transform = 'translate(0, 0.5px)';
     s.style.transform = '';
     
   });
@@ -45,7 +48,7 @@ function div_img1() {
     link.click();
 
     d_.style.border = '';
-    n_.style.transform = '';
+    n_.style.transform = 'translate(0, 0.5px)';
     
   });
 }
