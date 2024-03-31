@@ -19,6 +19,7 @@ function div_img() {
 
     d_.style.border = '';
     n_.style.transform = '';
+    s.style.transform = '';
     
   });
 }
