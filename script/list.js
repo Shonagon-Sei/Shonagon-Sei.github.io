@@ -179,8 +179,8 @@ window.addEventListener('DOMContentLoaded', function() {
       src_ = "assets/twd.png";
       src__ = "assets/psr.png";
     }
-    image.src = _src_;
-    image1.src = src_;
+    image1.src = _src_;
+    image.src = src_;
     image2.src = src__;
   }
 });
