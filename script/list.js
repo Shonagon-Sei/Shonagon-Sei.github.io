@@ -1,5 +1,6 @@
-//Type//
-window.addEventListener('DOMContentLoaded', function() {
+
+
+function typeSet() {
   var type = document.getElementById('cts');
   var nation = document.getElementById('ns');
   var image = document.getElementById('gn');
@@ -85,7 +86,11 @@ window.addEventListener('DOMContentLoaded', function() {
     trigger1.style.display = tri;
     triggerImage.src = im
   }
-});
+}
+
+window.addEventListener('DOMContentLoaded', typeSet);
+
+
 
 //Critical//
 window.addEventListener('DOMContentLoaded', function() {

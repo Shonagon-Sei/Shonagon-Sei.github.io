@@ -5,7 +5,7 @@ var ip2 = document.getElementById('cn');
 var ip3 = document.getElementById('race');
 var ip4 = document.getElementById('shield');
 var teb = document.getElementById('teb');
-
+var nation = document.getElementById('ns');
 //Effect//
 var se = document.getElementById('se');
 var se1 = document.getElementById('se_');
@@ -30,6 +30,7 @@ var rec = document.getElementById('rec');
 var rec1 = document.getElementById('rec1');
 
 var type = document.getElementById('cts');
+var grade = document.getElementById('g');
 
 //Power | Update//
 ip1.addEventListener('input', function() {
@@ -59,12 +60,6 @@ ip2.addEventListener('input', function() {
   cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
   cno.style.width = scl + "px";
   console.log(tpx_);
-});
-
-//Race | Update//
-ip3.addEventListener('input', function() {
-  rec1.textContent = ip3.value;
-  rec.textContent = ip3.value;  
 });
 
 //Race | Update//
@@ -250,3 +245,93 @@ ip4.addEventListener('input', function() {
   sh1.src = src;
   
 });
+
+
+class savefile{
+  constructor(){
+    this.name
+    this.power
+    this.type
+    this.nation
+    this.shield
+    this.effect
+    this.grade
+    this.nation
+    this.race
+  }
+}
+
+function save() {
+  var save = new savefile();
+  save.name = cn.textContent;
+  save.power = ip1.value;
+  save.type = type.value;
+  save.nation = nation.value;
+  save.shield = ip4.value;
+  save.effect = teb.value;
+  save.grade = grade.value;
+  save.race = ip3.value;
+
+  var jsonData = JSON.stringify(save);
+
+  function download(content, fileName, contentType) {
+    var a = document.createElement("a");
+    var file = new Blob([content], {type: contentType});
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
+  }
+  download(jsonData, 'save.json', 'text/plain');
+}
+
+document.getElementById('save').addEventListener('click', save);
+
+//Type//
+function load(){
+  var input = document.createElement('input');
+  input.type = 'file';
+
+  input.onchange = e => { 
+
+    // getting a hold of the file reference
+    var file = e.target.files[0]; 
+ 
+    // setting up the reader
+    var reader = new FileReader();
+    reader.readAsText(file,'UTF-8');
+ 
+    // here we tell the reader what to do when it's done reading...
+    reader.onload = readerEvent => {
+      var content = readerEvent.target.result; // this is the content!
+      console.log( content );
+      var savefiles = JSON.parse(content)
+
+      console.log( savefiles.name );
+
+      cn.textContent = savefiles.name;
+      ip1.value = savefiles.power;
+      type.value = savefiles.type;
+      nation.value = savefiles.nation;
+      ip4.value = savefiles.shield;
+      teb.value = savefiles.effect;
+      grade.value = savefiles.grade;
+      ip3.value = savefiles.race;
+      
+      var types = document.getElementById('cts');
+      types.dispatchEvent(new Event('change'))
+      var criss = document.getElementById('c');
+      criss.dispatchEvent(new Event('change'))
+      var trgss = document.getElementById('trg');
+      trgss.dispatchEvent(new Event('change'))
+      var gradess = document.getElementById('g');
+      gradess.dispatchEvent(new Event('change'))
+    }
+    
+  }
+  input.click();
+  
+}
+
+document.getElementById('load').addEventListener('click', load);
+
+

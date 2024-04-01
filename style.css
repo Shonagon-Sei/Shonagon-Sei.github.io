@@ -625,9 +625,11 @@ span{
 
 .exp,
 .imp,
-.how {
-  height: 40px;
-  line-height: .5rem;
+.how,
+.save,
+.load {
+  min-height: 40px;
+  line-height: 1rem;
   text-align: center;
   width: 204px;
   font-size: 22px;
@@ -639,16 +641,19 @@ span{
   color: #000000;
 }
 
-.exp {
+.exp,
+.how,
+.save,
+.load {
   margin-left: 2rem;
 }
 
-.how {
-  margin-left: 2rem;
-}
 
 .exp:hover,
-.imp:hover {
+.imp:hover,
+.how:hover,
+.save:hover,
+.load:hover {
   border: #ff0000 4px solid;
 }
 
