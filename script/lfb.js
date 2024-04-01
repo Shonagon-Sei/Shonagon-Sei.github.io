@@ -168,10 +168,10 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('*/', '</span>');
 
   
-
+  /*
   effect = effect.replaceAll('[', '<span class=\'under-line\'>[');
   effect = effect.replaceAll(']', ']</span>');
-
+  */
   //fcm
   effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
 
