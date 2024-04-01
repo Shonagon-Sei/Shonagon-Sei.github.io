@@ -444,6 +444,12 @@ select,
   color: #ff0000;
 }
 
+.italic{
+  font-family: cslr;
+  font-size: 12px;
+  font-style: italic;
+}
+
 .under-line{
   text-decoration: underline;
   display: inline-block;

@@ -39,6 +39,7 @@ window.addEventListener('DOMContentLoaded', function() {
       se.style.display = 'flex'
       nuborder.style.display = 'none'
       crs.style.display = 'flex'
+      image0.style.display = 'flex'
     }
     else if (select1 === 'nu') {
       tri = "none";
@@ -47,6 +48,7 @@ window.addEventListener('DOMContentLoaded', function() {
       se.style.display = 'flex'
       nuborder.style.display = 'none'
       crs.style.display = 'flex'
+      image0.style.display = 'flex'
     }
     else if (select1 === 'no') {
       tri = "none";
@@ -55,6 +57,7 @@ window.addEventListener('DOMContentLoaded', function() {
       se.style.display = 'none'
       nuborder.style.display = 'flex'
       crs.style.display = 'none'
+      image0.style.display = 'none'
     }
     else if (select1 === 'bo') {
       tri = "none";
@@ -63,6 +66,7 @@ window.addEventListener('DOMContentLoaded', function() {
       se.style.display = 'none'
       nuborder.style.display = 'flex'
       crs.style.display = 'none'
+      image0.style.display = 'none'
     }
     else if (select1 === 'so') {
       tri = "none";
@@ -71,6 +75,7 @@ window.addEventListener('DOMContentLoaded', function() {
       se.style.display = 'none'
       nuborder.style.display = 'flex'
       crs.style.display = 'none'
+      image0.style.display = 'none'
     }
 
     image.src = src_;

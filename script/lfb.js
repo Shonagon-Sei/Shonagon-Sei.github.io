@@ -167,6 +167,8 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('/*', '<span class=\'red-text\'>');
   effect = effect.replaceAll('*/', '</span>');
 
+  
+
   effect = effect.replaceAll('[', '<span class=\'under-line\'>[');
   effect = effect.replaceAll(']', ']</span>');
 
@@ -177,7 +179,8 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
   effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
   
-  
+  effect = effect.replaceAll('/i', '<span class=\'italic\'>(');
+  effect = effect.replaceAll('i/', ')</span>');
 
   se.innerHTML = effect;
   seo.innerHTML = effect;
