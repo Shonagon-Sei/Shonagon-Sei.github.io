@@ -405,7 +405,6 @@ select,
   align-self: flex-end;
   line-height: 15.8px;
   transform: translate(0, 2px);
-  word-break: break-all
 }
 
 .nubo .se_ {
@@ -432,10 +431,6 @@ select,
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
-
-span{
-  word-break: break-all;;
 }
 
 .nub .pw1 {
