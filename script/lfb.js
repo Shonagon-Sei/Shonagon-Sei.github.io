@@ -184,12 +184,12 @@ teb.addEventListener('input', function() {
     
   if (type.value === 'tu' || type.value === 'nu')
   {
-    const linesCount = Math.round(se.offsetHeight / 15.8);    
+    const linesCount = Math.round((se.offsetHeight / 16));    
     eb.src = `assets/textbox/textbox_${linesCount}.png`
   }
   else
   {
-    const linesCount = Math.round(seo.offsetHeight / 15.8);
+    const linesCount = Math.round((seo.offsetHeight / 16));
     eb.src = `assets/textbox/otextbox_${linesCount}.png`
   }
   
