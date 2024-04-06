@@ -123,13 +123,22 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('Regalis Piece', '<span class=\'image-wrapper\'><img src=\'assets/Regalis Piece Icon.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('Revoldress', '<span class=\'image-wrapper\'><img src=\'assets/RevolDress Icon.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('Overdress', '<span class=\'image-wrapper\'><img src=\'assets/o-Dress icon EN.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
-  effect = effect.replaceAll('Divine Skill', '<span class=\'image-wrapper\'><img src=\'assets/Divine.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
-  effect = effect.replaceAll('Stride', '<span class=\'image-wrapper\'><img src=\'assets/Stride EN.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('Divine Skill', '<span class=\'image-wrapper\'><img src=\'assets/Divine.png\' alt=\'Image\' class=\'mskill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('Stride', '<span class=\'image-wrapper\'><img src=\'assets/Stride EN.png\' alt=\'Image\' class=\'mskill\' id=\'auto\'></span>');
 
   //Power Shield Critical
-  effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-  effect = effect.replaceAll('Shield', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-  effect = effect.replaceAll('Critical', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+  var encounter = document.getElementById('enc');
+  if (encounter.checked){
+    effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'evalue\' id=\'auto\'></span>');
+    effect = effect.replaceAll('Shield', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'evalue\' id=\'auto\'></span>');
+    effect = effect.replaceAll('Critical', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'evalue\' id=\'auto\'></span>');
+  }
+  else{
+    effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('Shield', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('Critical', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+  }
+  
   
   //Circles
   effect = effect.replaceAll('VC', '<span class=\'image-wrapper\'><img src=\'assets/VC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
@@ -214,8 +223,22 @@ teb.addEventListener('input', function() {
     
   if (type.value === 'tu' || type.value === 'nu')
   {
+    const linesCount = Math.round((se.offsetHeight / 16))
+    
+    if (encounter.checked){
+      eb.src = `assets/textbox/etextbox_${linesCount}.png`
+      se.style.color = "#FFFFFF"
+    }else{
+      eb.src = `assets/textbox/textbox_${linesCount}.png`
+      se.style.color = "#000000"
+    }
+    
+  }
+  else if(type.value === 'gu')
+  {
     const linesCount = Math.round((se.offsetHeight / 16));    
-    eb.src = `assets/textbox/textbox_${linesCount}.png`
+    eb.src = `assets/textbox/etextbox_${linesCount}.png`
+    se.style.color = "#FFFFFF"
   }
   else
   {

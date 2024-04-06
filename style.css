@@ -223,6 +223,17 @@ option.zoo{
   left:0;
 }
 
+.mskill{
+  height:15.8px;
+  margin-left: 1px;
+  margin-right: 1px;
+  /*transform: translate(0, 2px);*/
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:bottom;
+  top:0; 
+  left:0;
+}
 
 .brack{
   height:11px;
@@ -234,6 +245,7 @@ option.zoo{
   vertical-align:middle;
   top:0; 
   left:0;
+  filter: invert(100%) brightness(10);
 }
 
 .circle{
@@ -510,6 +522,19 @@ option.zoo{
   vertical-align:bottom;
   top:0; 
   left:0;
+}
+
+.evalue{
+  height:15px;
+  margin-left: 1px;
+  margin-right: 1px;
+  /*transform: translate(0, 2px);*/
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:bottom;
+  top:0; 
+  left:0;
+  filter: invert(100%) brightness(10);
 }
 
 .red-text .value
