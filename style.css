@@ -505,6 +505,12 @@ select,
   transform: translate(0, -3px);
 }
 
+.quitt{
+  font-family: fcm;
+  font-size: 15.8px;
+  color: #000000;
+}
+
 .red-text .quote{
   font-family: fcm;
   font-size: 15.8px;

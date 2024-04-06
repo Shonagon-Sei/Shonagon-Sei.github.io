@@ -75,6 +75,32 @@ teb.addEventListener('input', function() {
   /** @type{string}*/
   var effect = teb.value;
 
+  effect = effect.replaceAll('<<', '&#12298;')
+  effect = effect.replaceAll('>>', '&#12299;')
+
+  while (effect.indexOf('<') != -1){
+
+    if(effect.indexOf('>') == -1){
+      break;
+    }
+    var newString = ""
+    var index = effect.indexOf('<') + 1;
+    while(effect.charAt(index) != '>'){
+      newString += effect.charAt(index);
+      effect = effect.replaceAt(index, '')
+    }
+    effect = effect.replaceAt(index, '')
+    effect = effect.replaceAt(effect.indexOf('<'), `《span class=\'quitt\'》&lt;《/span》${newString}《span class=\'quitt\'》&gt;《/span》`);   
+  }
+  
+
+  
+  effect = effect.replaceAll('《', '<')
+  effect = effect.replaceAll('》', '>')
+  
+  
+  
+  
   //Box Icons
   effect = effect.replaceAll('AUTO', '<span class=\'image-wrapper\'><img src=\'assets/AUTO.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('ACT', '<span class=\'image-wrapper\'><img src=\'assets/ACT.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
@@ -334,4 +360,7 @@ function load(){
 
 document.getElementById('load').addEventListener('click', load);
 
+String.prototype.replaceAt = function(index, replacement) {
+  return this.substr(0, index) + replacement + this.substr(index + 1);
+}
 
