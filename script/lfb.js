@@ -207,7 +207,13 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll(']', ']</span>');
   */
   //fcm
-  effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
+  if (encounter.checked){
+    effect = effect.replaceAll('"', '<span class=\'equote\'>"</span>');
+  }
+  else{
+    effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
+  }
+  
 
   //【
   effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');

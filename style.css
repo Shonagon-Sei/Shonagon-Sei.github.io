@@ -559,6 +559,14 @@ option.zoo{
   transform: translate(0, -3px);
 }
 
+.equote{
+  font-family: fcm;
+  font-size: 15.8px;
+  color: #FFFFFF;
+  vertical-align: top;
+  transform: translate(0, -3px);
+}
+
 .quitt{
   font-family: fcm;
   font-size: 15.8px;
