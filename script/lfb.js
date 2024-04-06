@@ -65,7 +65,11 @@ ip2.addEventListener('input', function() {
 //Race | Update//
 ip3.addEventListener('input', function() {
   rec1.textContent = ip3.value;
-  rec.textContent = ip3.value;  
+  rec.textContent = ip3.value;
+  var enrace1 = document.getElementById('enrec');
+  var enraceinner1 = document.getElementById('enrec1');
+  enrace1.textContent = ip3.value;
+  enraceinner1.textContent = ip3.value;
 });
 
 //Card Effect | Update//

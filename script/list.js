@@ -15,18 +15,31 @@ function typeSet() {
   var image1 = document.getElementById('gs'); 
   var image2 = document.getElementById('si1');
 
+  var race1 = document.getElementById('rec');
+  var raceinner1 = document.getElementById('rec1');
+
+  var enrace1 = document.getElementById('enrec');
+  var enraceinner1 = document.getElementById('enrec1');
+
+  var encounter = document.getElementById('enc');
+  var enc = document.getElementById('enclab')
+  var clan = document.getElementById('cl');
+  var clanImage = document.getElementById('encounter-clan');
+
   var se = document.getElementById('nub');
   var nuborder = document.getElementById('nubo');
   
   type.addEventListener('change', update);
   nation.addEventListener('change', update);
-  
+  clan.addEventListener('change', update);
+  encounter.addEventListener('change', update);
+
   function update() {
     var select1 = type.value;
     var select2 = nation.value;
     var tri = "";
     var tri1 = "";
-    var src_ = "assets/" + select2 + select1 + ".png";
+    
     var im = "";
     var im1 = "";
     var im2 = ""
@@ -41,6 +54,8 @@ function typeSet() {
       nuborder.style.display = 'none'
       crs.style.display = 'flex'
       image0.style.display = 'flex'
+      encounter.style.display = 'none'
+      enc.style.display = 'none'
     }
     else if (select1 === 'nu') {
       tri = "none";
@@ -50,6 +65,19 @@ function typeSet() {
       nuborder.style.display = 'none'
       crs.style.display = 'flex'
       image0.style.display = 'flex'
+      encounter.style.display = 'flex'
+      enc.style.display = 'flex'
+    }
+    else if (select1 === 'gu') {
+      tri = "none";
+      tri1 = "flex";
+      im = "assets/none_.png"
+      se.style.display = 'flex'
+      nuborder.style.display = 'none'
+      crs.style.display = 'flex'
+      image0.style.display = 'flex'
+      encounter.style.display = 'flex'
+      enc.style.display = 'flex'
     }
     else if (select1 === 'no') {
       tri = "none";
@@ -59,6 +87,8 @@ function typeSet() {
       nuborder.style.display = 'flex'
       crs.style.display = 'none'
       image0.style.display = 'none'
+      encounter.style.display = 'none'
+      enc.style.display = 'none'
     }
     else if (select1 === 'bo') {
       tri = "none";
@@ -68,6 +98,8 @@ function typeSet() {
       nuborder.style.display = 'flex'
       crs.style.display = 'none'
       image0.style.display = 'none'
+      encounter.style.display = 'none'
+      enc.style.display = 'none'
     }
     else if (select1 === 'so') {
       tri = "none";
@@ -77,9 +109,45 @@ function typeSet() {
       nuborder.style.display = 'flex'
       crs.style.display = 'none'
       image0.style.display = 'none'
+      encounter.style.display = 'none'
+      enc.style.display = 'none'
     }
 
-    image.src = src_;
+
+    if (encounter.checked && (select1 === "nu" || select1 === "gu")){
+      
+      if (select2 === 'nl'){
+        $("#ns option[value='nl']").remove();
+        nation.value = 'de'
+        select2 = 'de'
+      }
+      else{
+        $("#ns option[value='nl']").remove();
+      }
+      var src_ = "assets/" + select2 + select1 + "e.png";
+      race1.style.display = 'none'
+      raceinner1.style.display = 'none'
+      enrace1.style.display = 'block'
+      enraceinner1.style.display = 'block'
+      clanImage.style.display = 'flex'
+      clanImage.src = "assets/" + clan.value + '.png';
+
+      image.src = src_;
+    }
+    else
+    {
+      if ($("#ns option[value='nl']").length <= 0){
+        $("#ns").prepend("<option value='nl'>No Nation</option>");
+      }
+      race1.style.display = 'block'
+      raceinner1.style.display = 'block'
+      clanImage.style.display = 'none'
+      enrace1.style.display = 'none'
+      enraceinner1.style.display = 'none'  
+      var src_ = "assets/" + select2 + select1 + ".png";
+      image.src = src_;
+    }
+    
     grade.style.display = tri1;
     grade1.style.display = tri1;
     trigger.style.display = tri;
