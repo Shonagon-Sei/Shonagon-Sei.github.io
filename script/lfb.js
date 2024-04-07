@@ -198,6 +198,16 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('SC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
 
+  effect = effect.replaceAll('GB1', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB2', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB3', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB4', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB5', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB6', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB6.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB7', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB8', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+
+
   effect = effect.replaceAll('/*', '<span class=\'red-text\'>');
   effect = effect.replaceAll('*/', '</span>');
 
