@@ -219,15 +219,18 @@ teb.addEventListener('input', function() {
   //fcm
   if (encounter.checked){
     effect = effect.replaceAll('"', '<span class=\'equote\'>"</span>');
+    effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'ebrack\' id=\'auto\'></span>');
+  effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'ebrack\' id=\'auto\'></span>')
   }
   else{
     effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
+    effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
+  effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
   }
   
 
   //【
-  effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
-  effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
+  ;
   
   effect = effect.replaceAll('/i', '<span class=\'italic\'>(');
   effect = effect.replaceAll('i/', ')</span>');

@@ -239,6 +239,20 @@ option.zoo{
   height:11px;
   margin-left: 1px;
   margin-right: 1px;
+  color: #000;
+  /*transform: translate(0, 2px);*/
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:middle;
+  top:0; 
+  left:0;
+}
+
+.ebrack{
+  height:11px;
+  margin-left: 1px;
+  margin-right: 1px;
+  color: #fff;
   /*transform: translate(0, 2px);*/
   padding-top: 0px;
   padding-bottom: 0px;
