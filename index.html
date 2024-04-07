@@ -34,7 +34,9 @@
         
         <div class="nub" id="nub">
           <div class="se_" id="se_">
-            <p class="se" id="se"></p>
+            
+            <p class="sec" id="sec" style="display: none;"></p>
+            <p class="se" id="se"></p>            
           </div>
           <div class="cns_" id="cns_">
             <p class="cns" id="cns">Card Name</p>
@@ -228,13 +230,19 @@
 
           <label>Race</label>
           <input type="text" id=race class="ipb" placeholder="Card Race">
+
+          <label class="mcui-checkbox" id="splab" style="display: none;">
+            <input type="checkbox" id="sp">
+            <div>
+              <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
+                <title>checkmark-circle</title>
+                <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+              </svg>
+            </div>
+            <div>SP (Experimental)</div>
+          </label>
           <!--
-          <label>SP Rarity</label>
-          <div class="checkbox-wrapper-7">
-            <input class="tgl tgl-ios" id="sp" type="checkbox" onclick="SP()"/>
-            <label class="tgl-btn" for="sp">
-          </div>
-         <input type="checkbox" id="sp" onclick="SP()">
+          
           
           <label>Overdress Frame?</label>
           <input type="checkbox" id="oD" onclick="overDress()">

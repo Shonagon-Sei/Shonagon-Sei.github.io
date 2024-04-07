@@ -462,6 +462,21 @@ option.zoo{
   transform: translate(0, 1px);
 }
 
+.nub .sec{
+  width: 92%;
+  font-family: cslb;
+  font-size: 12px;
+  color: #000000;
+  text-align: justify;  
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  align-self: flex-end;
+  line-height: 15.8px;
+  transform: translate(0, 2px);
+  position: absolute;
+  -webkit-text-stroke: 2px #000;
+}
+
 .nubo .se_ {
   height: 50%;
   width: 100%;

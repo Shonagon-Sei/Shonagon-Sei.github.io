@@ -10,6 +10,7 @@ var nation = document.getElementById('ns');
 var se = document.getElementById('se');
 var se1 = document.getElementById('se_');
 var seo = document.getElementById('seo');
+var sec = document.getElementById('sec');
 
 //Power//
 var pw = document.getElementById('pw');
@@ -129,9 +130,9 @@ teb.addEventListener('input', function() {
   //Power Shield Critical
   var encounter = document.getElementById('enc');
   if (encounter.checked){
-    effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'evalue\' id=\'auto\'></span>');
-    effect = effect.replaceAll('Shield', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'evalue\' id=\'auto\'></span>');
-    effect = effect.replaceAll('Critical', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'evalue\' id=\'auto\'></span>');
+    effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/ePower Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('Shield', '<span class=\'image-wrapper\'><img src=\'assets/eShield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('Critical', '<span class=\'image-wrapper\'><img src=\'assets/eCritical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
   }
   else{
     effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
@@ -219,8 +220,8 @@ teb.addEventListener('input', function() {
   //fcm
   if (encounter.checked){
     effect = effect.replaceAll('"', '<span class=\'equote\'>"</span>');
-    effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'ebrack\' id=\'auto\'></span>');
-  effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'ebrack\' id=\'auto\'></span>')
+    effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/ELSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
+  effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/ERSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
   }
   else{
     effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
@@ -237,12 +238,23 @@ teb.addEventListener('input', function() {
 
   se.innerHTML = effect;
   seo.innerHTML = effect;
+  sec.innerHTML = effect;
 
   var eb = document.getElementById('eb');
-    
-  if (type.value === 'tu' || type.value === 'nu')
+  var sp = document.getElementById('sp');
+  if (sp.checked){
+    eb.style.display = 'none'
+    se.style.color = "#FFFFFF"
+    sec.style.display = 'flex'
+  }
+  else
   {
-    const linesCount = Math.round((se.offsetHeight / 16))
+    eb.style.display = 'flex'
+    sec.style.display = 'none'
+
+    if (type.value === 'tu' || type.value === 'nu')
+    {
+      const linesCount = Math.round((se.offsetHeight / 16))
     
     if (encounter.checked){
       eb.src = `assets/textbox/etextbox_${linesCount}.png`
@@ -252,19 +264,23 @@ teb.addEventListener('input', function() {
       se.style.color = "#000000"
     }
     
-  }
-  else if(type.value === 'gu')
-  {
-    const linesCount = Math.round((se.offsetHeight / 16));    
-    eb.src = `assets/textbox/etextbox_${linesCount}.png`
-    se.style.color = "#FFFFFF"
-  }
-  else
-  {
-    const linesCount = Math.round((seo.offsetHeight / 16));
-    eb.src = `assets/textbox/otextbox_${linesCount}.png`
+    }
+    else if(type.value === 'gu')
+    {
+      const linesCount = Math.round((se.offsetHeight / 16));    
+      eb.src = `assets/textbox/etextbox_${linesCount}.png`
+      se.style.color = "#FFFFFF"
+    }
+    else
+    {
+      const linesCount = Math.round((seo.offsetHeight / 16));
+      eb.src = `assets/textbox/otextbox_${linesCount}.png`
+    }
+  
   }
   
+
+
 });
 
 function overDress()
