@@ -1,3 +1,4 @@
+import { domToPng } from 'modern-screenshot'
 function div_img() {
   var d_ = document.getElementById('img_');
   var n_ = document.getElementById('nub');
