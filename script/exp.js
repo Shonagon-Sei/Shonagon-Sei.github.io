@@ -35,7 +35,7 @@ function div_img1() {
   var no = document.getElementById('nubo');
   var s = document.getElementById('eb');
 
-  d_.style.border = '0';
+  
 
   //d_.scale = 6.665
 
@@ -43,15 +43,6 @@ function div_img1() {
     .then(function (blob) {
         window.saveAs(blob, 'test.png');
     });
-
-    domToPng(d_).then(dataUrl => {
-      const link = document.createElement('a')
-      link.download = 'screenshot.png'
-      link.href = dataUrl
-      link.click()
-    })
-
-  d_.style.border = '';
 }
 
 document.getElementById('exp1').addEventListener('click', div_img1);
