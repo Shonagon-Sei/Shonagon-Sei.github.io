@@ -118,4 +118,25 @@ document.getElementById('imp').addEventListener('click', function() {
   fileInput.click();
 });
 
+document.getElementById('custom').addEventListener('click', function() {
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'image/*';
+
+  fileInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      const image = document.getElementById('gn');
+      image.src = e.target.result;
+      image.style.height = "613.5px";
+    };
+
+    reader.readAsDataURL(file);
+  });
+
+  fileInput.click();
+});
+
 
