@@ -35,18 +35,25 @@ function div_img1() {
   var no = document.getElementById('nubo');
   var s = document.getElementById('eb');
 
-  
+  d_.style.border = '0';
+  n_.style.transform = "translate(0 , 0px)";
+  no.style.transform = "translate(0 , 0px)";
+  //
 
-  d_.style.scale = 6.665
-  d_.style.transform = 'translate(100, 100)'
+  html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
+    var image = new Image();
+    image.src = canvas.toDataURL();
 
-  domtoimage.toBlob(d_)
-    .then(function (blob) {
-        window.saveAs(blob, 'test.png');
-    });
+    var link = document.createElement('a');
+    link.href = image.src;
+    link.download = 'CFV fanmade.png';
+    link.click();
 
-    d_.style.scale = 1
-    d_.style.transform = ''
+    d_.style.border = '';
+    n_.style.transform = 'translate(0, 0.5px)';
+    no.style.transform = 'translate(0, 0.5px)';
+    
+  });
 }
 
 document.getElementById('exp1').addEventListener('click', div_img1);
