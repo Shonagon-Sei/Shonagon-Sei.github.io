@@ -22,13 +22,17 @@
     <div class="pv">
       <div id="img_" class="img_">
 
-        <img class="gn" id=gn src="assets/nlnu.png">
-        <img class="encounter-clan" id=encounter-clan src="assets/kgr.png">
-        <img class="gs" id=gs src="assets/grade_0.png">
-        <img class="si" id=si1 src="assets/none_.png">
-        <img class="si" id=si src="assets/bts.png">
-        <img class="crs" id=crs src="assets/c_1_.png">
-        <img class="sh" id=sh src="assets/none_.png">
+        <img class="gn" id="gn" src="assets/nlnu.png">
+        <img class="dnf" id='dnf' src="assets/dual nation/fde.png">
+        <img class="dns" id='dns' src="assets/dual nation/sde.png">
+        <img class="dnfflag" id='dnfflag' src="assets/dual nation/flag/fde.png">
+        <img class="dnsflag" id='dnsflag' src="assets/dual nation/flag/sde.png">
+        <img class="encounter-clan" id='encounter-clan' src="assets/kgr.png">
+        <img class="gs" id='gs' src="assets/grade_0.png">
+        <img class="si" id='si1' src="assets/none_.png">
+        <img class="si" id='si' src="assets/bts.png">
+        <img class="crs" id='crs' src="assets/c_1_.png">
+        <img class="sh" id='sh' src="assets/none_.png">
         <img class="trigger" id="trigger" src="assets/none_.png">
         <img class="frame" id="frame" src="assets/none_.png">
         
@@ -132,7 +136,7 @@
           <select id="cts">
             <option value="nu">Normal</option>
             <option value="tu">Trigger</option>
-            <option value="gu">G Unit (Encounter must be ON)</option>
+            <option value="gu">G Unit (Will Set to Encounter)</option>
             <option value="no">Normal Order</option>
             <option value="bo">Blitz Order</option>
             <option value="so">Set Order</option>            
@@ -170,8 +174,41 @@
             <div>Encounter</div>
           </label>
 
-          <label for="cl">Clan</label>
-          <select id="cl">
+          <label class="mcui-checkbox" id="dualab">
+            <input type="checkbox" id="dual">
+            <div>
+              <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
+                <title>checkmark-circle</title>
+                <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+              </svg>
+            </div>
+            <div>Dual Nation</div>
+          </label>
+
+          <label for="fns" id="fnslab" style="display: none;">First Nation</label>
+          <select id="fns" style="display: none;">
+            <option value="de">Dragon Empire</option>
+            <option value="ds">Dark States</option>
+            <option value="bg">Brandt Gate</option>
+            <option value="ks">Keter Sanctuary</option>
+            <option value="sc">Stocheia</option>
+            <option value="lm">Lyrical Monasterio</option>
+            <!--  <option value="test">Test</option> -->
+          </select>
+
+          <label for="sns" id="snslab" style="display: none;">Second Nation</label>
+          <select id="sns" style="display: none;">
+            <option value="de">Dragon Empire</option>
+            <option value="ds">Dark States</option>
+            <option value="bg">Brandt Gate</option>
+            <option value="ks">Keter Sanctuary</option>
+            <option value="sc">Stocheia</option>
+            <option value="lm">Lyrical Monasterio</option>
+            <!--  <option value="test">Test</option> -->
+          </select>
+
+          <label for="cl" id="cll" style="display: none;">Clan</label>
+          <select id="cl" style="display: none;">
             <option class="dre"value="kgr">Kagero</option>
             <option class="dre" value="nrk">Narukami</option>
             <option class="dre" value="nub">Nubatama</option>
@@ -276,7 +313,7 @@
   <div class="config">
     <button class="imp" id="imp">Upload Image</button>
     <button class="exp" id="exp">Export (Main)</button>
-    <button class="exp" id="exp1">Export<br>(If Main Has Problems)</button>
+    <button class="exp" id="exp1">Alt Export<br>(If Main Has Problems)</button>
     <button class="save" id="save">Save</button>
     <button class="load" id="load">Load</button>
     <button class="how" id="how">Keywords</button>

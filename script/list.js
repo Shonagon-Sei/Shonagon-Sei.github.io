@@ -4,6 +4,15 @@ function typeSet() {
   var type = document.getElementById('cts');
   var nation = document.getElementById('ns');
   var image = document.getElementById('gn');
+
+  var fimage = document.getElementById('dnf');
+  var simage = document.getElementById('dns');
+  var ffimage = document.getElementById('dnfflag');
+  var fsimage = document.getElementById('dnsflag');
+
+  var fselect = document.getElementById('fns');
+  var sselect = document.getElementById('sns');
+
   var trigger = document.getElementById('trg_');
   var trigger1 = document.getElementById('trg');
   var crs = document.getElementById('crs');
@@ -23,8 +32,13 @@ function typeSet() {
 
   var encounter = document.getElementById('enc');
   var enc = document.getElementById('enclab')
+
   var clan = document.getElementById('cl');
+  var clanlabel = document.getElementById('cll');
   var clanImage = document.getElementById('encounter-clan');
+
+  var dualab = document.getElementById('dualab');
+  var dual = document.getElementById('dual')
 
   var se = document.getElementById('nub');
   var nuborder = document.getElementById('nubo');
@@ -33,6 +47,9 @@ function typeSet() {
   nation.addEventListener('change', update);
   clan.addEventListener('change', update);
   encounter.addEventListener('change', update);
+  dual.addEventListener('change', update);
+  fselect.addEventListener('change', update);
+  sselect.addEventListener('change', update);
 
   function update() {
     var select1 = type.value;
@@ -56,6 +73,8 @@ function typeSet() {
       image0.style.display = 'flex'
       encounter.style.display = 'none'
       enc.style.display = 'none'
+      dual.checked = false
+      dualab.style.display = 'none'
     }
     else if (select1 === 'nu') {
       tri = "none";
@@ -67,6 +86,7 @@ function typeSet() {
       image0.style.display = 'flex'
       encounter.style.display = 'flex'
       enc.style.display = 'flex'
+      dualab.style.display = 'flex'
     }
     else if (select1 === 'gu') {
       tri = "none";
@@ -77,7 +97,10 @@ function typeSet() {
       crs.style.display = 'flex'
       image0.style.display = 'flex'
       encounter.style.display = 'flex'
-      enc.style.display = 'flex'
+      enc.style.display = 'none'
+      encounter.checked = true
+      dual.checked = false
+      dualab.style.display = 'none'
     }
     else if (select1 === 'no') {
       tri = "none";
@@ -89,6 +112,8 @@ function typeSet() {
       image0.style.display = 'none'
       encounter.style.display = 'none'
       enc.style.display = 'none'
+      dual.checked = false
+      dualab.style.display = 'none'
     }
     else if (select1 === 'bo') {
       tri = "none";
@@ -100,6 +125,8 @@ function typeSet() {
       image0.style.display = 'none'
       encounter.style.display = 'none'
       enc.style.display = 'none'
+      dual.checked = false
+      dualab.style.display = 'none'
     }
     else if (select1 === 'so') {
       tri = "none";
@@ -111,6 +138,8 @@ function typeSet() {
       image0.style.display = 'none'
       encounter.style.display = 'none'
       enc.style.display = 'none'
+      dual.checked = false
+      dualab.style.display = 'none'
     }
 
 
@@ -131,7 +160,8 @@ function typeSet() {
       enraceinner1.style.display = 'block'
       clanImage.style.display = 'flex'
       clanImage.src = "assets/" + clan.value + '.png';
-
+      clan.style.display = 'flex'
+      clanlabel.style.display = 'flex'
       image.src = src_;
     }
     else
@@ -142,10 +172,40 @@ function typeSet() {
       race1.style.display = 'block'
       raceinner1.style.display = 'block'
       clanImage.style.display = 'none'
+      clan.style.display = 'none'
+      clanlabel.style.display = 'none'
       enrace1.style.display = 'none'
       enraceinner1.style.display = 'none'  
       var src_ = "assets/" + select2 + select1 + ".png";
       image.src = src_;
+    }
+
+    if (dual.checked){
+      image.style.display = 'none'
+      fimage.style.display = 'flex'
+      simage.style.display = 'flex'
+      ffimage.style.display = 'flex'
+      fsimage.style.display = 'flex'
+      fselect.style.display = 'flex'
+      sselect.style.display = 'flex'
+      
+      fimage.src = `assets/dual nation/f${fselect.value}.png`
+      simage.src = `assets/dual nation/s${sselect.value}.png`
+      ffimage.src = `assets/dual nation/flag/f${fselect.value}.png`
+      fsimage.src = `assets/dual nation/flag/s${sselect.value}.png`
+      encounter.style.display = 'none'
+      enc.style.display = 'none'
+      encounter.checked = false
+    }
+    else
+    {
+      image.style.display = 'flex'
+      fimage.style.display = 'none'
+      simage.style.display = 'none'
+      ffimage.style.display = 'none'
+      fsimage.style.display = 'none'
+      fselect.style.display = 'none'
+      sselect.style.display = 'none'    
     }
     
     grade.style.display = tri1;

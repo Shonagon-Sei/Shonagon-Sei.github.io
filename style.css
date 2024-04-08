@@ -305,7 +305,8 @@ option.zoo{
   height: 613.5px;
 }
 
-.gn, .encounter-clan{
+.gn, .encounter-clan,.dnf,
+.dns, .dnfflag, .dnsflag{
   position: absolute;
   z-index: 3;
   display: flex;
@@ -317,7 +318,8 @@ option.zoo{
   user-select: none;
 }
 
-.encounter-clan{
+.encounter-clan, .dnf,
+.dns, .dnfflag, .dnsflag{
   display: none;
 }
 
