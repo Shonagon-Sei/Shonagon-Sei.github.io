@@ -37,12 +37,16 @@ function div_img1() {
 
   
 
-  //d_.scale = 6.665
+  d_.style.scale = 6.665
+  d_.style.transform = 'translate(100, 100)'
 
   domtoimage.toBlob(d_)
     .then(function (blob) {
         window.saveAs(blob, 'test.png');
     });
+
+    d_.style.scale = 1
+    d_.style.transform = ''
 }
 
 document.getElementById('exp1').addEventListener('click', div_img1);
