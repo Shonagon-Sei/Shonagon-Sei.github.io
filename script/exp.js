@@ -32,25 +32,17 @@ document.getElementById('exp').addEventListener('click', div_img);
 function div_img1() {
   var d_ = document.getElementById('img_');
   var n_ = document.getElementById('nub');
-  var s = document.getElementById('se');
+  var no = document.getElementById('nubo');
+  var s = document.getElementById('eb');
 
   d_.style.border = '0';
-  n_.style.transform = "translate(0 , 0)";
-  s.style.transform = "translate(0 , 0)";
 
-  html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
-    var image = new Image();
-    image.src = canvas.toDataURL();
+  d_.scale = 6.665
 
-    var link = document.createElement('a');
-    link.href = image.src;
-    link.download = 'CFV fanmade.png';
-    link.click();
-
-    d_.style.border = '';
-    n_.style.transform = 'translate(0, 0.5px)';
-    
-  });
+  domtoimage.toBlob(d_)
+    .then(function (blob) {
+        window.saveAs(blob, 'test.png');
+    });
 }
 
 document.getElementById('exp1').addEventListener('click', div_img1);
