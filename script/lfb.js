@@ -197,7 +197,7 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('SB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   
   
   effect = effect.replaceAll('SC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
