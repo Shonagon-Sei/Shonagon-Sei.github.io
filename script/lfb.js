@@ -147,7 +147,7 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('GC', '<span class=\'image-wrapper\'><img src=\'assets/GC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('COST', '<span class=\'image-wrapper\'><img src=\'assets/COST.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
 
-  effect = effect.replaceAll('EB', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+
   effect = effect.replaceAll('EB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
@@ -157,8 +157,9 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('EB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-
-  effect = effect.replaceAll('EC', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  
+  
   effect = effect.replaceAll('EC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
@@ -168,22 +169,25 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('EC(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('EC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-
-  effect = effect.replaceAll('CB', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  
+  
   effect = effect.replaceAll('CB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CB(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CB(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-
-  effect = effect.replaceAll('CC', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  
+  
   effect = effect.replaceAll('CC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CC(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('CC(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-
-  effect = effect.replaceAll('SB', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  
+  
   effect = effect.replaceAll('SB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
@@ -193,8 +197,9 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('SB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-
-  effect = effect.replaceAll('SC', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  
+  
   effect = effect.replaceAll('SC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
@@ -204,7 +209,8 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('SC(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-
+  effect = effect.replaceAll('SC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  
   effect = effect.replaceAll('GB1', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('GB2', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('GB3', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
