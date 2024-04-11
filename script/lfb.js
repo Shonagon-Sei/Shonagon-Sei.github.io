@@ -408,7 +408,9 @@ function load(){
 
       console.log( savefiles.name );
 
-      cn.textContent = savefiles.name;
+      //power name race effect
+      
+      ip2.textContent = savefiles.name;
       ip1.value = savefiles.power;
       type.value = savefiles.type;
       nation.value = savefiles.nation;
@@ -416,6 +418,12 @@ function load(){
       teb.value = savefiles.effect;
       grade.value = savefiles.grade;
       ip3.value = savefiles.race;
+
+      ip1.dispatchEvent(new Event('input'));
+      ip2.dispatchEvent(new Event('input'));
+      ip3.dispatchEvent(new Event('input'));
+      ip4.dispatchEvent(new Event('input'));
+      teb.dispatchEvent(new Event('input'));
       
       var types = document.getElementById('cts');
       types.dispatchEvent(new Event('change'))
