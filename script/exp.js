@@ -9,14 +9,14 @@ function div_img() {
   no.style.transform = "translate(0 , -1.2px)";
   s.style.transform = "translate(0 , -1.2px)";
   //
-
+  var fileName = prompt('Please Enter File Name')
   html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
     var image = new Image();
     image.src = canvas.toDataURL();
 
     var link = document.createElement('a');
     link.href = image.src;
-    link.download = 'CFV fanmade.png';
+    link.download = `${fileName}.png`;
     link.click();
 
     d_.style.border = '';
@@ -39,6 +39,7 @@ function div_img1() {
   n_.style.transform = "translate(0 , 0px)";
   no.style.transform = "translate(0 , 0px)";
   //
+  var fileName = prompt('Please Enter File Name')
 
   html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
     var image = new Image();
@@ -46,7 +47,7 @@ function div_img1() {
 
     var link = document.createElement('a');
     link.href = image.src;
-    link.download = 'CFV fanmade.png';
+    link.download =  `${fileName}.png`;
     link.click();
 
     d_.style.border = '';
