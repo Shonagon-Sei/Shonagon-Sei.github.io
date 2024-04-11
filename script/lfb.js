@@ -363,7 +363,7 @@ class savefile{
 
 function save() {
   var save = new savefile();
-  save.name = cn.textContent;
+  save.name = ip2.value;
   save.power = ip1.value;
   save.type = type.value;
   save.nation = nation.value;
@@ -373,7 +373,7 @@ function save() {
   save.race = ip3.value;
 
   var jsonData = JSON.stringify(save);
-
+  var fileName_ = prompt('Please Enter File Name')
   function download(content, fileName, contentType) {
     var a = document.createElement("a");
     var file = new Blob([content], {type: contentType});
@@ -381,7 +381,7 @@ function save() {
     a.download = fileName;
     a.click();
   }
-  download(jsonData, 'save.json', 'text/plain');
+  download(jsonData, `${fileName_}.json`, 'text/plain');
 }
 
 document.getElementById('save').addEventListener('click', save);
@@ -408,9 +408,9 @@ function load(){
 
       console.log( savefiles.name );
 
-      //power name race effect
+      //power name race shield
       
-      ip2.textContent = savefiles.name;
+      ip2.value = savefiles.name;
       ip1.value = savefiles.power;
       type.value = savefiles.type;
       nation.value = savefiles.nation;
