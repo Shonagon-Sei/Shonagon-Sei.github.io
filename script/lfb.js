@@ -41,6 +41,7 @@ var trigger1 = document.getElementById('trg');
 
 var encounter = document.getElementById('enc');
 var dual = document.getElementById('dual')
+var clan = document.getElementById('cl')
 
 //Power | Update//
 ip1.addEventListener('input', function() {
@@ -388,6 +389,10 @@ function save() {
   save.race = ip3.value;
   save.encounter = encounter.checked;
   save.dual = dual.checked;
+  save.trigger = trigger1.value;
+  save.fnation = fselect.value;
+  save.snation = sselect.value;
+  save.clan = clan.value;
 
   var jsonData = JSON.stringify(save);
   var fileName_ = prompt('Please Enter File Name')
@@ -435,6 +440,11 @@ function load(){
       teb.value = savefiles.effect;
       grade.value = savefiles.grade;
       ip3.value = savefiles.race;
+      encounter.checked = savefiles.encounter;
+      dual.checked = savefiles.dual;
+      clan.value = savefiles.clan;
+      fselect.value = savefiles.fnation;
+      sselect.value = savefiles.snation;
 
       ip1.dispatchEvent(new Event('input'));
       ip2.dispatchEvent(new Event('input'));
@@ -446,8 +456,12 @@ function load(){
       types.dispatchEvent(new Event('change'))
       var criss = document.getElementById('c');
       criss.dispatchEvent(new Event('change'))
-      var trgss = document.getElementById('trg');
-      trgss.dispatchEvent(new Event('change'))
+      
+      if (savefiles.type === 'tu'){        
+        var trgss = document.getElementById('trg');
+      	trgss.dispatchEvent(new Event('change'))
+      }
+      
       var gradess = document.getElementById('g');
       gradess.dispatchEvent(new Event('change'))
     }
