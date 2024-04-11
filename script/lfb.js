@@ -33,6 +33,15 @@ var rec1 = document.getElementById('rec1');
 var type = document.getElementById('cts');
 var grade = document.getElementById('g');
 
+var fselect = document.getElementById('fns');
+var sselect = document.getElementById('sns');
+
+var trigger = document.getElementById('trg_');
+var trigger1 = document.getElementById('trg');
+
+var encounter = document.getElementById('enc');
+var dual = document.getElementById('dual')
+
 //Power | Update//
 ip1.addEventListener('input', function() {
   pw.textContent = ip1.value;
@@ -358,6 +367,12 @@ class savefile{
     this.grade
     this.nation
     this.race
+    this.trigger
+    this.encounter
+    this.clan
+    this.dual
+    this.fnation
+    this.snation
   }
 }
 
@@ -371,6 +386,8 @@ function save() {
   save.effect = teb.value;
   save.grade = grade.value;
   save.race = ip3.value;
+  save.encounter = encounter.checked;
+  save.dual = dual.checked;
 
   var jsonData = JSON.stringify(save);
   var fileName_ = prompt('Please Enter File Name')
