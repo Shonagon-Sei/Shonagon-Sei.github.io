@@ -64,7 +64,7 @@ ip2.addEventListener('input', function() {
     scl = 250 + (tpx - 200)/.4
     _sc_ = 1.08 - tpx_;
   }
-
+	/*
 	if (/[\u0E00-\u0E7F]/.test(ip2.value))
   {
     cn.textContent = ip2.value;
@@ -94,8 +94,16 @@ ip2.addEventListener('input', function() {
     cno.style.width = scl + "px";
     console.log(tpx_);
   }
-	
+	*/
+  cn.textContent = ip2.value;
+    cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+    cn.style.width = scl + "px";
+    
+    cno.textContent = ip2.value;
   
+    cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+    cno.style.width = scl + "px";
+    console.log(tpx_);
 });
 
 //Race | Update//
