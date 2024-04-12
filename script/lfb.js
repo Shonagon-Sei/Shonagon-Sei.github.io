@@ -140,14 +140,14 @@ teb.addEventListener('input', function() {
   //Power Shield Critical
   var encounter = document.getElementById('enc');
   if (encounter.checked){
-    effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/ePower Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('Shield', '<span class=\'image-wrapper\'><img src=\'assets/eShield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('Critical', '<span class=\'image-wrapper\'><img src=\'assets/eCritical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Power]', '<span class=\'image-wrapper\'><img src=\'assets/ePower Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Shield]', '<span class=\'image-wrapper\'><img src=\'assets/eShield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Critical]', '<span class=\'image-wrapper\'><img src=\'assets/eCritical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
   }
   else{
-    effect = effect.replaceAll('Power', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('Shield', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('Critical', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Power]', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Shield]', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Critical]', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
   }
   
   
