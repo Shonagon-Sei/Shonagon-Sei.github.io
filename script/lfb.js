@@ -24,6 +24,9 @@ var sh3 = document.getElementById('_sh1');
 //Card Name//
 var cn = document.getElementById('cns');
 var cno = document.getElementById('cnso');
+var cn_ = document.getElementById('cns_');
+var cno_ = document.getElementById('cnso_')
+
 var tc = cn.textContent;
 
 //Race//
@@ -62,15 +65,37 @@ ip2.addEventListener('input', function() {
     _sc_ = 1.08 - tpx_;
   }
 
-  cn.textContent = ip2.value;
+	if ('([\u0E00-\u0E7F])'.test(ip2.value))
+  {
+    cn.textContent = ip2.value;
 
-  cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
-  cn.style.width = scl + "px";
-  cno.textContent = ip2.value;
+		cn.style.font-family = 'pslxol'
+    cn.style.font-size = '24px'
+  	cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 0px) skewX(-13deg)";
+  	cn.style.width = scl + "px";
+    cn_.style.tranform = 'translate(0, -53)';
+    
+  	cno.textContent = ip2.value;
 
-  cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
-  cno.style.width = scl + "px";
-  console.log(tpx_);
+  	cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-13deg)";
+  	cno.style.width = scl + "px";
+  	console.log(tpx_);
+  }else{
+    cn.textContent = ip2.value;
+		cn.style.font-family = 'imp'
+    cn.style.font-size = '18px'
+    cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+    cn.style.width = scl + "px";
+    cn_.style.tranform = 'translate(0, -55)';
+    
+    cno.textContent = ip2.value;
+  
+    cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+    cno.style.width = scl + "px";
+    console.log(tpx_);
+  }
+	
+  
 });
 
 //Race | Update//
