@@ -65,7 +65,7 @@ ip2.addEventListener('input', function() {
     _sc_ = 1.08 - tpx_;
   }
 
-	if ('([\u0E00-\u0E7F])'.test(ip2.value))
+	if (/[\u0E00-\u0E7F]/.test(ip2.value))
   {
     cn.textContent = ip2.value;
 
