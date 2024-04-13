@@ -98,12 +98,53 @@ ip2.addEventListener('input', function() {
 
 //Race | Update//
 ip3.addEventListener('input', function() {
-  rec1.textContent = ip3.value;
-  rec.textContent = ip3.value;
-  var enrace1 = document.getElementById('enrec');
-  var enraceinner1 = document.getElementById('enrec1');
-  enrace1.textContent = ip3.value;
-  enraceinner1.textContent = ip3.value;
+  
+  if (/[\u0E00-\u0E7F]/.test(ip2.value))
+  {
+    rec1.textContent = ip3.value;
+  	rec.textContent = ip3.value;
+    rec1.style.transform = 'translate(242.75px, -20px)'
+    rec1.style.fontFamily = 'pslxim'
+    rec.style.transform = 'translate(242.75px, -20px)'
+    rec.style.fontFamily = 'pslxim'
+    rec.style.fontSize = '13px'
+    rec1.style.fontSize = '13px'
+    
+  	var enrace1 = document.getElementById('enrec');
+  	var enraceinner1 = document.getElementById('enrec1');
+  	enrace1.textContent = ip3.value;
+  	enraceinner1.textContent = ip3.value;
+    
+    enrace1.style.transform = 'translate(275.75px, -19px)'
+    enrace1.style.fontFamily = 'pslxim'
+    enraceinner1.style.transform = 'translate(275.75px, -19px)'
+    enraceinner1.style.fontFamily = 'pslxim'
+    enrace1.style.fontSize = '13px'
+    enraceinner1.style.fontSize = '13px'
+  }
+  else
+  {
+    rec1.textContent = ip3.value;
+  	rec.textContent = ip3.value;
+    rec1.style.transform = 'translate(242.75px, -21px)'
+    rec1.style.fontFamily = 'cslr'
+    rec.style.transform = 'translate(242.75px, -21px)'
+    rec.style.fontFamily = 'cslr'
+    rec1.style.fontSize = '9px'
+    rec.styke.fontSize = '9px'
+  	var enrace1 = document.getElementById('enrec');
+  	var enraceinner1 = document.getElementById('enrec1');
+  	enrace1.textContent = ip3.value;
+  	enraceinner1.textContent = ip3.value;
+    
+    enrace1.style.transform = 'translate(275.75px, -20px)'
+    enrace1.style.fontFamily = 'cslr'
+    enraceinner1.style.transform = 'translate(275.75px, -20px)'
+    enraceinner1.style.fontFamily = 'cslr'
+    enrace1.style.fontSize = '8px'
+    enraceinner1.style.fontSize = '8px'
+  }
+  
 });
 
 //Card Effect | Update//
