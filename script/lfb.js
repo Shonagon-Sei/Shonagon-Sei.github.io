@@ -99,7 +99,7 @@ ip2.addEventListener('input', function() {
 //Race | Update//
 ip3.addEventListener('input', function() {
   
-  if (/[\u0E00-\u0E7F]/.test(ip2.value))
+  if (/[\u0E00-\u0E7F]/.test(ip3.value))
   {
     rec1.textContent = ip3.value;
   	rec.textContent = ip3.value;
