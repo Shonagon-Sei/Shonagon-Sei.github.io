@@ -130,8 +130,10 @@ ip3.addEventListener('input', function() {
     rec1.style.fontFamily = 'cslr'
     rec.style.transform = 'translate(242.75px, -21px)'
     rec.style.fontFamily = 'cslr'
+    
     rec1.style.fontSize = '9px'
-    rec.styke.fontSize = '9px'
+    rec.style.fontSize = '9px'
+    
   	var enrace1 = document.getElementById('enrec');
   	var enraceinner1 = document.getElementById('enrec1');
   	enrace1.textContent = ip3.value;
@@ -141,6 +143,7 @@ ip3.addEventListener('input', function() {
     enrace1.style.fontFamily = 'cslr'
     enraceinner1.style.transform = 'translate(275.75px, -20px)'
     enraceinner1.style.fontFamily = 'cslr'
+    
     enrace1.style.fontSize = '8px'
     enraceinner1.style.fontSize = '8px'
   }
