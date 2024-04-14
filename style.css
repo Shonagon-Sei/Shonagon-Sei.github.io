@@ -319,7 +319,7 @@ option.zoo{
 }
 
 .encounter-clan, .dnf,
-.dns, .dnfflag, .dnsflag{
+.dns, .dnfflag, .dnsflag, .dnfgrade, .dnsgrade{
   display: none;
 }
 
