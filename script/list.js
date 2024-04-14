@@ -3,6 +3,7 @@
 function typeSet() {
   var type = document.getElementById('cts');
   var nation = document.getElementById('ns');
+  var nslab = document.getElementById('nslab');
   var image = document.getElementById('gn');
 
   var fimage = document.getElementById('dnf');
@@ -42,6 +43,9 @@ function typeSet() {
 
   var se = document.getElementById('nub');
   var nuborder = document.getElementById('nubo');
+
+  var ip2 = document.getElementById('cn');
+
   
   type.addEventListener('change', update);
   nation.addEventListener('change', update);
@@ -175,8 +179,12 @@ function typeSet() {
       clan.style.display = 'none'
       clanlabel.style.display = 'none'
       enrace1.style.display = 'none'
-      enraceinner1.style.display = 'none'  
+      enraceinner1.style.display = 'none'
       var src_ = "assets/" + select2 + select1 + ".png";
+      if (/[\u0E00-\u0E7F]/.test(ip2.value)){
+        var src_ = "assets/TH/" + select2 + select1 + ".png";
+      }
+      
       image.src = src_;
     }
 
@@ -188,7 +196,8 @@ function typeSet() {
       fsimage.style.display = 'flex'
       fselect.style.display = 'flex'
       sselect.style.display = 'flex'
-      
+      nation.style.display = 'none'
+      nslab.style.display = 'none'
       fimage.src = `assets/dual nation/f${fselect.value}.png`
       simage.src = `assets/dual nation/s${sselect.value}.png`
       ffimage.src = `assets/dual nation/flag/f${fselect.value}.png`
@@ -205,7 +214,9 @@ function typeSet() {
       ffimage.style.display = 'none'
       fsimage.style.display = 'none'
       fselect.style.display = 'none'
-      sselect.style.display = 'none'    
+      sselect.style.display = 'none'
+      nation.style.display = 'flex'
+      nslab.style.display = 'flex'    
     }
     
     grade.style.display = tri1;
@@ -230,6 +241,13 @@ window.addEventListener('DOMContentLoaded', function() {
   function update() {
     var select = cri.value;
     var src_ = "assets/" + select + ".png";
+
+    if (/[\u0E00-\u0E7F]/.test(ip2.value)){
+      src_ = "assets/TH/" + select + ".png"
+      image.style.transform = 'translate(0, 0)'
+    }else{
+      image.style.transform = 'translate(0, -2px)'
+    }
     image.src = src_;
   }
 });
@@ -312,6 +330,13 @@ window.addEventListener('DOMContentLoaded', function() {
       src_ = "assets/twd.png";
       src__ = "assets/psr.png";
     }
+
+    if (/[\u0E00-\u0E7F]/.test(ip2.value)){
+      _src_ = _src_.slice(0, 7) + "TH/" + _src_.slice(7)
+      src_ = src_.slice(0, 7) + "TH/" + src_.slice(7)
+      src__ = src__.slice(0, 7) + "TH/" + src__.slice(7)
+    }
+
     image1.src = _src_;
     image.src = src_;
     image2.src = src__;

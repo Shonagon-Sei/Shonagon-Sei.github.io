@@ -50,6 +50,16 @@ var clan = document.getElementById('cl')
 ip1.addEventListener('input', function() {
   pw.textContent = ip1.value;
   pw1.textContent = ip1.value;  
+  if (/[\u0E00-\u0E7F]/.test(ip2.value))
+  {
+    pw.style.transform = 'translate(83px, 0px) skewX(-13deg)'
+    pw1.style.transform = 'translate(83px, 0px) skewX(-13deg)'
+  }
+  else{
+    pw.style.transform = 'translate(83px, -2px) skewX(-13deg)'
+    pw.style.transform = 'translate(83px, -2px) skewX(-13deg)'
+  }
+  
 });
 
 //Card Name | Update//
@@ -71,7 +81,7 @@ ip2.addEventListener('input', function() {
 
 		cn.style.fontFamily = 'pslxol'
     cn.style.fontSize = '24px'
-  	cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 0px) skewX(-13deg)";
+  	cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-13deg)";
   	cn.style.width = scl + "px";
     cn_.style.tranform = 'translate(0, -53)';
     
@@ -94,12 +104,23 @@ ip2.addEventListener('input', function() {
     cno.style.width = scl + "px";
     console.log(tpx_);
   }
+  ip1.dispatchEvent(new Event('input'));
+      ip3.dispatchEvent(new Event('input'));
+      ip4.dispatchEvent(new Event('input'));
+      teb.dispatchEvent(new Event('input'));
+      
+      var types = document.getElementById('cts');
+      types.dispatchEvent(new Event('change'))
+      var criss = document.getElementById('c');
+      criss.dispatchEvent(new Event('change'))      
+      var gradess = document.getElementById('g');
+      gradess.dispatchEvent(new Event('change'))
 });
 
 //Race | Update//
 ip3.addEventListener('input', function() {
   
-  if (/[\u0E00-\u0E7F]/.test(ip3.value))
+  if (/[\u0E00-\u0E7F]/.test(ip2.value))
   {
     rec1.textContent = ip3.value;
   	rec.textContent = ip3.value;
@@ -147,7 +168,7 @@ ip3.addEventListener('input', function() {
     enrace1.style.fontSize = '8px'
     enraceinner1.style.fontSize = '8px'
   }
-  
+    
 });
 
 //Card Effect | Update//
@@ -320,7 +341,7 @@ teb.addEventListener('input', function() {
   
 
   //【
-  ;
+  
   
   effect = effect.replaceAll('/i', '<span class=\'italic\'>(');
   effect = effect.replaceAll('i/', ')</span>');
@@ -368,7 +389,15 @@ teb.addEventListener('input', function() {
   
   }
   
-
+  if (/[\u0E00-\u0E7F]/.test(ip2.value))
+  {
+    se.style.fontFamily = 'pslxim'
+    se.style.fontSize = '18px'
+  }
+  else{
+    se.style.fontFamily = 'cslb'
+    se.style.fontSize = '12px'
+  }
 
 });
 
@@ -418,7 +447,10 @@ ip4.addEventListener('input', function() {
   else if (sv < 0 ) {
     src = "assets/none_.png";
   }
+  if (/[\u0E00-\u0E7F]/.test(ip2.value)){
+    src = src.slice(0, 7) + "TH/" + src.slice(7)
 
+  }
   sh1.src = src;
   
 });
