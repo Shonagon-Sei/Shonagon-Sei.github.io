@@ -306,7 +306,7 @@ option.zoo{
 }
 
 .gn, .encounter-clan,.dnf,
-.dns, .dnfflag, .dnsflag{
+.dns, .dnfflag, .dnsflag, .dnfgrade, .dnsgrade{
   position: absolute;
   z-index: 3;
   display: flex;

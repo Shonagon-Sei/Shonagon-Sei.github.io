@@ -10,6 +10,8 @@ function typeSet() {
   var simage = document.getElementById('dns');
   var ffimage = document.getElementById('dnfflag');
   var fsimage = document.getElementById('dnsflag');
+  var gfimage = document.getElementById('dnfgrade');
+  var gsimage = document.getElementById('dnsgrade');
 
   var fselect = document.getElementById('fns');
   var sselect = document.getElementById('sns');
@@ -194,6 +196,8 @@ function typeSet() {
       simage.style.display = 'flex'
       ffimage.style.display = 'flex'
       fsimage.style.display = 'flex'
+      gfimage.style.display = 'flex'
+      gsimage.style.display = 'flex'
       fselect.style.display = 'flex'
       sselect.style.display = 'flex'
       nation.style.display = 'none'
@@ -202,6 +206,8 @@ function typeSet() {
       simage.src = `assets/dual nation/s${sselect.value}.png`
       ffimage.src = `assets/dual nation/flag/f${fselect.value}.png`
       fsimage.src = `assets/dual nation/flag/s${sselect.value}.png`
+      gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
+      gsimage.src = `assets/dual nation/grade/s${sselect.value}.png`
       encounter.style.display = 'none'
       enc.style.display = 'none'
       encounter.checked = false
@@ -216,7 +222,9 @@ function typeSet() {
       fselect.style.display = 'none'
       sselect.style.display = 'none'
       nation.style.display = 'flex'
-      nslab.style.display = 'flex'    
+      nslab.style.display = 'flex'
+      gfimage.style.display = 'none'
+      gsimage.style.display = 'none'    
     }
     
     grade.style.display = tri1;
