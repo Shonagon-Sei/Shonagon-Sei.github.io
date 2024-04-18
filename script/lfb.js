@@ -613,6 +613,8 @@ function CCUExport(){
   replacedEffect = replacedEffect.replaceAll('7)', '7')
   replacedEffect = replacedEffect.replaceAll('8)', '8')
   replacedEffect = replacedEffect.replaceAll('9)', '9')
+  replacedEffect = replacedEffect.replaceAll('(', '[')
+  replacedEffect = replacedEffect.replaceAll(')', ']')
   replacedEffect = replacedEffect.replaceAll("'", '');
   replacedEffect = replacedEffect.replaceAll("/i", '(');
   replacedEffect = replacedEffect.replaceAll("i/", ')');
