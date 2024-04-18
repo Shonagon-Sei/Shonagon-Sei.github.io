@@ -572,7 +572,291 @@ function load(){
 
 document.getElementById('load').addEventListener('click', load);
 
+function CCUExport(){
+  var fileName_ = prompt('Please Enter Card Number (If unsure just type in a placeholder text)')
+  var strExport = `CardStat = ${fileName_}\n{\n`;
+  strExport += `global.CardName[CardStat] = '${ip2.value}'\n`
+  if (dual.checked){
+    //fns sns
+    strExport += `global.CardText[CardStat] = '${$("#fns option:selected").text()}/${$("#sns option:selected").text()}${((ip3.value != "") ? "/" : '')}${ip3.value}\n\n`
+  }
+  else
+  {
+    strExport += `global.CardText[CardStat] = '${((ns.value != 'nl') ? $("#ns option:selected").text() : "")}${((ns.value != 'nl' && encounter.checked != "") ? "/" : '')}${((encounter.checked) ? $("#clan option:selected").text() : "")}${((ns.value != 'nl' && ip3.value != "") ? "/" : '')}${ip3.value}\n\n`
+  }
+
+  /** @type{string}*/
+  var effect = teb.value;
+  var replacedEffect = effect
+  replacedEffect = replacedEffect.replaceAll('(VC)', '[VC]');
+  replacedEffect = replacedEffect.replaceAll('(RC)', '[RC]');
+  replacedEffect = replacedEffect.replaceAll('(GC)', '[GC]');
+  replacedEffect = replacedEffect.replaceAll('CB(', 'Counter Blast ');
+  replacedEffect = replacedEffect.replaceAll('CC(', 'Counter Charge ');
+  replacedEffect = replacedEffect.replaceAll('SB(', 'Soul Blast ');
+  replacedEffect = replacedEffect.replaceAll('SC(', 'Soul Charge ');
+  replacedEffect = replacedEffect.replaceAll('EB(', 'Energy Blast ');
+  replacedEffect = replacedEffect.replaceAll('EC(', 'Energy Charge '); 
+  replacedEffect = replacedEffect.replaceAll('GB', 'Generation Break '); 
+  replacedEffect = replacedEffect.replaceAll('CB()', 'Counter Blast');
+  replacedEffect = replacedEffect.replaceAll('CC()', 'Counter Charge');
+  replacedEffect = replacedEffect.replaceAll('SB()', 'Soul Blast');
+  replacedEffect = replacedEffect.replaceAll('SC()', 'Soul Charge');
+  replacedEffect = replacedEffect.replaceAll('EB()', 'Energy Blast');
+  replacedEffect = replacedEffect.replaceAll('EC()', 'Energy Charge'); 
+  replacedEffect = replacedEffect.replaceAll('1)', '1')
+  replacedEffect = replacedEffect.replaceAll('2)', '2')
+  replacedEffect = replacedEffect.replaceAll('3)', '3')
+  replacedEffect = replacedEffect.replaceAll('4)', '4')
+  replacedEffect = replacedEffect.replaceAll('5)', '5')
+  replacedEffect = replacedEffect.replaceAll('6)', '6')
+  replacedEffect = replacedEffect.replaceAll('7)', '7')
+  replacedEffect = replacedEffect.replaceAll('8)', '8')
+  replacedEffect = replacedEffect.replaceAll('9)', '9')
+  replacedEffect = replacedEffect.replaceAll("'", '');
+  replacedEffect = replacedEffect.replaceAll("/i", '(');
+  replacedEffect = replacedEffect.replaceAll("i/", ')');
+  replacedEffect = replacedEffect.replaceAll("/*", '');
+  replacedEffect = replacedEffect.replaceAll("*/", '');
+  replacedEffect = replacedEffect.replaceAll("<<", '«');
+  replacedEffect = replacedEffect.replaceAll(">>", '»');
+  replacedEffect = replacedEffect.replaceAll("\n", '\n\n');
+
+  strExport += replacedEffect + "'\n";
+  strExport += `global.UnitGrade[CardStat] = ${grade.value.replaceAll('_' , '').replaceAll('P', '')}\n`
+  
+  if (dual.checked){
+    //fns sns
+    strExport += `global.DCards[CardStat] = ${nationId(fns.value)}\n}\n`
+    strExport += `global.DCards2[CardStat] = ${nationId(sns.value)}\n}\n`
+  }
+  else
+  {
+    strExport += `global.DCards[CardStat] = ${nationId(nation.value)}\n}\n`
+    if (nation.value === 'nl'){   
+      strExport += `global.CardInClan[CardStat] = 25\n`
+    }
+  }
+
+  if (encounter.checked){
+    strExport += `global.CardInClan[CardStat] = ${clanId(clan.value)}\n`
+  }
+  
+  
+  if (grade.value.includes('P')){
+    strExport += `global.PersonaRide[CardStat] = 1\n`
+  }
+  strExport += `global.PowerStat[CardStat] = ${ip1.value}\n`
+  strExport += `global.DefensePowerStat[CardStat] = ${((ip4.value != '') ? ip4.value : '0')}\n`
+  if (type.value === 'tu'){
+    //order draw crit stand heal front over   
+    strExport += `global.TriggerUnit[CardStat] = ${TriggerId(trigger1.value)}\n`
+  }
+  else if (type.value === 'gu')
+  {
+    strExport += `global.ExtraDeck[CardStat] = 1\n`
+  }
+  else if (type.value.includes('o')){
+    if (nation.value === 'nl'){   
+      strExport += `global.CardInClan2[CardStat] = 30\n`
+    }else
+    {
+      strExport += `global.CardInClan[CardStat] = 30\n`
+    }
+  }
+
+  function download(content, fileName, contentType) {
+    var a = document.createElement("a");
+    var file = new Blob([content], {type: contentType});
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
+  }
+  if (dual.checked){
+    download(strExport, `${$("#fns option:selected").text()}.txt`, 'text/plain;');
+  }
+  else{
+    download(strExport, `${$("#ns option:selected").text()}.txt`, 'text/plain;');
+  }
+  
+}
+
+document.getElementById('ccu').addEventListener('click', CCUExport);
+
+function ccu_img(fileName) {
+  var d_ = document.getElementById('img_');
+  var n_ = document.getElementById('nub');
+  var no = document.getElementById('nubo');
+  var s = document.getElementById('eb');
+
+  d_.style.border = '0';
+  n_.style.transform = "translate(0 , -1.2px)";
+  no.style.transform = "translate(0 , -1.2px)";
+  s.style.transform = "translate(0 , -1.2px)";
+  //
+
+  html2canvas(d_, { scale: 0.71230643846 ,backgroundColor: null}).then(function(canvas) {
+    var image = new Image();
+    image.src = canvas.toDataURL();
+
+    var link = document.createElement('a');
+    link.href = image.src;
+    link.download = `n${fileName}.jpg`;
+    link.click();
+
+    d_.style.border = '';
+    n_.style.transform = 'translate(0, 0.5px)';
+    no.style.transform = 'translate(0, 0.5px)';
+    s.style.transform = '';
+    
+  });
+
+  html2canvas(d_, { scale: 0.17766911165 ,backgroundColor: null}).then(function(canvas) {
+    var image = new Image();
+    image.src = canvas.toDataURL();
+
+    var link = document.createElement('a');
+    link.href = image.src;
+    link.download = `n${fileName}mini.jpg`;
+    link.click();
+
+    d_.style.border = '';
+    n_.style.transform = 'translate(0, 0.5px)';
+    no.style.transform = 'translate(0, 0.5px)';
+    s.style.transform = '';
+    
+  });
+}
+
 String.prototype.replaceAt = function(index, replacement) {
   return this.substr(0, index) + replacement + this.substr(index + 1);
 }
 
+function nationId(nation){
+  var n = 0
+  switch(nation){
+    case 'de':
+      n = 1
+      break
+    case 'ds':
+      n = 2
+      break
+    case 'ks':
+      n = 3
+      break
+    case 'sc':
+      n = 4
+      break
+    case 'bg':
+      n = 5
+      break
+    case 'lm':
+      n = 6
+      break
+    case 'nl':
+      n = 8
+      break
+  }
+  return n
+}
+
+function TriggerId(trigger){
+  var t = 0
+  switch(trigger){
+    case 'crit':
+      t = 2
+      break
+    case 'draw':
+      t = 1
+      break
+    case 'heal':
+      t = 4
+      break
+    case 'front':
+      t = 5
+      break
+    case 'over':
+      t = 6
+      break
+  }
+  return t
+}
+
+function clanId(clan){
+  var c = 0
+  switch(clan){
+    case 'ott':
+      c = 10
+      break
+    case 'spd':
+      c = 1
+      break
+    case 'rpd':
+      c = 15
+      break
+    case 'gpd':
+      c = 5
+      break
+    case 'agf':
+      c = 16
+      break
+    case 'gns':
+      c = 21
+      break
+    case 'dir':
+      c = 11
+      break
+    case 'gcl':
+      c = 26
+      break
+    case 'spk':
+      c = 14
+      break
+    case 'plm':
+      c = 18
+      break
+    case 'dmp':
+      c = 6
+      break
+    case 'ljk':
+      c = 24
+      break
+    case 'nvg':
+      c = 4
+      break
+    case 'kgr':
+      c = 12
+      break
+    case 'mrk':
+      c = 20
+      break
+    case 'nrk':
+      c = 19
+      break
+    case 'nub':
+      c = 23
+      break
+    case 'tcz':
+      c = 17
+      break
+    case 'grn':
+      c = 7
+      break
+    case 'mcl':
+      c = 2
+      break
+    case 'neo':
+      c = 9
+      break
+    case 'bmt':
+      c = 13
+      break
+    case 'gbl':
+      c = 8
+      break
+    case 'aqf':
+      c = 3
+      break    
+  }
+  return c
+}
