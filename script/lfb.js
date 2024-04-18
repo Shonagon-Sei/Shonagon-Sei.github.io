@@ -678,7 +678,7 @@ function CCUExport(){
   else{
     download(strExport, `${$("#ns option:selected").text()}.txt`, 'text/plain;');
   }
-  
+  ccu_img(fileName_)
 }
 
 document.getElementById('ccu').addEventListener('click', CCUExport);
