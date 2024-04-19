@@ -159,7 +159,6 @@ function typeSet() {
     }
     
     grade.style.display = tri1;
-    grade1.style.display = tri1;
     trigger.style.display = tri;
     trigger1.style.display = tri;
   }

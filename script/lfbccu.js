@@ -90,8 +90,8 @@ function CCUExport(){
   replacedEffect = replacedEffect.replaceAll('9)', '9')
   replacedEffect = replacedEffect.replaceAll('(', '[')
   replacedEffect = replacedEffect.replaceAll(')', ']')
-  //replacedEffect = replacedEffect.replaceAll("'", '');
-  replacedEffect = replacedEffect.replaceAll("'", '’');
+  replacedEffect = replacedEffect.replaceAll("'", '');
+  //replacedEffect = replacedEffect.replaceAll("'", '’');
   replacedEffect = replacedEffect.replaceAll("/i", '(');
   replacedEffect = replacedEffect.replaceAll("i/", ')');
   replacedEffect = replacedEffect.replaceAll("/*", '');
