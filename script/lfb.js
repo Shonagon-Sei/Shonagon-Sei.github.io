@@ -1,4 +1,4 @@
-import * as windows1251 from 'windows-1251.mjs';
+import * as windows1251 from './windows-1251.mjs';
 /// <reference lib="es2021" />
 //Input//
 var ip1 = document.getElementById('power');
