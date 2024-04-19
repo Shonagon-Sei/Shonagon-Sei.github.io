@@ -1,3 +1,4 @@
+import * as windows1251 from 'windows-1251.mjs';
 /// <reference lib="es2021" />
 //Input//
 var ip1 = document.getElementById('power');
@@ -666,6 +667,8 @@ function CCUExport(){
       strExport += `global.CardInClan[CardStat] = 30\n`
     }
   }
+
+  windows1251.encode(strExport);
 
   function download(content, fileName, contentType) {
     var a = document.createElement("a");
