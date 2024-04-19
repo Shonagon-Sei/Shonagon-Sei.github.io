@@ -668,7 +668,7 @@ function CCUExport(){
     }
   }
 
-  windows1251.encode(strExport);
+  var test = windows1251.encode(strExport);
 
   function download(content, fileName, contentType) {
     var a = document.createElement("a");
@@ -678,10 +678,10 @@ function CCUExport(){
     a.click();
   }
   if (dual.checked){
-    download(strExport, `${$("#fns option:selected").text()}.txt`, 'text/plain;');
+    download(test, `${$("#fns option:selected").text()}.txt`, 'text/plain;charset=windows-1251');
   }
   else{
-    download(strExport, `${$("#ns option:selected").text()}.txt`, 'text/plain;');
+    download(test, `${$("#ns option:selected").text()}.txt`, 'text/plain;charset=windows-1251');
   }
   ccu_img(fileName_)
 }
