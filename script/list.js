@@ -245,7 +245,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var image = document.getElementById('crs');
   
   cri.addEventListener('change', update);
-  
+  var ip2 = document.getElementById('cn');
   function update() {
     var select = cri.value;
     var src_ = "assets/" + select + ".png";
@@ -289,6 +289,7 @@ window.addEventListener('DOMContentLoaded', function() {
     var src_ = "";
     var src__ = "assets/none_.png";
     var ty = type.value;
+    var ip2 = document.getElementById('cn');
 
     if (select === "_0") {
       src_ = "assets/bts.png";

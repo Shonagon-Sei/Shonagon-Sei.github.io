@@ -1,4 +1,4 @@
-import * as windows1251 from './windows-1251.mjs';
+//import * as windows1251 from './windows-1251.mjs';
 /// <reference lib="es2021" />
 //Input//
 var ip1 = document.getElementById('power');
@@ -75,6 +75,7 @@ ip2.addEventListener('input', function() {
     scl = 250 + (tpx - 200)/.4
     _sc_ = 1.08 - tpx_;
   }
+
 
 	if (/[\u0E00-\u0E7F]/.test(ip2.value))
   {
@@ -616,7 +617,8 @@ function CCUExport(){
   replacedEffect = replacedEffect.replaceAll('9)', '9')
   replacedEffect = replacedEffect.replaceAll('(', '[')
   replacedEffect = replacedEffect.replaceAll(')', ']')
-  replacedEffect = replacedEffect.replaceAll("'", '');
+  //replacedEffect = replacedEffect.replaceAll("'", '');
+  replacedEffect = replacedEffect.replaceAll("'", '’');
   replacedEffect = replacedEffect.replaceAll("/i", '(');
   replacedEffect = replacedEffect.replaceAll("i/", ')');
   replacedEffect = replacedEffect.replaceAll("/*", '');
@@ -668,8 +670,9 @@ function CCUExport(){
     }
   }
 
-  var test = windows1251.encode(strExport);
-
+  //var test = windows1251.encode(strExport);
+  //var test = encode(strExport);
+  var test = strExport
   function download(content, fileName, contentType) {
     var a = document.createElement("a");
     var file = new Blob([content], {type: contentType});
@@ -678,10 +681,10 @@ function CCUExport(){
     a.click();
   }
   if (dual.checked){
-    download(test, `${$("#fns option:selected").text()}.txt`, 'text/plain;charset=windows-1251');
+    download(test, `${$("#fns option:selected").text()}.txt`, 'text/plain');
   }
   else{
-    download(test, `${$("#ns option:selected").text()}.txt`, 'text/plain;charset=windows-1251');
+    download(test, `${$("#ns option:selected").text()}.txt`, 'text/plain');
   }
   ccu_img(fileName_)
 }
@@ -865,3 +868,4 @@ function clanId(clan){
   }
   return c
 }
+
