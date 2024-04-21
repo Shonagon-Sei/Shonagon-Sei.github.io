@@ -221,11 +221,16 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('Over Trigger', '<span class=\'image-wrapper\'><img src=\'assets/Trigger Over mini icon.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
 
   //Specific
-  effect = effect.replaceAll('Regalis Piece', '<span class=\'image-wrapper\'><img src=\'assets/Regalis Piece Icon.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('Regalis Piece', '<span class=\'image-wrapper\'><img src=\'assets/Regalis Piece Icon.png\' alt=\'Image\' class=\'mskill\' id=\'auto\'></span>');
   effect = effect.replaceAll('Revoldress', '<span class=\'image-wrapper\'><img src=\'assets/RevolDress Icon.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
-  effect = effect.replaceAll('Overdress', '<span class=\'image-wrapper\'><img src=\'assets/o-Dress icon EN.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
-  effect = effect.replaceAll('Divine Skill', '<span class=\'image-wrapper\'><img src=\'assets/Divine.png\' alt=\'Image\' class=\'mskill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('Overdress', '<span class=\'image-wrapper\'><img src=\'assets/o-Dress icon EN.png\' alt=\'Image\' class=\'sskill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('Divine Skill', '<span class=\'image-wrapper\'><img src=\'assets/Divine.png\' alt=\'Image\' class=\'divine\' id=\'auto\'></span>');
   effect = effect.replaceAll('Stride', '<span class=\'image-wrapper\'><img src=\'assets/Stride EN.png\' alt=\'Image\' class=\'mskill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('Xodress', '<span class=\'image-wrapper\'><img src=\'assets/xodress.png\' alt=\'Image\' class=\'sskill\' id=\'auto\'></span>')
+  effect = effect.replaceAll('Glitter', '<span class=\'image-wrapper\'><img src=\'assets/glitter.png\' alt=\'Image\' class=\'mskill\' id=\'auto\'></span>')
+  effect = effect.replaceAll('Unisondress', '<span class=\'image-wrapper\'><img src=\'assets/Unison.png\' alt=\'Image\' class=\'bskill\' id=\'auto\'></span>')
+  effect = effect.replaceAll('Dressboost', '<span class=\'image-wrapper\'><img src=\'assets/dressboost.png\' alt=\'Image\' class=\'sskill\' id=\'auto\'></span>')
+
 
   //Power Shield Critical
   var encounter = document.getElementById('enc');
@@ -245,80 +250,80 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('VC', '<span class=\'image-wrapper\'><img src=\'assets/VC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('RC', '<span class=\'image-wrapper\'><img src=\'assets/RC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
   effect = effect.replaceAll('GC', '<span class=\'image-wrapper\'><img src=\'assets/GC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('COST', '<span class=\'image-wrapper\'><img src=\'assets/COST.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('COST', '<span class=\'image-wrapper\'><img src=\'assets/COST.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
 
 
-  effect = effect.replaceAll('EB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB6.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB2.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB3.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB4.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB5.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB6.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB7.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB8.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB9.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EB.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
   
-  effect = effect.replaceAll('EC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC6.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('EC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC2.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC3.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC4.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC5.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC6.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC7.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC8.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC9.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('EC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/EC.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
   
-  effect = effect.replaceAll('CB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CB(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CB(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB2.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB3.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CB(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB4.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CB(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB5.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CB.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
   
-  effect = effect.replaceAll('CC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CC(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CC(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC2.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC3.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CC(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC4.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CC(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC5.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/CC.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
   
-  effect = effect.replaceAll('SB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB6.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB2.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB3.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB4.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB5.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB6.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB7.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB8.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB9.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
   
-  effect = effect.replaceAll('SC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC6.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC9.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('SC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(1)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(2)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC2.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(3)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC3.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(4)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC4.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(5)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC5.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(6)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC6.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC7.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC8.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC9.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
-  effect = effect.replaceAll('GB1', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB1.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('GB2', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB2.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('GB3', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB3.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('GB4', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB4.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('GB5', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB5.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('GB6', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB6.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('GB7', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB7.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
-  effect = effect.replaceAll('GB8', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB8.png\' alt=\'Image\' class=\'circle\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB1', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB2', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB2.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB3', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB3.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB4', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB4.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB5', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB5.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB6', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB6.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB7', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB7.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('GB8', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB8.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
 
 
   effect = effect.replaceAll('/*', '<span class=\'red-text\'>');

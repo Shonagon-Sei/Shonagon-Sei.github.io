@@ -211,6 +211,18 @@ option.zoo{
   outline: none;
 }
 
+.sskill{
+  height:13px;
+  margin-left: 1px;
+  margin-right: 1px;
+  /*transform: translate(0, 2px);*/
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:bottom;
+  top:0; 
+  left:0;
+}
+
 .skill{
   height:15px;
   margin-left: 1px;
@@ -224,9 +236,36 @@ option.zoo{
 }
 
 .mskill{
-  height:15.8px;
+  height:18px;
+  margin-top: -1.2px;
+  margin-bottom: -1.2px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:bottom;
+  top:0; 
+  left:0;
+}
+
+.bskill{
+  height:22px;
   margin-left: 1px;
   margin-right: 1px;
+  margin-top: -3.6px;
+  margin-bottom: -3.6px;
+  /*transform: translate(0, 2px);*/
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:bottom;
+  top:0; 
+  left:0;
+}
+
+.divine{
+  height:26px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: -5.6px;
+  margin-bottom: -5.6px;
   /*transform: translate(0, 2px);*/
   padding-top: 0px;
   padding-bottom: 0px;
@@ -263,10 +302,9 @@ option.zoo{
 }
 
 .circle{
-  height:15.8px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  /*transform: translate(0, 2px);*/
+  height:18px;
+  margin-top: -1.2px;
+  margin-bottom: -1.2px;
   padding-top: 0px;
   padding-bottom: 0px;
   vertical-align:bottom;
