@@ -175,7 +175,7 @@ function ccu_img(fileName) {
 
   html2canvas(d_, { scale: 0.71230643846 ,backgroundColor: null}).then(function(canvas) {
     var image = new Image();
-    image.src = canvas.toDataURL();
+    image.src = canvas.toDataURL('image/jpeg');
 
     var link = document.createElement('a');
     link.href = image.src;
@@ -189,7 +189,7 @@ function ccu_img(fileName) {
 
   html2canvas(d_, { scale: 0.17766911165 ,backgroundColor: null}).then(function(canvas) {
     var image = new Image();
-    image.src = canvas.toDataURL();
+    image.src = canvas.toDataURL('image/jpeg');
 
     var link = document.createElement('a');
     link.href = image.src;
