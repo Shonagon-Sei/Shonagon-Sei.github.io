@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  font-family: bds;
+  src: url("fonts/BodrumSoft-15Medium.ttf");
+}
+
+@font-face {
   src: url("fonts/zh-cn.ttf");
   font-family: zc;
 }
@@ -541,6 +546,46 @@ option.zoo{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.nub .note {
+  font-family: bds;
+  position: absolute;
+  font-size: 8px;
+  align-self: center;
+  
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nub .set {
+  font-family: bds;
+  position: absolute;
+  font-size: 9px;
+  align-self:flex-start;
+  transform: translate(25px, -8px);
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.nub .illust {
+  font-family: bds;
+  position: absolute;
+  font-size: 9px;
+  align-self: flex-end;
+  transform: translate(-12px, -8px);
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .nub .pw1 {

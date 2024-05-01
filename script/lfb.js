@@ -7,6 +7,13 @@ var ip3 = document.getElementById('race');
 var ip4 = document.getElementById('shield');
 var teb = document.getElementById('teb');
 var nation = document.getElementById('ns');
+
+var ipillust = document.getElementById('il');
+var ipset = document.getElementById('s');
+
+var illust = document.getElementById('illust');
+var set = document.getElementById('set');
+
 //Effect//
 var se = document.getElementById('se');
 var se1 = document.getElementById('se_');
@@ -61,6 +68,15 @@ ip1.addEventListener('input', function() {
     pw.style.transform = 'translate(83px, -2px) skewX(-13deg)'
   }
   
+});
+
+//Set and Illust | Update//
+ipset.addEventListener('input', function() {
+  set.textContent = ipset.value;   
+});
+
+ipillust.addEventListener('input', function() {
+  illust.textContent = "Illust / " + ipillust.value;   
 });
 
 //Card Name | Update//
