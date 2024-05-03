@@ -37,6 +37,7 @@
         <img class="sh" id='sh' src="assets/none_.png">
         <img class="trigger" id="trigger" src="assets/none_.png">
         <img class="frame" id="frame" src="assets/none_.png">
+        <img class="flavorFrame" id="flavorFrame" src="assets/none_.png">
         
         <div class="nub" id="nub">
           <div class="se_" id="se_">
@@ -55,7 +56,10 @@
           <p class="enrec" id="enrec">Card Race</p>
           <p class="pw1" id="pw1">0</p>
           <p class="pw" id="pw">0</p>
+          <p class="flavortext" id="flavortext"></p>
+          
           <p class="note" id="note">This is a Fanmade card. NOT FOR SALE</p>
+          
           <p class="set" id="set"></p>
           <p class="illust" id="illust">Illust / </p>
         </div>
@@ -300,8 +304,8 @@
           <label>Card Name</label>
           <input type="text" id="cn" class="cn" placeholder="Card Name"></textarea>
 
-          <label>Flavor (Not Working Yet)</label>
-          <input type="text" class="flb" placeholder="Work In Progress"></textarea>
+          <label>Flavor (Only for non Encounters Units)</label>
+          <textarea type="text" class="flb" id="flb" placeholder="Flavor"></textarea>
 
           <label>Ability</label>
           <textarea type="text" id="teb" class="teb" placeholder="Card Effect"></textarea>

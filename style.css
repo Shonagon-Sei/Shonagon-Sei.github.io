@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  src: url("fonts/FTLTLT.TTF");
+  font-family: FTL;
+}
+
+@font-face {
   font-family: bds;
   src: url("fonts/BodrumSoft-15Medium.ttf");
 }
@@ -361,6 +366,36 @@ option.zoo{
   user-select: none;
 }
 
+.flavorFrame{
+  position: absolute;
+  width: 400px;
+  transform: translate(0, 200px);
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+
+.nub .flavortext {
+  font-family: ftl;
+  position: absolute;
+  max-width: fit-content;
+  font-size: 16px;
+  line-height: 16px;
+  align-self: center;
+  paint-order: stroke fill;
+  transform: translate(0px, -100px);
+  color: #000;
+  -webkit-text-stroke: 1.5px #fff;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+
 .encounter-clan, .dnf,
 .dns, .dnfflag, .dnsflag, .dnfgrade, .dnsgrade{
   display: none;
@@ -547,6 +582,8 @@ option.zoo{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+
 
 .nub .note {
   font-family: bds;

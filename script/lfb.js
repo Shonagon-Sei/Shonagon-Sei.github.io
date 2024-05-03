@@ -10,9 +10,13 @@ var nation = document.getElementById('ns');
 
 var ipillust = document.getElementById('il');
 var ipset = document.getElementById('s');
+var ipflavor = document.getElementById('flb');
+
 
 var illust = document.getElementById('illust');
 var set = document.getElementById('set');
+var flavor = document.getElementById('flavorFrame')
+var flavText = document.getElementById('flavortext')
 
 //Effect//
 var se = document.getElementById('se');
@@ -79,6 +83,81 @@ ipillust.addEventListener('input', function() {
   illust.textContent = "Illust / " + ipillust.value;   
 });
 
+ipflavor.addEventListener('input', function() {
+  const linesCount = Math.round((se.offsetHeight / 16));
+  flavText.textContent = ipflavor.value;
+
+  var list = []
+  for (i of ipflavor.value.split('\n')){
+    list.push(i)
+  }
+
+  const textLegnth = Math.ceil(getTextWidth(list.reduce(
+    function (a, b) {
+        return a.length > b.length ? a : b;
+    }), "16px FTL") / 100);
+
+  const linesofFlav = Math.round((flavText.offsetHeight / 16));
+
+  if (linesofFlav == 1){
+    switch(textLegnth){
+      case 0:
+        flavor.src = "assets/none_.png";
+        break;
+      case 1:
+        flavor.src = "assets/flavor/Sflavor.png";
+        break;
+      case 2:
+        flavor.src = "assets/flavor/Mflavor.png";
+        break;
+      case 3:
+        flavor.src = "assets/flavor/Bflavor.png";
+        break;
+    }
+  
+    if (linesCount >= 1){
+      flavor.style.transform = `translate(0, ${(185 - (linesCount * 16))}px)`  
+      flavText.style.transform = `translate(0, ${(-115 - (linesCount * 16))}px)`
+    }
+    else{
+      flavor.style.transform = `translate(0, 200px)`  
+      flavText.style.transform = `translate(0, -100px)`
+    }
+  }
+  else{
+    switch(textLegnth){
+      case 0:
+        flavor.src = "assets/none_.png";
+        break;
+      case 1:
+        flavor.src = "assets/flavor/2Sflavor.png";
+        break;
+      case 2:
+        flavor.src = "assets/flavor/2Mflavor.png";
+        break;
+      case 3:
+        flavor.src = "assets/flavor/2Bflavor.png";
+        break;
+    }
+  
+    if (linesCount >= 1){
+      flavor.style.transform = `translate(0, ${(177 - (linesCount * 16))}px)`  
+      flavText.style.transform = `translate(0, ${(-115 - (linesCount * 16))}px)`
+    }
+    else{
+      flavor.style.transform = `translate(0, 192px)`  
+      flavText.style.transform = `translate(0, -100px)`
+    }
+  }
+
+  
+
+  //138 and 212
+  //ratio 2460 to 600
+
+  //flavor.src   
+});
+
 //Card Name | Update//
 ip2.addEventListener('input', function() {
   var tpx = ip2.value.length * 8;
@@ -101,7 +180,7 @@ ip2.addEventListener('input', function() {
     cn.style.fontSize = '24px'
   	cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-13deg)";
   	cn.style.width = scl + "px";
-    cn_.style.tranform = 'translate(0, -53)';
+    cn_.style.transform = 'translate(0, -53)';
     
   	cno.textContent = ip2.value;
 
@@ -114,7 +193,7 @@ ip2.addEventListener('input', function() {
     cn.style.fontSize = '18px'
     cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
     cn.style.width = scl + "px";
-    cn_.style.tranform = 'translate(0, -55)';
+    cn_.style.transform = 'translate(0, -55)';
     
     cno.textContent = ip2.value;
   
@@ -372,7 +451,7 @@ teb.addEventListener('input', function() {
   se.innerHTML = effect;
   seo.innerHTML = effect;
   sec.innerHTML = effect;
-
+  
   var eb = document.getElementById('eb');
   var sp = document.getElementById('sp');
   if (sp.checked){
@@ -389,13 +468,15 @@ teb.addEventListener('input', function() {
     {
       const linesCount = Math.round((se.offsetHeight / 16))
     
-    if (encounter.checked){
-      eb.src = `assets/textbox/etextbox_${linesCount}.png`
-      se.style.color = "#FFFFFF"
-    }else{
-      eb.src = `assets/textbox/textbox_${linesCount}.png`
-      se.style.color = "#000000"
-    }
+      if (encounter.checked){
+        eb.src = `assets/textbox/etextbox_${linesCount}.png`
+        se.style.color = "#FFFFFF"
+      }
+      else{
+        eb.src = `assets/textbox/textbox_${linesCount}.png`
+        se.style.color = "#000000"
+
+      }
     
     }
     else if(type.value === 'gu')
@@ -403,13 +484,15 @@ teb.addEventListener('input', function() {
       const linesCount = Math.round((se.offsetHeight / 16));    
       eb.src = `assets/textbox/etextbox_${linesCount}.png`
       se.style.color = "#FFFFFF"
+
     }
     else
     {
       const linesCount = Math.round((seo.offsetHeight / 16));
       eb.src = `assets/textbox/otextbox_${linesCount}.png`
+
     }
-  
+    ipflavor.dispatchEvent(new Event('input'));
   }
   
   if (/[\u0E00-\u0E7F]/.test(ip2.value))
@@ -890,3 +973,23 @@ function clanId(clan){
   return c
 }
 
+function getTextWidth(text, font) {
+  // re-use canvas object for better performance
+  const canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
+  const context = canvas.getContext("2d");
+  context.font = font;
+  const metrics = context.measureText(text);
+  return metrics.width;
+}
+
+function getCssStyle(element, prop) {
+    return window.getComputedStyle(element, null).getPropertyValue(prop);
+}
+
+function getCanvasFont(el = document.body) {
+  const fontWeight = getCssStyle(el, 'font-weight') || 'normal';
+  const fontSize = getCssStyle(el, 'font-size') || '16px';
+  const fontFamily = getCssStyle(el, 'font-family') || 'Times New Roman';
+  
+  return `${fontWeight} ${fontSize} ${fontFamily}`;
+}
