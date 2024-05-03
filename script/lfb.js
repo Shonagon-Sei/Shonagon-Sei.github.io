@@ -114,6 +114,9 @@ ipflavor.addEventListener('input', function() {
         flavor.src = "assets/flavor/Bflavor.png";
         break;
     }
+    if (encounter.checked){
+      flavor.src = flavor.src.replace('flavor/', 'flavor/E')
+    }
   
     if (linesCount >= 1){
       flavor.style.transform = `translate(0, ${(185 - (linesCount * 16))}px)`  
@@ -140,6 +143,10 @@ ipflavor.addEventListener('input', function() {
         break;
     }
   
+    if (encounter.checked){
+      flavor.src = flavor.src.replace('flavor/', 'flavor/E')
+    }
+
     if (linesCount >= 1){
       flavor.style.transform = `translate(0, ${(177 - (linesCount * 16))}px)`  
       flavText.style.transform = `translate(0, ${(-115 - (linesCount * 16))}px)`
