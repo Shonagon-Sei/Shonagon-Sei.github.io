@@ -368,6 +368,7 @@ option.zoo{
 
 .flavorFrame{
   position: absolute;
+  z-index: 3;
   width: 400px;
   transform: translate(0, 200px);
   align-items: center;
