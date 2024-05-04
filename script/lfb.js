@@ -116,6 +116,11 @@ ipflavor.addEventListener('input', function() {
     }
     if (encounter.checked){
       flavor.src = flavor.src.replace('flavor/', 'flavor/E')
+      flavText.style.color = '#000'
+      flavText.style.webkitTextStroke = '1.5px #fff'
+    }else{
+      flavText.style.color = '#fff'
+      flavText.style.webkitTextStroke = '1.5px #000'
     }
   
     if (linesCount >= 1){
@@ -145,6 +150,11 @@ ipflavor.addEventListener('input', function() {
   
     if (encounter.checked){
       flavor.src = flavor.src.replace('flavor/', 'flavor/E')
+      flavText.style.color = '#000'
+      flavText.style.webkitTextStroke = '1.5px #fff'
+    }else{
+      flavText.style.color = '#fff'
+      flavText.style.webkitTextStroke = '1.5px #000'
     }
 
     if (linesCount >= 1){
@@ -575,7 +585,7 @@ class savefile{
     this.power
     this.type
     this.nation
-    this.shield
+    this.shields
     this.effect
     this.grade
     this.nation
@@ -586,6 +596,10 @@ class savefile{
     this.dual
     this.fnation
     this.snation
+    this.image
+    this.flavor
+    this.set
+    this.illust
   }
 }
 
@@ -605,6 +619,11 @@ function save() {
   save.fnation = fselect.value;
   save.snation = sselect.value;
   save.clan = clan.value;
+  save.set = ipset.value;
+  save.illust = ipillust.value;
+  save.flavor = ipflavor.value;
+  const image = document.getElementById('dpim');
+  save.image = image.src;
 
   var jsonData = JSON.stringify(save);
   var fileName_ = prompt('Please Enter File Name')
@@ -657,11 +676,22 @@ function load(){
       clan.value = savefiles.clan;
       fselect.value = savefiles.fnation;
       sselect.value = savefiles.snation;
+      ipflavor.value = savefiles.flavor;
+      ipset.value = savefiles.set;
+      ipillust.value = savefiles.illust;
+
+
+      const image = document.getElementById('dpim');
+      image.src = savefiles.image
+      image.style.height = "613.5px";
 
       ip1.dispatchEvent(new Event('input'));
       ip2.dispatchEvent(new Event('input'));
       ip3.dispatchEvent(new Event('input'));
       ip4.dispatchEvent(new Event('input'));
+      ipillust.dispatchEvent(new Event('input'));
+      ipset.dispatchEvent(new Event('input'));
+      ipflavor.dispatchEvent(new Event('input'));
       teb.dispatchEvent(new Event('input'));
       
       var types = document.getElementById('cts');

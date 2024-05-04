@@ -385,8 +385,8 @@ option.zoo{
   align-self: center;
   paint-order: stroke fill;
   transform: translate(0px, -100px);
-  color: #000;
-  -webkit-text-stroke: 1.5px #fff;
+  color: #fff;
+  -webkit-text-stroke: 1.5px #000;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   text-overflow: ellipsis;
