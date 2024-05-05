@@ -59,6 +59,38 @@ function div_img1() {
 
 document.getElementById('exp1').addEventListener('click', div_img1);
 
+function div_img2() {
+  var d_ = document.getElementById('img_');
+  var n_ = document.getElementById('nub');
+  var no = document.getElementById('nubo');
+  var s = document.getElementById('eb');
+
+  d_.style.border = '0';
+  n_.style.transform = "translate(0 , 0px)";
+  no.style.transform = "translate(0 , 0px)";
+  //
+  var fileName = prompt('Please Enter File Name')
+
+  htmlToImage.toPng(d_)
+  .then(function (dataUrl) {
+    var link = document.createElement('a');
+    link.href = dataUrl
+    link.download =  `${fileName}.png`;
+    link.click();
+  });
+
+
+  d_.style.border = '';
+  n_.style.transform = 'translate(0, 0.5px)';
+  no.style.transform = 'translate(0, 0.5px)';
+
+}
+
+document.getElementById('exp2').addEventListener('click', div_img2);
+
+
+
+
 const hbutton = document.getElementById('how');
 const cbutton = document.getElementById('close');
 const overlay = document.getElementById('overlay');
