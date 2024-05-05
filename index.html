@@ -42,7 +42,6 @@
         <div class="nub" id="nub">
           <div class="se_" id="se_">
             
-            <p class="sec" id="sec" style="display: none;"></p>
             <p class="se" id="se"></p>            
           </div>
           <div class="cns_" id="cns_">
@@ -71,6 +70,11 @@
           <div class="cns_" id="cnso_">
             <p class="cns" id="cnso">Card Name</p>
           </div>
+          <p class="flavortext" id="flavortextO"></p>
+          <p class="note" id="note">This is a Fanmade card. NOT FOR SALE</p>
+          
+          <p class="set" id="seto"></p>
+          <p class="illust" id="illusto">Illust / </p>
         </div>
 
         <img class="eb" id=eb src="assets/textbox/textbox_0.png">
@@ -173,7 +177,6 @@
             <option value="ks">Keter Sanctuary</option>
             <option value="sc">Stocheia</option>
             <option value="lm">Lyrical Monasterio</option>
-            <!--  <option value="test">Test</option> -->
           </select>   
 
           <label class="mcui-checkbox" id="enclab">
@@ -206,7 +209,6 @@
             <option value="ks">Keter Sanctuary</option>
             <option value="sc">Stocheia</option>
             <option value="lm">Lyrical Monasterio</option>
-            <!--  <option value="test">Test</option> -->
           </select>
 
           <label for="sns" id="snslab" style="display: none;">Second Nation</label>
@@ -217,7 +219,6 @@
             <option value="ks">Keter Sanctuary</option>
             <option value="sc">Stocheia</option>
             <option value="lm">Lyrical Monasterio</option>
-            <!--  <option value="test">Test</option> -->
           </select>
 
           <label for="cl" id="cll" style="display: none;">Clan</label>
@@ -281,7 +282,7 @@
           <label>Race</label>
           <input type="text" id=race class="ipb" placeholder="Card Race">
 
-          <label class="mcui-checkbox" id="splab" style="display: none;">
+          <label class="mcui-checkbox" id="splab">
             <input type="checkbox" id="sp">
             <div>
               <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
@@ -304,7 +305,7 @@
           <label>Card Name</label>
           <input type="text" id="cn" class="cn" placeholder="Card Name"></textarea>
 
-          <label>Flavor (Only for Units)</label>
+          <label>Flavor</label>
           <textarea type="text" class="flb" id="flb" placeholder="Flavor"></textarea>
 
           <label>Ability</label>

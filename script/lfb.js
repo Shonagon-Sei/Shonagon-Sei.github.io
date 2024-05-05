@@ -15,8 +15,13 @@ var ipflavor = document.getElementById('flb');
 
 var illust = document.getElementById('illust');
 var set = document.getElementById('set');
+
+var illusto = document.getElementById('illusto');
+var seto = document.getElementById('seto');
+
 var flavor = document.getElementById('flavorFrame')
 var flavText = document.getElementById('flavortext')
+var flavTexto = document.getElementById('flavortextO')
 
 //Effect//
 var se = document.getElementById('se');
@@ -76,16 +81,18 @@ ip1.addEventListener('input', function() {
 
 //Set and Illust | Update//
 ipset.addEventListener('input', function() {
-  set.textContent = ipset.value;   
+  set.textContent = ipset.value;  
+  seto.textContent = ipset.value;  
 });
 
 ipillust.addEventListener('input', function() {
   illust.textContent = "Illust / " + ipillust.value;   
+  illusto.textContent = "Illust / " + ipillust.value;   
 });
 
 ipflavor.addEventListener('input', function() {
-  const linesCount = Math.round((se.offsetHeight / 16));
-  flavText.textContent = ipflavor.value;
+  
+  
 
   var list = []
   for (i of ipflavor.value.split('\n')){
@@ -97,76 +104,137 @@ ipflavor.addEventListener('input', function() {
         return a.length > b.length ? a : b;
     }), "16px FTL") / 100);
 
-  const linesofFlav = Math.round((flavText.offsetHeight / 16));
+  if (type.value === 'tu' || type.value === 'nu' || type.value === 'gu')
+  {
+    const linesCount = Math.round((se.offsetHeight / 16));
+    flavText.textContent = ipflavor.value;
+    const linesofFlav = Math.round((flavText.offsetHeight / 16));
 
-  if (linesofFlav == 1){
-    switch(textLegnth){
-      case 0:
-        flavor.src = "assets/none_.png";
-        break;
-      case 1:
-        flavor.src = "assets/flavor/Sflavor.png";
-        break;
-      case 2:
-        flavor.src = "assets/flavor/Mflavor.png";
-        break;
-      case 3:
-        flavor.src = "assets/flavor/Bflavor.png";
-        break;
-    }
-    if (encounter.checked){
-      flavor.src = flavor.src.replace('flavor/', 'flavor/E')
-      flavText.style.color = '#000'
-      flavText.style.webkitTextStroke = '1.5px #fff'
-    }else{
-      flavText.style.color = '#fff'
-      flavText.style.webkitTextStroke = '1.5px #000'
-    }
-  
-    if (linesCount >= 1){
-      flavor.style.transform = `translate(0, ${(185 - (linesCount * 16))}px)`  
-      flavText.style.transform = `translate(0, ${(-115 - (linesCount * 16))}px)`
+    if (linesofFlav == 1){
+      switch(textLegnth){
+        case 0:
+          flavor.src = "assets/none_.png";
+          break;
+        case 1:
+          flavor.src = "assets/flavor/Sflavor.png";
+          break;
+        case 2:
+          flavor.src = "assets/flavor/Mflavor.png";
+          break;
+        case 3:
+          flavor.src = "assets/flavor/Bflavor.png";
+          break;
+      }
+      if (encounter.checked){
+        flavor.src = flavor.src.replace('flavor/', 'flavor/E')
+        flavText.style.color = '#000'
+        flavText.style.webkitTextStroke = '1.5px #fff'
+      }else{
+        flavText.style.color = '#fff'
+        flavText.style.webkitTextStroke = '1.5px #000'
+      }
+    
+      if (linesCount >= 1){
+        flavor.style.transform = `translate(0, ${(185 - (linesCount * 16))}px)`  
+        flavText.style.transform = `translate(0, ${(-115 - (linesCount * 16))}px)`
+      }
+      else{
+        flavor.style.transform = `translate(0, 200px)`  
+        flavText.style.transform = `translate(0, -100px)`
+      }
     }
     else{
-      flavor.style.transform = `translate(0, 200px)`  
-      flavText.style.transform = `translate(0, -100px)`
+      switch(textLegnth){
+        case 0:
+          flavor.src = "assets/none_.png";
+          break;
+        case 1:
+          flavor.src = "assets/flavor/2Sflavor.png";
+          break;
+        case 2:
+          flavor.src = "assets/flavor/2Mflavor.png";
+          break;
+        case 3:
+          flavor.src = "assets/flavor/2Bflavor.png";
+          break;
+      }
+    
+      if (encounter.checked){
+        flavor.src = flavor.src.replace('flavor/', 'flavor/E')
+        flavText.style.color = '#000'
+        flavText.style.webkitTextStroke = '1.5px #fff'
+      }else{
+        flavText.style.color = '#fff'
+        flavText.style.webkitTextStroke = '1.5px #000'
+      }
+
+      if (linesCount >= 1){
+        flavor.style.transform = `translate(0, ${(177 - (linesCount * 16))}px)`  
+        flavText.style.transform = `translate(0, ${(-115 - (linesCount * 16))}px)`
+      }
+      else{
+        flavor.style.transform = `translate(0, 192px)`  
+        flavText.style.transform = `translate(0, -100px)`
+      }
     }
+  
   }
   else{
-    switch(textLegnth){
-      case 0:
-        flavor.src = "assets/none_.png";
-        break;
-      case 1:
-        flavor.src = "assets/flavor/2Sflavor.png";
-        break;
-      case 2:
-        flavor.src = "assets/flavor/2Mflavor.png";
-        break;
-      case 3:
-        flavor.src = "assets/flavor/2Bflavor.png";
-        break;
-    }
-  
-    if (encounter.checked){
-      flavor.src = flavor.src.replace('flavor/', 'flavor/E')
-      flavText.style.color = '#000'
-      flavText.style.webkitTextStroke = '1.5px #fff'
-    }else{
-      flavText.style.color = '#fff'
-      flavText.style.webkitTextStroke = '1.5px #000'
-    }
+    const linesCount = Math.round((seo.offsetHeight / 16));
+    flavTexto.textContent = ipflavor.value;
+    const linesofFlav = Math.round((flavTexto.offsetHeight / 16));
 
-    if (linesCount >= 1){
-      flavor.style.transform = `translate(0, ${(177 - (linesCount * 16))}px)`  
-      flavText.style.transform = `translate(0, ${(-115 - (linesCount * 16))}px)`
+    if (linesofFlav == 1){
+      switch(textLegnth){
+        case 0:
+          flavor.src = "assets/none_.png";
+          break;
+        case 1:
+          flavor.src = "assets/flavor/Sflavor.png";
+          break;
+        case 2:
+          flavor.src = "assets/flavor/Mflavor.png";
+          break;
+        case 3:
+          flavor.src = "assets/flavor/Bflavor.png";
+          break;
+      }
+
+    
+      if (linesCount >= 1){
+        flavor.style.transform = `translate(0, ${(205 - (linesCount * 16))}px)`  
+        flavTexto.style.transform = `translate(0, ${(-95 - (linesCount * 16))}px)`
+      }
+      else{
+        flavor.style.transform = `translate(0, 224px)`  
+        flavTexto.style.transform = `translate(0, -76px)`
+      }
     }
     else{
-      flavor.style.transform = `translate(0, 192px)`  
-      flavText.style.transform = `translate(0, -100px)`
+      switch(textLegnth){
+        case 0:
+          flavor.src = "assets/none_.png";
+          break;
+        case 1:
+          flavor.src = "assets/flavor/2Sflavor.png";
+          break;
+        case 2:
+          flavor.src = "assets/flavor/2Mflavor.png";
+          break;
+        case 3:
+          flavor.src = "assets/flavor/2Bflavor.png";
+          break;
+      }  
+      if (linesCount >= 1){
+        flavor.style.transform = `translate(0, ${(201 - (linesCount * 16))}px)`  
+        flavTexto.style.transform = `translate(0, ${(-91 - (linesCount * 16))}px)`
+      }
+      else{
+        flavor.style.transform = `translate(0, 216px)`  
+        flavTexto.style.transform = `translate(0, -76px)`
+      }
     }
   }
-
   
 
   //138 and 212
@@ -346,16 +414,7 @@ teb.addEventListener('input', function() {
 
   //Power Shield Critical
   var encounter = document.getElementById('enc');
-  if (encounter.checked){
-    effect = effect.replaceAll('[Power]', '<span class=\'image-wrapper\'><img src=\'assets/ePower Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('[Shield]', '<span class=\'image-wrapper\'><img src=\'assets/eShield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('[Critical]', '<span class=\'image-wrapper\'><img src=\'assets/eCritical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-  }
-  else{
-    effect = effect.replaceAll('[Power]', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('[Shield]', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-    effect = effect.replaceAll('[Critical]', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
-  }
+  
   
   
   //Circles
@@ -447,16 +506,7 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll(']', ']</span>');
   
   //fcm
-  if (encounter.checked){
-    effect = effect.replaceAll('"', '<span class=\'equote\'>"</span>');
-    effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/ELSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
-  effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/ERSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
-  }
-  else{
-    effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
-    effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
-  effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
-  }
+  
   
 
   //【
@@ -465,21 +515,53 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('/i', '<span class=\'italic\'>(');
   effect = effect.replaceAll('i/', ')</span>');
 
-  se.innerHTML = effect;
-  seo.innerHTML = effect;
-  sec.innerHTML = effect;
-  
   var eb = document.getElementById('eb');
   var sp = document.getElementById('sp');
   if (sp.checked){
     eb.style.display = 'none'
-    se.style.color = "#FFFFFF"
-    sec.style.display = 'flex'
+    se.classList.add('SP')
+
+    effect = effect.replaceAll('[Power]', '<span class=\'image-wrapper\'><img src=\'assets/ePower Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Shield]', '<span class=\'image-wrapper\'><img src=\'assets/eShield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('[Critical]', '<span class=\'image-wrapper\'><img src=\'assets/eCritical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    effect = effect.replaceAll('"', '<span class=\'equote\'>"</span>');
+    effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/ELSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
+    effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/ERSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
+
+    //skill //circle //mskill //sskill //value
+    effect = effect.replaceAll("class='value'", "class='value SP'")
+    effect = effect.replaceAll("class='skill'", "class='skill SP'")
+    effect = effect.replaceAll("class='circle'", "class='circle SP'")
+    effect = effect.replaceAll("class='mskill'", "class='mskill SP'")
+    effect = effect.replaceAll("class='sskill'", "class='sskill SP'")
+    effect = effect.replaceAll("class='bskill'", "class='bskill SP'")
+    effect = effect.replaceAll("class='brack'", "class='brack SP'")
+
   }
   else
   {
+    if (encounter.checked){
+      effect = effect.replaceAll('[Power]', '<span class=\'image-wrapper\'><img src=\'assets/ePower Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+      effect = effect.replaceAll('[Shield]', '<span class=\'image-wrapper\'><img src=\'assets/eShield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+      effect = effect.replaceAll('[Critical]', '<span class=\'image-wrapper\'><img src=\'assets/eCritical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    }
+    else{
+      effect = effect.replaceAll('[Power]', '<span class=\'image-wrapper\'><img src=\'assets/Power Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+      effect = effect.replaceAll('[Shield]', '<span class=\'image-wrapper\'><img src=\'assets/Shield Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+      effect = effect.replaceAll('[Critical]', '<span class=\'image-wrapper\'><img src=\'assets/Critical Icon.png\' alt=\'Image\' class=\'value\' id=\'auto\'></span>');
+    }
+    if (encounter.checked){
+      effect = effect.replaceAll('"', '<span class=\'equote\'>"</span>');
+      effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/ELSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
+      effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/ERSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
+    }
+    else{
+      effect = effect.replaceAll('"', '<span class=\'quote\'>"</span>');
+      effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
+      effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
+    }
     eb.style.display = 'flex'
-    sec.style.display = 'none'
+    se.classList.remove('SP')
 
     if (type.value === 'tu' || type.value === 'nu')
     {
@@ -521,6 +603,11 @@ teb.addEventListener('input', function() {
     se.style.fontFamily = 'cslb'
     se.style.fontSize = '12px'
   }
+
+  se.innerHTML = effect;
+  seo.innerHTML = effect;
+  
+  
 
 });
 

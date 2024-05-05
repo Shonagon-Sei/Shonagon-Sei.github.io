@@ -322,6 +322,14 @@ option.zoo{
   left:0;
 }
 
+.circle.SP, .skill.SP, .brack.SP, .value.SP, .mskill.SP, .sskill.SP, .bskill.SP {
+  filter: drop-shadow(.7px 0 0 black) 
+          drop-shadow(0 .7px 0 black)
+          drop-shadow(-.7px 0 0 black) 
+      drop-shadow(0 -.7px 0 black);
+}
+
+
 .img_ {
   border: 2px dashed #ccc;
   overflow: hidden;
@@ -377,15 +385,16 @@ option.zoo{
 }
 
 
-.nub .flavortext {
+.nub .flavortext, .nubo .flavortext {
   font-family: ftl;
   position: absolute;
   max-width: fit-content;
   font-size: 14px;
   line-height: 14px;
   align-self: center;
-  paint-order: stroke fill;
+  
   transform: translate(0px, -100px);
+  paint-order: stroke fill;
   color: #fff;
   -webkit-text-stroke: 1.5px #000;
   white-space: pre-wrap;
@@ -396,6 +405,9 @@ option.zoo{
 }
 
 
+.nubo .flavortext{
+  transform: translate(0px, -76px);
+}
 
 .encounter-clan, .dnf,
 .dns, .dnfflag, .dnsflag, .dnfgrade, .dnsgrade{
@@ -586,7 +598,7 @@ option.zoo{
 
 
 
-.nub .note {
+.nub .note, .nubo .note {
   font-family: bds;
   position: absolute;
   font-size: 8px;
@@ -599,7 +611,7 @@ option.zoo{
   margin-top: 0;
   margin-bottom: 0;
 }
-.nub .set {
+.nub .set, .nubo .set {
   font-family: bds;
   position: absolute;
   font-size: 9px;
@@ -612,7 +624,7 @@ option.zoo{
   margin-top: 0;
   margin-bottom: 0;
 }
-.nub .illust {
+.nub .illust, .nubo .illust {
   font-family: bds;
   position: absolute;
   font-size: 9px;
@@ -734,20 +746,13 @@ option.zoo{
 }
 
 .nub .se.SP{
-  width: 92%; 
+  width: 92%;
   font-family: cslb;
-  font-size: 12px!important;
-  color: #FFFFFF!important;
-  text-shadow:
-    -1px -1px 0 #000,
-     0   -1px 0 #000,
-     1px -1px 0 #000,
-     1px  0   0 #000,
-     1px  1px 0 #000,
-     0    1px 0 #000,
-    -1px  1px 0 #000,
-    -1px  0   0 #000;
+  font-size: 12px;
   text-align: justify;
+  paint-order: stroke fill;
+  color: #fff;
+  -webkit-text-stroke: 1.5px #000;
   white-space: pre-wrap;
   overflow-wrap: break-word;
   align-self: flex-end;
