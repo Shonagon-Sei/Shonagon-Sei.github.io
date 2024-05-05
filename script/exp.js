@@ -71,12 +71,8 @@ function div_img2() {
   //
   var fileName = prompt('Please Enter File Name')
 
-  htmlToImage.toPng(d_)
-  .then(function (dataUrl) {
-    var link = document.createElement('a');
-    link.href = dataUrl
-    link.download =  `${fileName}.png`;
-    link.click();
+  htmlToImage.toPng(d_).then(function (dataUrl) {
+    download(dataUrl, 'my-node.png');
   });
 
 
