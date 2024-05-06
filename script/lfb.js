@@ -512,8 +512,7 @@ teb.addEventListener('input', function() {
   //【
   
   
-  effect = effect.replaceAll('/i', '<span class=\'italic\'>(');
-  effect = effect.replaceAll('i/', ')</span>');
+  
 
   var eb = document.getElementById('eb');
   var sp = document.getElementById('sp');
@@ -527,7 +526,8 @@ teb.addEventListener('input', function() {
     effect = effect.replaceAll('"', '<span class=\'equote\'>"</span>');
     effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/ELSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
     effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/ERSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
-
+    effect = effect.replaceAll('/i', '<span class=\'italic\'>(');
+    effect = effect.replaceAll('i/', ')</span>');
     //skill //circle //mskill //sskill //value
     effect = effect.replaceAll("class='value'", "class='value SP'")
     effect = effect.replaceAll("class='skill'", "class='skill SP'")
@@ -560,6 +560,8 @@ teb.addEventListener('input', function() {
       effect = effect.replaceAll('(', '<span class=\'image-wrapper\'><img src=\'assets/LSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>');
       effect = effect.replaceAll(')', '<span class=\'image-wrapper\'><img src=\'assets/RSB.png\' alt=\'Image\' class=\'brack\' id=\'auto\'></span>')
     }
+    effect = effect.replaceAll('/i', '<span class=\'italic\'>(');
+    effect = effect.replaceAll('i/', ')</span>');
     eb.style.display = 'flex'
     se.classList.remove('SP')
 
