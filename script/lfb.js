@@ -7,7 +7,7 @@ var ip3 = document.getElementById('race');
 var ip4 = document.getElementById('shield');
 var teb = document.getElementById('teb');
 var nation = document.getElementById('ns');
-
+var sp = document.getElementById('sp');
 var ipillust = document.getElementById('il');
 var ipset = document.getElementById('s');
 var ipflavor = document.getElementById('flb');
@@ -387,9 +387,9 @@ teb.addEventListener('input', function() {
   
   
   //Box Icons
-  effect = effect.replaceAll('AUTO', '<span class=\'image-wrapper\'><img src=\'assets/AUTO.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
-  effect = effect.replaceAll('ACT', '<span class=\'image-wrapper\'><img src=\'assets/ACT.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
-  effect = effect.replaceAll('CONT', '<span class=\'image-wrapper\'><img src=\'assets/CONT.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('AUTO', '<span class=\'image-wrapper\'><img src=\'assets/AUTO.png\' alt=\'Image\' class=\'Iskill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('ACT', '<span class=\'image-wrapper\'><img src=\'assets/ACT.png\' alt=\'Image\' class=\'Iskill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('CONT', '<span class=\'image-wrapper\'><img src=\'assets/CONT.png\' alt=\'Image\' class=\'Iskill\' id=\'auto\'></span>');
   effect = effect.replaceAll('Stand', '<span class=\'image-wrapper\'><img src=\'assets/Stand Icon.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('Rest', '<span class=\'image-wrapper\'><img src=\'assets/Rest Icon.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('1/Turn', '<span class=\'image-wrapper\'><img src=\'assets/1 per turn.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
@@ -515,7 +515,7 @@ teb.addEventListener('input', function() {
   
 
   var eb = document.getElementById('eb');
-  var sp = document.getElementById('sp');
+  
   if (sp.checked){
     eb.style.display = 'none'
     se.classList.add('SP')
@@ -531,12 +531,14 @@ teb.addEventListener('input', function() {
     //skill //circle //mskill //sskill //value
     effect = effect.replaceAll("class='value'", "class='value SP'")
     effect = effect.replaceAll("class='skill'", "class='skill SP'")
+    effect = effect.replaceAll("class='Iskill'", "class='Iskill SP'")
     effect = effect.replaceAll("class='circle'", "class='circle SP'")
     effect = effect.replaceAll("class='mskill'", "class='mskill SP'")
     effect = effect.replaceAll("class='sskill'", "class='sskill SP'")
     effect = effect.replaceAll("class='bskill'", "class='bskill SP'")
     effect = effect.replaceAll("class='brack'", "class='brack SP'")
-
+    effect = effect.replaceAll(".png'", "SP.png'")
+    se.style.color = "#FFFFFF"
   }
   else
   {
@@ -627,6 +629,8 @@ function overDress()
   }
 }
 
+sp.addEventListener('change', SP);
+
 function SP(){
   var checkBox = document.getElementById("sp");
   var eb = document.getElementById("eb");
@@ -639,7 +643,11 @@ function SP(){
     eb.style.display = 'flex'
     se.classList.remove('SP')
   }
+
+  teb.dispatchEvent(new Event('input'))
 }
+
+
 
 //Shield | Update//
 ip4.addEventListener('input', function() {

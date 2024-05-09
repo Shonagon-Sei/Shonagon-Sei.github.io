@@ -245,6 +245,18 @@ option.zoo{
   left:0;
 }
 
+.Iskill{
+  height:15px;
+  margin-left: 1px;
+  margin-right: 1px;
+  /*transform: translate(0, 2px);*/
+  padding-top: 0px;
+  padding-bottom: 0px;
+  vertical-align:bottom;
+  top:0; 
+  left:0;
+}
+
 .mskill{
   height:18px;
   margin-top: -1.2px;
@@ -285,7 +297,7 @@ option.zoo{
 }
 
 .brack{
-  height:11px;
+  height:12px;
   margin-left: 1px;
   margin-right: 1px;
   color: #000;
@@ -322,13 +334,21 @@ option.zoo{
   left:0;
 }
 
-.circle.SP, .skill.SP, .brack.SP, .value.SP, .mskill.SP, .sskill.SP, .bskill.SP {
-  filter: drop-shadow(.7px 0 0 black) 
-          drop-shadow(0 .7px 0 black)
-          drop-shadow(-.7px 0 0 black) 
-      drop-shadow(0 -.7px 0 black);
+.brack.SP{
+  height: 12.1px;
 }
 
+.skill.SP{
+  height: 17.5px;
+  margin-top: -0.95px;
+  margin-bottom: -0.95px;
+}
+
+.Iskill.SP{
+  height: 17px;
+  margin-top: -.7px;
+  margin-bottom: -.7px;
+}
 
 .img_ {
   border: 2px dashed #ccc;
@@ -664,7 +684,7 @@ option.zoo{
 
 .red-text .brack
 {
-  height:11px;
+  height:12px;
   margin-left: 1px;
   margin-right: 1px;
   /*transform: translate(0, 2px);*/
