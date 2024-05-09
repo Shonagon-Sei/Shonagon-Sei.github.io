@@ -995,6 +995,8 @@ option.zoo{
   pointer-events: all;
 }
 
+
+
 @media screen and (max-width: 1080px) {
   .main_ {
     display: flex;
