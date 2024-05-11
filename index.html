@@ -15,7 +15,6 @@
   <div id="h_1" class="h_1">
 
     <p>Cardfight ! ! Vanguard - Quick Custom Maker <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'M4M573R0T');kofiwidget2.draw();</script> </p>
-    <div class="bar"></div>
     
   </div>
 
@@ -148,7 +147,7 @@
 
         </div>
       </div>
-      <div class="main_x">
+      <div class="main_x", id="main_x">
         <div class="b_inf">
           <label for="cts">Card Types</label>
           <select id="cts">
@@ -191,7 +190,7 @@
             <div>Encounter</div>
           </label>
 
-          <label class="mcui-checkbox" id="dualab">
+          <label class="mcui-checkbox" id="dualab" >
             <input type="checkbox" id="dual">
             <div>
               <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
@@ -329,14 +328,24 @@
     <button class="imp" id="imp">Upload Image</button>
     <button class="exp" id="exp">Export (Main)</button>
     <button class="exp" id="exp1">Alt Export<br>(If Main Has Problems)</button>
-    <button class="exp" id="exp2">Alt2 Export<br></button>
     <button class="save" id="save">Save</button>
     <button class="load" id="load">Load</button>
     <button class="how" id="how">Keywords</button>
   </div>
   <div class="config">
     <button class="imp" id="custom">Custom Preset</button>
-    <button class="save" id="ccu">CCU Export<br>(Experimental)</button>
+    <button class="save" id="ccu">CCU Export</button>
+    <div class="space"></div>
+    <label class="mcui-checkbox" id="darklab" style="display: none;">
+      <input type="checkbox" id="dark" >
+      <div>
+        <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
+          <title>checkmark-circle</title>
+          <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+        </svg>
+      </div>
+      <div>Dark Mode</div>
+    </label>
   </div>
   <iframe id='kofiframe' src='https://ko-fi.com/iyako/?hidefeed=true&widget=true&embed=true&preview=true' style='border:none;width:100%;padding:4px;background:#f9f9f9;' height='712' title='iyako'></iframe>
   <div id="overlay"></div>

@@ -61,6 +61,31 @@ html {
   font-family: sans-serif;
 }
 
+body.dark{
+  background-color: #202020;
+}
+
+.img_.dark{
+  background-color: #484848;
+}
+
+.main_x.dark label{
+  color: white;
+}
+
+.main_x.dark .mcui-check {
+  color: white;
+}
+
+.main_x.dark .mcui-checkbox,.main_x.dark .mcui-radio{
+  border-color: white;
+}
+
+.main_x.dark .mcui-checkbox input[type=radio] + div::after,
+.main_x.dark .mcui-radio input[type=radio] + div::after{
+  background-color: white;
+}
+
 .h_1 {
   top: 0;
   z-index: 1000;
@@ -78,6 +103,12 @@ html {
   font-weight: 200;
   opacity: .9;
   backdrop-filter: blur(5px);
+}
+
+.h_1.dark{
+  background-color: white;
+  color: black;
+
 }
 
 .cfg {
@@ -887,7 +918,8 @@ option.zoo{
 .imp,
 .how,
 .save,
-.load {
+.load
+{
   min-height: 40px;
   line-height: 1rem;
   text-align: center;
@@ -899,6 +931,11 @@ option.zoo{
   background-color: #ffffff;
   font-family: fcm;
   color: #000000;
+}
+
+.space{
+  width: 50;
+  padding: 20px;
 }
 
 .exp,
