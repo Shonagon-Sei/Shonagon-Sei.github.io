@@ -150,6 +150,19 @@ function typeSet() {
       enc.style.display = 'none'
       dual.checked = false
       dualab.style.display = 'none'
+    }else if (select1 === 'tk'){
+      tri = "none";
+      tri1 = "flex";
+      im = "assets/none_.png"
+      se.style.display = 'flex'
+      nuborder.style.display = 'none'
+      crs.style.display = 'flex'
+      image0.style.display = 'flex'
+      encounter.style.display = 'none'
+      enc.style.display = 'none'
+      dualab.style.display = 'none'
+      dual.checked = false
+      dualab.style.display = 'none'
     }
 
 
@@ -276,13 +289,21 @@ window.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('DOMContentLoaded', function() {
   var trg = document.getElementById('trg');
   var image = document.getElementById('trigger');
-  
+  var type = this.document.getElementById('cts');
+
+
   trg.addEventListener('change', update);
   
   function update() {
-    var select = trg.value;
-    var src_ = "assets/" + select + ".png";
-    image.src = src_;
+
+    if (type.value == 'tu'){
+      var select = trg.value;
+      var src_ = "assets/" + select + ".png";
+      image.src = src_;
+    }else{
+      var src_ = "assets/" + "none" + ".png";
+    }
+    
   }
 });
 
