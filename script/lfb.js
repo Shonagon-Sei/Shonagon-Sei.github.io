@@ -511,6 +511,7 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('SB(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB7.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB8.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB9.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SB(10)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB10.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('SB()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SB.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
   
@@ -523,6 +524,7 @@ teb.addEventListener('input', function() {
   effect = effect.replaceAll('SC(7)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC7.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC(8)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC8.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC(9)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC9.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
+  effect = effect.replaceAll('SC(10)', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC10.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   effect = effect.replaceAll('SC()', '<span class=\'image-wrapper\'><img src=\'assets/BlastCharge/SC.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
   
   effect = effect.replaceAll('GB1', '<span class=\'image-wrapper\'><img src=\'assets/GB/GB1.png\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>');
