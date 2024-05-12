@@ -68,8 +68,8 @@ var clan = document.getElementById('cl')
 
 //Power | Update//
 ip1.addEventListener('input', function() {
-  pw.textContent = ((ip3.value != '') ? ip3.value: '0' );
-  pw1.textContent = ((ip3.value != '') ? ip3.value: '0');
+  pw.textContent = ((ip1.value != '') ? ip1.value: '0' );
+  pw1.textContent = ((ip1.value != '') ? ip1.value: '0');
 
   
 
