@@ -46,7 +46,11 @@ function typeSet() {
   var se = document.getElementById('nub');
   var nuborder = document.getElementById('nubo');
 
+  var ip1 = document.getElementById('power');
   var ip2 = document.getElementById('cn');
+  var ip3 = document.getElementById('race');
+  var ip4 = document.getElementById('shield');
+
 
   
   type.addEventListener('change', update);
@@ -232,7 +236,14 @@ function typeSet() {
     trigger.style.display = tri;
     trigger1.style.display = tri;
     triggerImage.src = im
+
+    ip1.dispatchEvent(new Event('input'))
+  ip2.dispatchEvent(new Event('input'))
+  ip3.dispatchEvent(new Event('input'))
   }
+
+  
+
 }
 
 window.addEventListener('DOMContentLoaded', typeSet);
@@ -243,18 +254,20 @@ window.addEventListener('DOMContentLoaded', typeSet);
 window.addEventListener('DOMContentLoaded', function() {
   var cri = document.getElementById('c');
   var image = document.getElementById('crs');
-  
+  var type = this.document.getElementById('cts');
+
   cri.addEventListener('change', update);
   var ip2 = document.getElementById('cn');
   function update() {
     var select = cri.value;
     var src_ = "assets/" + select + ".png";
 
-    if (/[\u0E00-\u0E7F]/.test(ip2.value)){
-      src_ = "assets/TH/" + select + ".png"
-      image.style.transform = 'translate(0, 0)'
+    
+
+    if(type.value === 'tk'){
+      image.classList.add('TK')
     }else{
-      image.style.transform = 'translate(0, -2px)'
+      image.classList.remove('TK')
     }
     image.src = src_;
   }

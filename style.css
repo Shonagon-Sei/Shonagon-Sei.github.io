@@ -493,7 +493,6 @@ option.zoo{
 }
 
 .crs,
-
 .trigger
 {
   position: absolute;
@@ -505,6 +504,10 @@ option.zoo{
   align-items: center;
   justify-content: center;
   user-select: none;
+}
+
+.crs.TK{
+  transform: translate(0px, -5px);
 }
 
 .frame{
@@ -857,6 +860,14 @@ option.zoo{
   transform: translate(0, 3px) skewX(-18deg) ;
 }
 
+.cns.TK {
+
+  paint-order: stroke fill;
+  color: #fff;
+  -webkit-text-stroke: 4px #000;
+  transform: translate(0, 7px) skewX(-18deg) ;
+}
+
 .nub .rec,
 .nub .rec1 {
   font-family: cslr;
@@ -869,6 +880,11 @@ option.zoo{
   overflow: hidden;
   text-overflow: ellipsis;
   width: 30%;
+}
+
+.rec1.TK, .rec.TK{
+  transform: translate(257px, -21px);
+  text-align: left;
 }
 
 .nub .enrec,

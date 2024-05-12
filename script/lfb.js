@@ -24,6 +24,8 @@ var flavor = document.getElementById('flavorFrame')
 var flavText = document.getElementById('flavortext')
 var flavTexto = document.getElementById('flavortextO')
 
+var note = document.getElementById('note');
+
 //Effect//
 var se = document.getElementById('se');
 var se1 = document.getElementById('se_');
@@ -66,16 +68,25 @@ var clan = document.getElementById('cl')
 
 //Power | Update//
 ip1.addEventListener('input', function() {
-  pw.textContent = ip1.value;
-  pw1.textContent = ip1.value;  
+  pw.textContent = ((ip3.value != '') ? ip2.value: 0);
+  pw1.textContent = ((ip3.value != '') ? ip2.value: 0);
+
+  
+
+
   if (/[\u0E00-\u0E7F]/.test(ip2.value))
   {
     pw.style.transform = 'translate(83px, 0px) skewX(-13deg)'
     pw1.style.transform = 'translate(83px, 0px) skewX(-13deg)'
   }
   else{
-    pw.style.transform = 'translate(83px, -2px) skewX(-13deg)'
-    pw.style.transform = 'translate(83px, -2px) skewX(-13deg)'
+    if(type.value === 'tk'){
+      pw.style.transform = 'translate(117px, -2px) skewX(-13deg)'
+      pw1.style.transform = 'translate(117px, -2px) skewX(-13deg)'
+    }else{
+      pw.style.transform = 'translate(83px, -2px) skewX(-13deg)'
+      pw1.style.transform = 'translate(83px, -2px) skewX(-13deg)'
+    }
   }
   
 });
@@ -292,7 +303,8 @@ ip2.addEventListener('input', function() {
     }
     */
   }
-  
+  cn.textContent = ((ip2.value != '') ? ip2.value: "Card Name");
+  cno.textContent = ((ip2.value != '') ? ip2.value: "Card Name");
 
 
 	if (/[\u0E00-\u0E7F]/.test(ip2.value))
@@ -311,26 +323,31 @@ ip2.addEventListener('input', function() {
   	cno.style.width = scl + "px";
   	console.log(tpx_);
   }else{
-    cn.textContent = ip2.value;
+    
 		cn.style.fontFamily = 'imp'
     cn.style.fontSize = '18px'
-    cn.style.transform = "scaleX(" + _sc_ + ")" + `scaleY(1) translate(0, 3px) skewX(-18deg)`;
+    cn.style.transform = "";
     cn.style.width = scl + "px";
-    cn_.style.transform = `translate(${-tlx}px, -55px)`;
+    cn_.style.transform = ``;
     
-    cno.textContent = ip2.value;
+    
+
+    
   
-    cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+    cno.style.transform = "";
     cno.style.width = scl + "px";
     console.log(tpx_);
   }
-  ip1.dispatchEvent(new Event('input'));
-      ip3.dispatchEvent(new Event('input'));
-      ip4.dispatchEvent(new Event('input'));
-      teb.dispatchEvent(new Event('input'));
+  
+  if(type.value === 'tk'){
+    cn.classList.add('TK')
+    note.style.display = 'none'
+  }else{
+    cn.classList.remove('TK')
+    note.style.display = ''
+  }
       
-      var types = document.getElementById('cts');
-      types.dispatchEvent(new Event('change'))
+
       var criss = document.getElementById('c');
       criss.dispatchEvent(new Event('change'))      
       var gradess = document.getElementById('g');
@@ -340,6 +357,22 @@ ip2.addEventListener('input', function() {
 //Race | Update//
 ip3.addEventListener('input', function() {
   
+  var enrace1 = document.getElementById('enrec');
+  var enraceinner1 = document.getElementById('enrec1');
+  rec1.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
+  rec.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
+  enrace1.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
+  enraceinner1.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
+
+  if(type.value === 'tk'){
+    rec.classList.add('TK')
+    rec1.classList.add('TK')
+  }else{
+    rec.classList.remove('TK')
+    rec1.classList.remove('TK')
+  }
+
+  /*
   if (/[\u0E00-\u0E7F]/.test(ip2.value))
   {
     rec1.textContent = ip3.value;
@@ -388,7 +421,7 @@ ip3.addEventListener('input', function() {
     enrace1.style.fontSize = '8px'
     enraceinner1.style.fontSize = '8px'
   }
-    
+    */
 });
 
 //Card Effect | Update//
@@ -556,7 +589,7 @@ teb.addEventListener('input', function() {
 
   var eb = document.getElementById('eb');
   
-  if (sp.checked){
+  if (sp.checked || type.value === 'tk'){
     eb.style.display = 'none'
     se.classList.add('SP')
 
