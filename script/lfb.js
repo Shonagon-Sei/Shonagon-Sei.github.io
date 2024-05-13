@@ -359,10 +359,10 @@ ip3.addEventListener('input', function() {
   
   var enrace1 = document.getElementById('enrec');
   var enraceinner1 = document.getElementById('enrec1');
-  rec1.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
-  rec.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
-  enrace1.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
-  enraceinner1.textContent = ((ip3.value != '') ? ip2.value: "Card Race");
+  rec1.textContent = ((ip3.value != '') ? ip3.value: "Card Race");
+  rec.textContent = ((ip3.value != '') ? ip3.value: "Card Race");
+  enrace1.textContent = ((ip3.value != '') ? ip3.value: "Card Race");
+  enraceinner1.textContent = ((ip3.value != '') ? ip3.value: "Card Race");
 
   if(type.value === 'tk'){
     rec.classList.add('TK')
