@@ -333,21 +333,21 @@ ip2.addEventListener('input', function() {
       cn.classList.add('TK')
       note.style.display = 'none'
       cn.style.fontSize = '18px'
-      cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
-      cn.style.width = scl + "px";
-      cn_.style.transform = 'translate(0, -55)';
-    
-      cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
-      cno.style.width = scl + "px";
-    }else{
-      cn.classList.remove('TK')
-      note.style.display = ''
-      cn.style.fontSize = '18px'
       cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 7px) skewX(-18deg)";
       cn.style.width = scl + "px";
       cn_.style.transform = 'translate(0, -55)';
     
       cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 7px) skewX(-18deg)";
+      cno.style.width = scl + "px";
+    }else{
+      cn.classList.remove('TK')
+      note.style.display = ''
+      cn.style.fontSize = '18px'
+      cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+      cn.style.width = scl + "px";
+      cn_.style.transform = 'translate(0, -55)';
+    
+      cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
       cno.style.width = scl + "px";
     }
     
