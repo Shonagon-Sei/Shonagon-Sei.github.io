@@ -339,25 +339,27 @@ ip2.addEventListener('input', function() {
     
       cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 7px) skewX(-18deg)";
       cno.style.width = scl + "px";
-    }else{
+    }
+    else{
       cn.classList.remove('TK')
       note.style.display = ''
       cn.style.fontSize = '18px'
-      cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+      cn.style.transform = "scaleX(" + _sc_ + ")" + `scaleY(1) translate(${-tlx}px, 3px) skewX(-18deg)`;
       cn.style.width = scl + "px";
       cn_.style.transform = 'translate(0, -55)';
     
-      cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-18deg)";
+      cno.style.transform = "scaleX(" + _sc_ + ")" + `scaleY(1) translate(${-tlx}px, 3px) skewX(-18deg)`;
       cno.style.width = scl + "px";
+      cno.style.transform = "";
+      cno.style.width = scl + "px";
+      console.log(tpx_);
     }
     
     
 
     
   
-    cno.style.transform = "";
-    cno.style.width = scl + "px";
-    console.log(tpx_);
+    
   }
   
   
