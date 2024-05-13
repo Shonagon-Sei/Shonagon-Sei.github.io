@@ -512,7 +512,7 @@ option.zoo{
 
 .frame{
   position: absolute;
-  z-index: 5;
+  z-index: 3;
   display: flex;
   width: 420.75px;
   height: 613.5px;

@@ -51,12 +51,17 @@ function typeSet() {
   var ip3 = document.getElementById('race');
   var ip4 = document.getElementById('shield');
 
+  var ovlab = document.getElementById('ovlab');
+  var overDress = document.getElementById('ov');
+
+  var frame = document.getElementById('frame');
 
   
   type.addEventListener('change', update);
   nation.addEventListener('change', update);
   clan.addEventListener('change', update);
   encounter.addEventListener('change', update);
+  overDress.addEventListener('change', update);
   dual.addEventListener('change', update);
   fselect.addEventListener('change', update);
   sselect.addEventListener('change', update);
@@ -85,6 +90,7 @@ function typeSet() {
       enc.style.display = 'none'
       dual.checked = false
       dualab.style.display = 'none'
+      ovlab.style.display = 'none'
     }
     else if (select1 === 'nu') {
       tri = "none";
@@ -97,6 +103,7 @@ function typeSet() {
       encounter.style.display = 'flex'
       enc.style.display = 'flex'
       dualab.style.display = 'flex'
+      ovlab.style.display = 'flex'
     }
     else if (select1 === 'gu') {
       tri = "none";
@@ -111,6 +118,7 @@ function typeSet() {
       encounter.checked = true
       dual.checked = false
       dualab.style.display = 'none'
+      ovlab.style.display = 'none'
     }
     else if (select1 === 'no') {
       tri = "none";
@@ -124,6 +132,7 @@ function typeSet() {
       enc.style.display = 'none'
       dual.checked = false
       dualab.style.display = 'none'
+      ovlab.style.display = 'none'
     }
     else if (select1 === 'bo') {
       tri = "none";
@@ -137,6 +146,7 @@ function typeSet() {
       enc.style.display = 'none'
       dual.checked = false
       dualab.style.display = 'none'
+      ovlab.style.display = 'none'
     }
     else if (select1 === 'so') {
       tri = "none";
@@ -150,6 +160,7 @@ function typeSet() {
       enc.style.display = 'none'
       dual.checked = false
       dualab.style.display = 'none'
+      ovlab.style.display = 'none'
     }else if (select1 === 'tk'){
       tri = "none";
       tri1 = "flex";
@@ -163,6 +174,7 @@ function typeSet() {
       dualab.style.display = 'none'
       dual.checked = false
       dualab.style.display = 'none'
+      ovlab.style.display = 'none'
     }
 
 
@@ -186,6 +198,7 @@ function typeSet() {
       clan.style.display = 'flex'
       clanlabel.style.display = 'flex'
       image.src = src_;
+      ovlab.style.display = 'none'
     }
     else
     {
@@ -199,9 +212,17 @@ function typeSet() {
       clanlabel.style.display = 'none'
       enrace1.style.display = 'none'
       enraceinner1.style.display = 'none'
+
+      
+
       var src_ = "assets/" + select2 + select1 + ".png";
+
+      if(overDress.checked){
+       src_ = "assets/" + select2 + select1 + "ov.png";
+      }
+
       if (/[\u0E00-\u0E7F]/.test(ip2.value)){
-        var src_ = "assets/TH/" + select2 + select1 + ".png";
+        src_ = "assets/TH/" + select2 + select1 + ".png";
       }
       
       image.src = src_;
@@ -225,6 +246,13 @@ function typeSet() {
       fsimage.src = `assets/dual nation/flag/s${sselect.value}.png`
       gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
       gsimage.src = `assets/dual nation/grade/s${sselect.value}.png`
+
+      if (overDress.checked){
+        frame.src = 'assets/OverDress Frame Remastered.png'
+      }else{
+        frame.src = 'assets/none_.png'
+      }
+
       encounter.style.display = 'none'
       enc.style.display = 'none'
       encounter.checked = false
@@ -241,7 +269,8 @@ function typeSet() {
       nation.style.display = 'flex'
       nslab.style.display = 'flex'
       gfimage.style.display = 'none'
-      gsimage.style.display = 'none'    
+      gsimage.style.display = 'none' 
+      frame.src = 'assets/none_.png'   
     }
     
     grade.style.display = tri1;
