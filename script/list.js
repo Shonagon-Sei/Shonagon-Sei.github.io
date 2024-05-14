@@ -5,6 +5,11 @@ function typeSet() {
   var nation = document.getElementById('ns');
   var nslab = document.getElementById('nslab');
   var image = document.getElementById('gn');
+  var teb = document.getElementById('teb');
+  var cn = document.getElementById('cns');
+
+  var power = document.getElementById('pw');
+  var power1 = document.getElementById('pw1');
 
   var fimage = document.getElementById('dnf');
   var simage = document.getElementById('dns');
@@ -199,6 +204,42 @@ function typeSet() {
       clanlabel.style.display = 'flex'
       image.src = src_;
       ovlab.style.display = 'none'
+      power.style.display = ''
+      power1.style.display = ''
+    }else if (select1 === 'ma'){
+      tri = "none";
+      tri1 = "none";
+      im = "assets/none_.png"
+      se.style.display = 'flex'
+      nuborder.style.display = 'none'
+      crs.style.display = 'none'
+      image0.style.display = 'none'
+      encounter.style.display = 'none'
+      enc.style.display = 'none'
+      dualab.style.display = 'none'
+      dual.checked = false
+      dualab.style.display = 'none'
+      ovlab.style.display = 'none'
+      race1.style.display = 'none'
+      raceinner1.style.display = 'none'
+      power.style.display = 'none'
+      power1.style.display = 'none'
+      var src_ = 'assets/marker.png'
+
+      grade.style.display = tri1;
+      grade1.style.display = tri1;
+      trigger.style.display = tri;
+      trigger1.style.display = tri;
+      triggerImage.src = im
+      image.src = src_;
+
+      
+
+      ip1.dispatchEvent(new Event('input'))
+      ip2.dispatchEvent(new Event('input'))
+      ip3.dispatchEvent(new Event('input'))
+      teb.dispatchEvent(new Event('input'))
+      return
     }
     else
     {
@@ -212,8 +253,8 @@ function typeSet() {
       clanlabel.style.display = 'none'
       enrace1.style.display = 'none'
       enraceinner1.style.display = 'none'
-
-      
+      power.style.display = ''
+      power1.style.display = ''
 
       var src_ = "assets/" + select2 + select1 + ".png";
 
@@ -282,6 +323,7 @@ function typeSet() {
     ip1.dispatchEvent(new Event('input'))
   ip2.dispatchEvent(new Event('input'))
   ip3.dispatchEvent(new Event('input'))
+  teb.dispatchEvent(new Event('input'))
   }
 
   
@@ -343,65 +385,21 @@ window.addEventListener('DOMContentLoaded', function() {
   var image = document.getElementById('si');
   var image1 = document.getElementById('gs'); 
   var image2 = document.getElementById('si1');
-  
+  var csk = document.getElementById('csk');
+  var ask = document.getElementById('ask');
   grade.addEventListener('change', update);
+  csk.addEventListener('change', update);
+  ask.addEventListener('change', update);
 
   function update() {
     var select = grade.value;
     var _src_ = "assets/grade" + select + ".png";
-    var src_ = "";
-    var src__ = "assets/none_.png";
+    var src_ = "assets/" + csk.value + ".png";
+    var src__ = "assets/" + ask.value + ".png";
     var ty = type.value;
     var ip2 = document.getElementById('cn');
 
-    if (select === "_0") {
-      src_ = "assets/bts.png";
-      src__ = "assets/none_.png"; 
-    } 
-    else if (select === "_1") {
-      src_ = "assets/bts.png";
-      src__ = "assets/none_.png";
-    }
-    else if (select === "_2") {
-      src_ = "assets/itc.png";
-      src__ = "assets/none_.png";
-    }
-    else if (select === "_3") {
-      src_ = "assets/twd.png";
-      src__ = "assets/none_.png";
-    }
-    else if (select === "_3P") {
-      _src_ = "assets/grade_3.png";
-      src_ = "assets/twd.png";
-      src__ = "assets/psr.png";
-    }
-    else if (select === "_4") {
-      src_ = "assets/tpd.png";
-      src__ = "assets/none_.png";
-    }
-    else if (select === "_4P") {
-      _src_ = "assets/grade_4.png";
-      src_ = "assets/tpd.png";
-      src__ = "assets/psr.png";
-    }
-    else if (select === "_10") {
-      src_ = "assets/twd.png";
-      src__ = "assets/none_.png";
-    }
-    else if (select === "_10P") {
-      _src_ = "assets/grade_10.png";
-      src_ = "assets/twd.png";
-      src__ = "assets/psr.png";
-    }
-    else if (select === "_11") {
-      src_ = "assets/twd.png";
-      src__ = "assets/none_.png";
-    }
-    else if (select === "_11P") {
-      _src_ = "assets/grade_11.png";
-      src_ = "assets/twd.png";
-      src__ = "assets/psr.png";
-    }
+    
 
     if (/[\u0E00-\u0E7F]/.test(ip2.value)){
       _src_ = _src_.slice(0, 7) + "TH/" + _src_.slice(7)

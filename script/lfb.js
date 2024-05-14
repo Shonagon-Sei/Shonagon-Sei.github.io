@@ -331,6 +331,7 @@ ip2.addEventListener('input', function() {
     
     if(type.value === 'tk'){
       cn.classList.add('TK')
+      cn.classList.remove('MA');
       note.style.display = 'none'
       cn.style.fontSize = '18px'
       cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 7px) skewX(-18deg)";
@@ -340,8 +341,17 @@ ip2.addEventListener('input', function() {
       cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 7px) skewX(-18deg)";
       cno.style.width = scl + "px";
     }
+    else if(type.value === 'ma'){
+      cn.classList.add('MA');
+      cn.classList.remove('TK');
+      cn.style.fontSize = '18px'
+      cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 26px) skewX(-18deg)";
+      cn.style.width = scl + "px";
+      cn_.style.transform = 'translate(0, -55)';
+    }
     else{
       cn.classList.remove('TK')
+      cn.classList.remove('MA');
       note.style.display = ''
       cn.style.fontSize = '18px'
       cn.style.transform = "scaleX(" + _sc_ + ")" + `scaleY(1) translate(${-tlx}px, 3px) skewX(-18deg)`;
@@ -629,6 +639,7 @@ teb.addEventListener('input', function() {
     effect = effect.replaceAll("class='brack'", "class='brack SP'")
     effect = effect.replaceAll(".png'", "SP.png'")
     se.style.color = "#FFFFFF"
+    se.innerHTML = effect;
   }
   else
   {
@@ -657,9 +668,15 @@ teb.addEventListener('input', function() {
     eb.style.display = 'flex'
     se.classList.remove('SP')
 
+    se.innerHTML = effect;
+    seo.innerHTML = effect;
+
     if (type.value === 'tu' || type.value === 'nu')
     {
       const linesCount = Math.round((se.offsetHeight / 16))
+      console.log(se.value)
+      if (se.value == '')
+        linesCount = 0
     
       if (encounter.checked){
         eb.src = `assets/textbox/etextbox_${linesCount}.png`
@@ -670,20 +687,31 @@ teb.addEventListener('input', function() {
         se.style.color = "#000000"
 
       }
+      se.style.transform = '' //+20
+      eb.style.transform = '' //+20
     
+    }else if(type.value === 'ma'){
+      const linesCount = Math.round((se.offsetHeight / 16))   
+        eb.src = `assets/textbox/textbox_${linesCount}.png`
+        se.style.color = "#000000"
+      se.style.transform = 'translate(0px, 22px)' //+20
+      eb.style.transform = 'translate(0px, 20px)' //+20
     }
     else if(type.value === 'gu')
     {
       const linesCount = Math.round((se.offsetHeight / 16));    
       eb.src = `assets/textbox/etextbox_${linesCount}.png`
       se.style.color = "#FFFFFF"
+      se.style.transform = '' //+20
+      eb.style.transform = '' //+20
 
     }
     else
     {
       const linesCount = Math.round((seo.offsetHeight / 16));
       eb.src = `assets/textbox/otextbox_${linesCount}.png`
-
+      se.style.transform = '' //+20
+      eb.style.transform = '' //+20
     }
     ipflavor.dispatchEvent(new Event('input'));
   }
@@ -698,8 +726,7 @@ teb.addEventListener('input', function() {
     se.style.fontSize = '12px'
   }
 
-  se.innerHTML = effect;
-  seo.innerHTML = effect;
+  
   
   
 
@@ -1228,6 +1255,10 @@ function getTextWidth(text, font) {
   const metrics = context.measureText(text);
   return metrics.width;
 }
+
+
+
+
 
 function getCssStyle(element, prop) {
     return window.getComputedStyle(element, null).getPropertyValue(prop);

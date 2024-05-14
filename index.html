@@ -158,7 +158,8 @@
             <option value="tk">Token Unit</option>
             <option value="no">Normal Order</option>
             <option value="bo">Blitz Order</option>
-            <option value="so">Set Order</option>            
+            <option value="so">Set Order</option>
+            <option value="ma">Marker (WIP)</option>             
           </select>
 
           <label class="trg_" id="trg_" for="cts">Trigger</label>
@@ -258,31 +259,37 @@
             <option value="_1">1</option>
             <option value="_2">2</option>
             <option value="_3">3</option>
-            <option value="_3P">3 + Persona Ride</option>
             <option value="_4">4</option>
-            <option value="_4P">4 + Persona Ride</option>
             <option value="_10">10</option>
-            <option value="_10P">10 + Persona Ride</option>
             <option value="_11">11</option>
-            <option value="_11P">11 + Persona Ride</option>
           </select>
 
-          <label for="c">Critical</label>
+          <label class="csk_" id="csk_" for="csk">Card Skill</label>
+          <select class="csk" id="csk">
+            <option value="bts">Boost</option>
+            <option value="itc">Intercept</option>
+            <option value="twd">Twindrive</option>
+            <option value="tpd">Tripledrive</option>
+          </select>
+
+          <label class="ask_" id="ask_" for="ask">Additional Skill</label>
+          <select class="ask" id="ask">
+            <option value="none_">None</option>
+            <option value="pride">Persona Ride</option>
+            <option value="rpiece">Regalis Piece (Order)</option>
+            <option value="rpieceU">Regalis Piece (Unit)</option>
+            <option value="force">Imaginary Gift Force</option>
+            <option value="accel">Imaginary Gift Accel</option>
+            <option value="protect">Imaginary Gift Protect</option>
+          </select>
+
+          <label id="crilab" for="c">Critical</label>
           <select id="c">
             <option value="c_1_">Default</option>
             <option value="c_0_">0</option>
             <option value="c_1_">1</option>
             <option value="c_2_">2</option>
           </select>
-
-          <label>Power</label>
-          <input type="text" id=power class="ipb" placeholder="Power">
-
-          <label>Shield</label>
-          <input type="number" id=shield class="ipb" placeholder="Shield">
-
-          <label>Race</label>
-          <input type="text" id=race class="ipb" placeholder="Card Race">
 
           <label class="mcui-checkbox" id="ovlab">
             <input type="checkbox" id="ov">
@@ -303,20 +310,34 @@
                 <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
               </svg>
             </div>
-            <div>SP (Experimental)</div>
+            <div>SP</div>
           </label>
-          <!--
           
-          
-          <label>Overdress Frame?</label>
-          <input type="checkbox" id="oD" onclick="overDress()">
-          -->
         </div>
 
         <div class="ability">
 
-          <label>Card Name</label>
-          <input type="text" id="cn" class="cn" placeholder="Card Name"></textarea>
+          <div class="side">
+              <div class="vert nm">
+              <label for="cn">Card Name</label>
+              <input type="text" id="cn" class="cn" placeholder="Card Name"></textarea>
+            </div>
+            <div class="vert rc">
+              <label for="race">Race</label>
+            <input type="text" id=race class="ipb" placeholder="Card Race"></textarea>
+            </div>
+          </div>
+
+          <div class="side">
+            <div class="vert left">
+              <label>Power</label>
+              <input type="text" id=power class="ipb" placeholder="Power"></textarea>
+            </div>
+            <div class="vert right">
+              <label>Shield</label>
+              <input type="number" id=shield class="ipb" placeholder="Shield"></textarea>
+            </div>
+          </div>
 
           <label>Flavor</label>
           <textarea type="text" class="flb" id="flb" placeholder="Flavor"></textarea>
@@ -324,11 +345,16 @@
           <label>Ability</label>
           <textarea type="text" id="teb" class="teb" placeholder="Card Effect"></textarea>
 
-          <label>Illust</label>
-          <input type="text" class="il" id="il" placeholder="Illustrator"></textarea>
-
-          <label>Set</label>
-          <input type="text" class="s" id="s" placeholder="Card Set"></textarea>
+          <div class="side">
+            <div class="vert left">
+              <label>Illust</label>
+              <input type="text" class="il" id="il" placeholder="Illustrator"></textarea>
+            </div>
+            <div class="vert right">
+              <label>Set</label>
+              <input type="text" class="s" id="s" placeholder="Card Set"></textarea>
+            </div>
+          </div>
 
         </div>
       </div>

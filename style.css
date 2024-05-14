@@ -216,15 +216,62 @@ option.zoo{
 
 
 
-.flb,
-.cn,
-.il,
-.s {
+.flb
+
+{
   margin-top: 5px;
   margin-bottom: 20px;
   text-align: left;
   resize: none;
   width: 500px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: fcm;
+  font-size: 22px;
+  height: 100px;
+  color: #000000;
+  border: 2px solid #eee;
+  background-color: #e6e6e6;
+  outline: none;
+}
+
+.side{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  position: relative;
+}
+
+.vert{
+  display: flex;
+  flex-direction: column;
+  width:50%;  
+}
+
+.vert.nm{
+  display: flex;
+  flex-direction: column;
+  width:100%;  
+}
+
+.vert.rc{
+  width:30%;
+  margin-left: 5%;
+}
+
+.vert.right{
+  width:50%;
+  margin-left: 5%;
+}
+
+.il,
+.s,
+.cn {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  text-align: left;
+  resize: none;
+  
   padding: 10px;
   box-sizing: border-box;
   font-family: fcm;
@@ -865,6 +912,10 @@ option.zoo{
   paint-order: stroke fill;
   color: #fff;
   -webkit-text-stroke: 4px #000;
+  transform: translate(0, 7px) skewX(-18deg) ;
+}
+
+.cns.MA {
   transform: translate(0, 7px) skewX(-18deg) ;
 }
 
