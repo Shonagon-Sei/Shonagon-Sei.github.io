@@ -26,6 +26,7 @@ function typeSet() {
   var crs = document.getElementById('crs');
   var c = document.getElementById('c');
   var grade = document.getElementById('g');
+  var glab = document.getElementById('g_');
   var grade1 = document.getElementById('gs');
   var triggerImage = document.getElementById('trigger')
   var image0 = document.getElementById('si');
@@ -206,6 +207,7 @@ function typeSet() {
       ovlab.style.display = 'none'
       power.style.display = ''
       power1.style.display = ''
+      glab.style.display = ''
     }else if (select1 === 'ma'){
       tri = "none";
       tri1 = "none";
@@ -228,6 +230,10 @@ function typeSet() {
 
       grade.style.display = tri1;
       grade1.style.display = tri1;
+
+      glab.style.display = 'none'
+      
+
       trigger.style.display = tri;
       trigger1.style.display = tri;
       triggerImage.src = im
@@ -255,7 +261,7 @@ function typeSet() {
       enraceinner1.style.display = 'none'
       power.style.display = ''
       power1.style.display = ''
-
+      glab.style.display = ''
       var src_ = "assets/" + select2 + select1 + ".png";
 
       if(overDress.checked){
