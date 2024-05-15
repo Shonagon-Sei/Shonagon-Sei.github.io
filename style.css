@@ -512,7 +512,7 @@ option.zoo{
   display: none;
 }
 
-.eb {
+.eb , .eb2{
   position: absolute;
   z-index: 3;
   display: flex;

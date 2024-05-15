@@ -64,6 +64,7 @@ var trigger1 = document.getElementById('trg');
 
 var encounter = document.getElementById('enc');
 var dual = document.getElementById('dual')
+var glitter = document.getElementById('glitter');
 var clan = document.getElementById('cl')
 
 //Power | Update//
@@ -615,7 +616,8 @@ teb.addEventListener('input', function() {
   
 
   var eb = document.getElementById('eb');
-  
+  var eb2 = document.getElementById('eb2');
+
   if (sp.checked || type.value === 'tk'){
     eb.style.display = 'none'
     se.classList.add('SP')
@@ -673,45 +675,181 @@ teb.addEventListener('input', function() {
 
     if (type.value === 'tu' || type.value === 'nu')
     {
-      const linesCount = Math.round((se.offsetHeight / 16))
-      console.log(se.value)
-      if (se.value == '')
-        linesCount = 0
-    
-      if (encounter.checked){
-        eb.src = `assets/textbox/etextbox_${linesCount}.png`
-        se.style.color = "#FFFFFF"
+
+      var complicated = effect.split('\n\n')
+
+      if (complicated.length > 1){
+        
+        console.log(complicated)
+
+        se.innerHTML = complicated[0]
+
+        const linesCount = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        console.log(linesCount)
+
+        se.innerHTML = complicated[1]
+
+        const linesCount2 = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        console.log(linesCount2)
+
+        se.innerHTML = effect
+      
+        if (encounter.checked){
+          
+          eb.src = `assets/textbox/etextbox_${linesCount2}.png`
+          eb2.src = `assets/textbox/etextbox_${linesCount}.png`
+          eb2.style.transform = `translate(0px, ${-(linesCount2 * 16) - 16}px)`
+          se.style.color = "#FFFFFF"
+        }
+        else{
+          eb.src = `assets/textbox/${((glitter.checked && dual.checked) ? sselect.value : "")}textbox_${linesCount2}.png`
+          eb2.src = `assets/textbox/textbox_${linesCount}.png`
+          eb2.style.transform = `translate(0px, ${-(linesCount2 * 16) - 16}px)`
+          se.style.color = "#000000"
+
+        }
       }
       else{
-        eb.src = `assets/textbox/textbox_${linesCount}.png`
-        se.style.color = "#000000"
+        
+        const linesCount = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        console.log(linesCount)
 
+        if (encounter.checked){
+          eb.src = `assets/textbox/etextbox_${linesCount}.png`
+          eb2.src = `assets/textbox/textbox_0.png`
+          eb2.style.transform = ``
+          se.style.color = "#FFFFFF"
+        }
+        else{
+          eb.src = `assets/textbox/textbox_${linesCount}.png`
+          eb2.src = `assets/textbox/textbox_0.png`
+          eb2.style.transform = ``
+          se.style.color = "#000000"
+
+        }
       }
+
+      
       se.style.transform = '' //+20
       eb.style.transform = '' //+20
     
     }else if(type.value === 'ma'){
-      const linesCount = Math.round((se.offsetHeight / 16))   
-        eb.src = `assets/textbox/textbox_${linesCount}.png`
+      var complicated = effect.split('\n\n')
+
+      if (complicated.length > 1){
+        
+        console.log(complicated)
+
+        se.innerHTML = complicated[0]
+
+        const linesCount = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        console.log(linesCount)
+
+        se.innerHTML = complicated[1]
+
+        const linesCount2 = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        console.log(linesCount2)
+
+        se.innerHTML = effect
+
+        
+        eb.src = `assets/textbox/${((glitter.checked && dual.checked) ? sselect.value : "")}textbox_${linesCount2}.png`
+        eb2.src = `assets/textbox/textbox_${linesCount}.png`
         se.style.color = "#000000"
-      se.style.transform = 'translate(0px, 22px)' //+20
-      eb.style.transform = 'translate(0px, 20px)' //+20
+        se.style.transform = 'translate(0px, 22px)' //+20
+        eb.style.transform = 'translate(0px, 20px)' //+20
+        eb2.style.transform = `translate(0px, ${-(linesCount2 * 16) + 6}px)`
+      }
+      else
+      {
+        const linesCount = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        eb.src = `assets/textbox/textbox_${linesCount}.png`
+        eb2.src = `assets/textbox/textbox_0.png`
+        se.style.color = "#000000"
+        se.style.transform = 'translate(0px, 22px)' //+20
+        eb.style.transform = 'translate(0px, 20px)' //+20
+        eb2.style.transform = ''
+      }
+
+      
     }
     else if(type.value === 'gu')
     {
-      const linesCount = Math.round((se.offsetHeight / 16));    
-      eb.src = `assets/textbox/etextbox_${linesCount}.png`
-      se.style.color = "#FFFFFF"
-      se.style.transform = '' //+20
-      eb.style.transform = '' //+20
+      var complicated = effect.split('\n\n')
 
+      if (complicated.length > 1){
+        
+        console.log(complicated)
+
+        se.innerHTML = complicated[0]
+
+        const linesCount = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        console.log(linesCount)
+
+        se.innerHTML = complicated[1]
+
+        const linesCount2 = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        console.log(linesCount2)
+
+        se.innerHTML = effect
+
+        
+        eb.src = `assets/textbox/etextbox_${linesCount2}.png`
+        eb2.src = `assets/textbox/etextbox_${linesCount}.png`
+        se.style.color = "#FFFFFF"
+        se.style.transform = '' //+20
+        eb.style.transform = '' //+20
+        eb2.style.transform = `translate(0px, ${-(linesCount2 * 16) - 16}px)`
+      }
+      else
+      {
+        const linesCount = countWrappedLines(se) + (se.innerHTML.split('\n').length - 1)
+        eb.src = `assets/textbox/etextbox_${linesCount}.png`
+        eb2.src = `assets/textbox/textbox_0.png`
+        se.style.color = "#FFFFFF"
+        se.style.transform = '' //+20
+        eb.style.transform = '' //+20
+        eb2.style.transform = ''
+      }
     }
     else
     {
-      const linesCount = Math.round((seo.offsetHeight / 16));
-      eb.src = `assets/textbox/otextbox_${linesCount}.png`
-      se.style.transform = '' //+20
-      eb.style.transform = '' //+20
+      var complicated = effect.split('\n\n')
+
+      if (complicated.length > 1){
+        
+        console.log(complicated)
+
+        seo.innerHTML = complicated[0]
+
+        const linesCount = countWrappedLines(seo) + (seo.innerHTML.split('\n').length - 1)
+        console.log(linesCount)
+
+        seo.innerHTML = complicated[1]
+
+        const linesCount2 = countWrappedLines(seo) + (seo.innerHTML.split('\n').length - 1)
+        console.log(linesCount2)
+
+        seo.innerHTML = effect
+
+        
+        eb.src = `assets/textbox/otextbox_${linesCount2}.png`
+        eb2.src = `assets/textbox/otextbox_${linesCount}.png`
+        se.style.color = "#FFFFFF"
+        se.style.transform = '' //+20
+        eb.style.transform = '' //+20
+        eb2.style.transform = `translate(0px, ${-(linesCount2 * 16) - 16}px)`
+      }
+      else
+      {
+        const linesCount = countWrappedLines(seo) + (seo.innerHTML.split('\n').length - 1)
+        eb.src = `assets/textbox/otextbox_${linesCount}.png`
+        eb2.src = `assets/textbox/textbox_0.png`
+        se.style.color = "#FFFFFF"
+        se.style.transform = '' //+20
+        eb.style.transform = '' //+20
+        eb2.style.transform = ''
+      }
     }
     ipflavor.dispatchEvent(new Event('input'));
   }
@@ -726,11 +864,9 @@ teb.addEventListener('input', function() {
     se.style.fontSize = '12px'
   }
 
-  
-  
-  
-
 });
+
+
 
 function overDress()
 {
@@ -1270,4 +1406,36 @@ function getCanvasFont(el = document.body) {
   const fontFamily = getCssStyle(el, 'font-family') || 'Times New Roman';
   
   return `${fontWeight} ${fontSize} ${fontFamily}`;
+}
+
+function countWrappedLines(element) {
+  const computedStyle = getComputedStyle(element);
+  const lineHeight = parseFloat(computedStyle.lineHeight);
+
+  // Create a temporary clone element to measure the text without wrapping
+  const tempElement = document.createElement('div');
+  tempElement.style.cssText = `
+      width: ${element.clientWidth}px;
+      white-space: pre-wrap;
+      visibility: hidden;
+      position: absolute;
+  `;
+  tempElement.textContent = element.textContent;
+  document.body.appendChild(tempElement);
+
+  const wrappedHeight = element.offsetHeight;
+  const tempWrappedHeight = tempElement.offsetHeight;
+
+  document.body.removeChild(tempElement);
+
+  const wrappedLines = Math.round(wrappedHeight / lineHeight);
+  const tempWrappedLines = Math.round(tempWrappedHeight / lineHeight);
+
+  // Calculate number of newlines
+  const newLineCount = (element.textContent.match(/\n/g) || []).length;
+
+  // Adjust for newlines in wrapped text
+  const adjustedWrappedLines = wrappedLines - newLineCount;
+
+  return adjustedWrappedLines;
 }

@@ -47,7 +47,9 @@ function typeSet() {
   var clanImage = document.getElementById('encounter-clan');
 
   var dualab = document.getElementById('dualab');
+  var glitterlab = document.getElementById('glitterlab');
   var dual = document.getElementById('dual')
+  var glitter = document.getElementById('glitter');
 
   var se = document.getElementById('nub');
   var nuborder = document.getElementById('nubo');
@@ -71,6 +73,7 @@ function typeSet() {
   dual.addEventListener('change', update);
   fselect.addEventListener('change', update);
   sselect.addEventListener('change', update);
+  glitter.addEventListener('change', update);
 
   function update() {
     var select1 = type.value;
@@ -287,6 +290,7 @@ function typeSet() {
       sselect.style.display = 'flex'
       nation.style.display = 'none'
       nslab.style.display = 'none'
+      glitterlab.style.display = 'flex'
       fimage.src = `assets/dual nation/f${fselect.value}.png`
       simage.src = `assets/dual nation/s${sselect.value}.png`
       ffimage.src = `assets/dual nation/flag/f${fselect.value}.png`
@@ -316,7 +320,8 @@ function typeSet() {
       nation.style.display = 'flex'
       nslab.style.display = 'flex'
       gfimage.style.display = 'none'
-      gsimage.style.display = 'none' 
+      gsimage.style.display = 'none'
+      glitterlab.style.display = 'none' 
       frame.src = 'assets/none_.png'   
     }
     
