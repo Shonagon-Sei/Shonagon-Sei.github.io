@@ -4,14 +4,14 @@ const wcbutton = document.getElementById('closew');
 const woverlay = document.getElementById('overlay');
 const welcome = document.getElementById('welcome');
 
-wcbutton.addEventListener('click', () => closeModal())
+wcbutton.addEventListener('click', () => closewModal())
 
-function openModal(){
+function openwModal(){
   welcome.classList.add('active')
   overlay.classList.add('active')
 }
 
-function closeModal(){
+function closewModal(){
   welcome.classList.remove('active')
   woverlay.classList.remove('active')
 }
@@ -24,8 +24,8 @@ woverlay.addEventListener('click', () => {
 })
 
 
-const hasVisited = Cookies.get("has-visited") == undefined;
+const hasVisited = Cookies.get("has-visit") == undefined;
 if (hasVisited) {
-  Cookies.set("has-visited", "true");
-  openModal()
+  Cookies.set("has-visit", "true");
+  openwModal()
 }
