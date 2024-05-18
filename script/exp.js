@@ -5,7 +5,7 @@ function div_img() {
   var s = document.getElementById('eb');
 
   d_.style.border = '0';
-  n_.style.transform = "translate(0 , -1.2px)";
+  n_.style.transform = n_.style.transform + " translateY(-1.2px)";
   no.style.transform = "translate(0 , -1.2px)";
   s.style.transform = "translate(0 , -1.2px)";
   //
@@ -20,8 +20,8 @@ function div_img() {
     link.click();
 
     d_.style.border = '';
-    n_.style.transform = 'translate(0, 0.5px)';
-    no.style.transform = 'translate(0, 0.5px)';
+    n_.style.transform = '';
+    no.style.transform = '';
     s.style.transform = '';
     
   });
@@ -36,7 +36,7 @@ function div_img1() {
   var s = document.getElementById('eb');
 
   d_.style.border = '0';
-  n_.style.transform = "translate(0 , 0px)";
+  n_.style.transform = n_.style.transform + " translateY(-1.2px)";
   no.style.transform = "translate(0 , 0px)";
   //
   var fileName = prompt('Please Enter File Name')
