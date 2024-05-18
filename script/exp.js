@@ -23,7 +23,7 @@ function div_img() {
   se.style.transform = `translate(0px, ${((type.value === 'ma') ? '20px':'0px')})`
   pw.style.translate = "translate(83px, -3.2px)";
   pw1.style.translate = "translate(83px, -3.2px)";
-  cn.style.translate = `0px, ${((type.value === 'ma') ? '24px':'1.8px')}`
+  cn.style.translate = `0px, ${((type.value === 'ma') ? '24px':'0px')}`
   rec.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
