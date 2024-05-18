@@ -17,15 +17,15 @@ function div_img() {
   var eb = document.getElementById('eb');
   var eb2 = document.getElementById('eb2');
 
-  illust.style.transform = "translate(0 , -1.2px)";
-  set.style.transform = "translate(0 , -1.2px)";
+  illust.style.transform = "translate(-12px, -9.2px)";
+  set.style.transform = "translate(25px, -9.2px)";
   flavText.style.transform = "translate(0 , -1.2px)";
-  se.style.transform = `translate(0px, ${((type === 'ma') ? '20.8px':'-1.2px')})`
-  pw.style.transform = "translate(0 , -1.2px)";
-  pw1.style.transform = "translate(0 , -1.2px)";
-  cn.style.transform = `translate(0px, ${((type === 'ma') ? '24.8px':'-1.2px')})`
-  rec.style.transform = "translate(0 , -1.2px)";
-  rec1.style.transform = "translate(0 , -1.2px)";
+  se.style.transform = `translate(0px, ${((type === 'ma') ? '20.8px':'-1.8px')})`
+  pw.style.translate = "translate(83px, -3.2px)";
+  pw1.style.translate = "translate(83px, -3.2px)";
+  cn.style.translate = `0px, ${((type === 'ma') ? '24.8px':'-1.2px')}`
+  rec.style.transform = "translate(242.75px, -22.2px)";
+  rec1.style.transform = "translate(242.75px, -22.2px)";
   eb.style.transform = `translate(0px, ${((type === 'ma') ? '18.8px':'-1.2px')})`
 
 
