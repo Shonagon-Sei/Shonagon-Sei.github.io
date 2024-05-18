@@ -1052,7 +1052,7 @@ option.zoo{
 
 .welcome {
   position: fixed;
-  top: 50%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   transition: 200ms ease-in-out;
@@ -1060,7 +1060,7 @@ option.zoo{
   border-radius: 10px;
   z-index: 10;
   background-color: white;
-  height: 80%;
+  height: 88%;
   width: 60%;
 }
 
