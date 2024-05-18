@@ -1,9 +1,9 @@
 
-const cbutton = document.getElementById('closew');
-const overlay = document.getElementById('overlay');
+const wcbutton = document.getElementById('closew');
+const woverlay = document.getElementById('overlay');
 const welcome = document.getElementById('welcome');
 
-cbutton.addEventListener('click', () => closeModal())
+wcbutton.addEventListener('click', () => closeModal())
 
 function openModal(){
   welcome.classList.add('active')
@@ -12,10 +12,10 @@ function openModal(){
 
 function closeModal(){
   welcome.classList.remove('active')
-  overlay.classList.remove('active')
+  woverlay.classList.remove('active')
 }
 
-overlay.addEventListener('click', () => {
+woverlay.addEventListener('click', () => {
   const modals = document.querySelectorAll('.welcome.active')
   modals.forEach(welcome => {
     closeModal(welcome)
