@@ -3,9 +3,10 @@ function div_img() {
   var n_ = document.getElementById('nub');
   var no = document.getElementById('nubo');
   var s = document.getElementById('eb');
+  var type = document.getElementById('cts');
 
   d_.style.border = '0';
-  n_.style.transform = n_.style.transform + " translateY(-1.2px)";
+  n_.style.transform = `translate(0px, ${((type.value === 'ma') ? '22px':'-1.2px')})`
   no.style.transform = "translate(0 , -1.2px)";
   s.style.transform = "translate(0 , -1.2px)";
   //
@@ -36,7 +37,6 @@ function div_img1() {
   var s = document.getElementById('eb');
 
   d_.style.border = '0';
-  n_.style.transform = n_.style.transform + " translateY(-1.2px)";
   no.style.transform = "translate(0 , 0px)";
   //
   var fileName = prompt('Please Enter File Name')
