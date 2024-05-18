@@ -5,8 +5,32 @@ function div_img() {
   var s = document.getElementById('eb');
   var type = document.getElementById('cts');
 
+  var illust = document.getElementById('illust');
+  var set = document.getElementById('set');
+  var flavText = document.getElementById('flavortext')
+  var se = document.getElementById('se');
+  var pw = document.getElementById('pw');
+  var pw1 = document.getElementById('pw1');
+  var cn = document.getElementById('cns');
+  var rec = document.getElementById('rec');
+  var rec1 = document.getElementById('rec1');
+  var eb = document.getElementById('eb');
+  var eb2 = document.getElementById('eb2');
+
+  illust.style.transform = "translate(0 , -1.2px)";
+  set.style.transform = "translate(0 , -1.2px)";
+  flavText.style.transform = "translate(0 , -1.2px)";
+  se.style.transform = `translate(0px, ${((type === 'ma') ? '20.8px':'-1.2px')})`
+  pw.style.transform = "translate(0 , -1.2px)";
+  pw1.style.transform = "translate(0 , -1.2px)";
+  cn.style.transform = `translate(0px, ${((type === 'ma') ? '24.8px':'-1.2px')})`
+  rec.style.transform = "translate(0 , -1.2px)";
+  rec1.style.transform = "translate(0 , -1.2px)";
+  eb.style.transform = `translate(0px, ${((type === 'ma') ? '18.8px':'-1.2px')})`
+
+
+
   d_.style.border = '0';
-  n_.style.transform = `translate(0px, ${((type.value === 'ma') ? '22px':'-1.2px')})`
   no.style.transform = "translate(0 , -1.2px)";
   s.style.transform = "translate(0 , -1.2px)";
   //
@@ -37,7 +61,6 @@ function div_img1() {
   var s = document.getElementById('eb');
 
   d_.style.border = '0';
-  no.style.transform = "translate(0 , 0px)";
   //
   var fileName = prompt('Please Enter File Name')
 
