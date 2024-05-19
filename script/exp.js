@@ -19,7 +19,7 @@ function div_img() {
 
   illust.style.transform = "translate(-12px, -9.2px)";
   set.style.transform = "translate(25px, -9.2px)";
-  flavText.style.transform = "translate(0 , -1.2px)";
+  
   se.style.transform = `translate(0px, ${((type.value === 'ma') ? '20px':'0px')})`
   pw.style.translate = "0px -1.2px";
   pw1.style.translate = "0px -1.2px";
