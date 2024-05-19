@@ -21,8 +21,8 @@ function div_img() {
   set.style.transform = "translate(25px, -9.2px)";
   flavText.style.transform = "translate(0 , -1.2px)";
   se.style.transform = `translate(0px, ${((type.value === 'ma') ? '20px':'0px')})`
-  pw.style.translate = "83px -3.2px";
-  pw1.style.translate = "83px -3.2px";
+  pw.style.translate = "0px -1.2px";
+  pw1.style.translate = "0px -1.2px";
   cn.style.translate = `0px ${((type.value === 'ma') ? '24px':'0px')}`
   rec.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
