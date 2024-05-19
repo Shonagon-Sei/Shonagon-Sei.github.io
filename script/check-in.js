@@ -1,4 +1,4 @@
-import Cookies from 'js-cookie'
+//import Cookies from 'js-cookie'
 
 const wcbutton = document.getElementById('closew');
 const woverlay = document.getElementById('overlay');
