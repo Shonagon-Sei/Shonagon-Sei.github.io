@@ -23,7 +23,7 @@ function div_img() {
   se.style.transform = `translate(0px, ${((type.value === 'ma') ? '20px':'0px')})`
   pw.style.translate = "0px -1.2px";
   pw1.style.translate = "0px -1.2px";
-  cn.style.translate = `0px -3px`
+  cn.style.translate = `0px -2px`
   rec.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
@@ -48,6 +48,13 @@ function div_img() {
     n_.style.transform = '';
     no.style.transform = '';
     s.style.transform = '';
+    se.style.transform = ''
+    pw.style.translate = ''
+    pw1.style.translate = ''
+    cn.style.translate = ''
+    rec.style.transform = ''
+    rec1.style.transform = ''
+    eb.style.transform = ''
     
   });
 }
