@@ -702,7 +702,12 @@ teb.addEventListener('input', function() {
           se.style.color = "#FFFFFF"
         }
         else{
-          eb.src = `assets/textbox/${((glitter.checked && dual.checked) ? sselect.value : "")}textbox_${linesCount2}.png`
+          if (dual.checked){
+            eb.src = `assets/textbox/${((glitter.checked) ? sselect.value : "")}textbox_${linesCount2}.png`
+          }else{
+            eb.src = `assets/textbox/${((glitter.checked) ? nation.value : "")}textbox_${linesCount2}.png`
+          }
+          
           eb2.src = `assets/textbox/textbox_${linesCount}.png`
           eb2.style.transform = `translate(0px, ${-(linesCount2 * 16) - 16}px)`
           se.style.color = "#000000"

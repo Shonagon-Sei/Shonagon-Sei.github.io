@@ -321,7 +321,13 @@ function typeSet() {
       nslab.style.display = 'flex'
       gfimage.style.display = 'none'
       gsimage.style.display = 'none'
-      glitterlab.style.display = 'none' 
+
+      if (type.value != 'nu' && type.value != 'gu'){
+        glitterlab.style.display = 'none' 
+      }else{
+        glitterlab.style.display = 'flex' 
+      }
+      
       frame.src = 'assets/none_.png'   
     }
     
