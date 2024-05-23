@@ -5,7 +5,7 @@ function div_img() {
 
 
   d_.style.border = '0';
-  n_.style.transform = "translate(0 , -1.2px)";
+  //n_.style.transform = "translate(0 , -1.2px)";
   var fileName = prompt('Please Enter File Name')
   html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
     var image = new Image();
