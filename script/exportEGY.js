@@ -24,3 +24,15 @@ function div_img() {
 
 document.getElementById('exp').addEventListener('click', div_img);
 
+var ipillust = document.getElementById('il');
+var ipset = document.getElementById('s');
+var illust = document.getElementById('illust');
+var set = document.getElementById('set');
+
+ipset.addEventListener('input', function() {
+  set.textContent = ipset.value;  
+});
+
+ipillust.addEventListener('input', function() {
+  illust.textContent = "Illust / " + ipillust.value;     
+});
