@@ -459,6 +459,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     else{
       bg1.src = `assets/grade/${nation.value}.png`
+      image11.src = "assets/none_.png"
       bg2.src = "assets/none_.png"
     }
 
