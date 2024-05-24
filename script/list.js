@@ -400,17 +400,68 @@ window.addEventListener('DOMContentLoaded', function() {
   var type = document.getElementById('cts');
   var grade = document.getElementById('g');
   var image = document.getElementById('si');
-  var image1 = document.getElementById('gs'); 
+  var image1 = document.getElementById('gs');
+  var image11 = document.getElementById('gs2');  
   var image2 = document.getElementById('si1');
+  var bg1 = document.getElementById('ficon'); 
+  var bg2 = document.getElementById('sicon');
   var csk = document.getElementById('csk');
   var ask = document.getElementById('ask');
+  var glitter = document.getElementById('glitter');
+  var encounter = document.getElementById('enc');
+  var nation = document.getElementById('ns');
+  var dual = document.getElementById('dual');
+  var fselect = document.getElementById('fns');
+  var sselect = document.getElementById('sns');
+  var gfimage = document.getElementById('dnfgrade');
+  var gsimage = document.getElementById('dnsgrade');
   grade.addEventListener('change', update);
   csk.addEventListener('change', update);
   ask.addEventListener('change', update);
+  glitter.addEventListener('change', update);
+  encounter.addEventListener('change', update());
+  nation.addEventListener('change', update());
+  dual.addEventListener('change', update());
+
+  
 
   function update() {
     var select = grade.value;
+
+
+
     var _src_ = "assets/grade" + select + ".png";
+
+    if (glitter.checked && !encounter.checked && !dual.checked){
+      _src_ = `assets/dual nation/number/${nation.value}${select}.png`
+      image11.src = "assets/none_.png"
+      bg1.src = `assets/grade/glitter.png`
+      bg2.src = "assets/none_.png"
+
+    }
+    else if(dual.checked && glitter.checked)
+    {
+      _src_ = `assets/dual nation/number/f${fselect.value}${select}.png`
+      image11.src = `assets/dual nation/number/s${sselect.value}${select}.png`
+      bg1.src = `assets/grade/glitter.png`
+      bg2.src = "assets/none_.png"
+      gfimage.src = "assets/none_.png"
+      gsimage.src = "assets/none_.png"
+      
+    }
+    else if(dual.checked)
+    {
+      bg1.src = "assets/none_.png"
+      _src_ = `assets/dual nation/number/nonGlitter/f${fselect.value}${select}.png`
+      image11.src = `assets/dual nation/number/s${sselect.value}${select}.png`
+      gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
+      gsimage.src = `assets/dual nation/grade/s${sselect.value}.png`
+    }
+    else{
+      bg1.src = `assets/grade/${nation.value}.png`
+      bg2.src = "assets/none_.png"
+    }
+
     var src_ = "assets/" + csk.value + ".png";
     var src__ = "assets/" + ask.value + ".png";
     var ty = type.value;

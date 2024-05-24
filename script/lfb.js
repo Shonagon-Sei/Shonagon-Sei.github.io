@@ -104,9 +104,6 @@ ipillust.addEventListener('input', function() {
 });
 
 ipflavor.addEventListener('input', function() {
-  
-  
-
   var list = []
   for (i of ipflavor.value.split('\n')){
     list.push(i)
