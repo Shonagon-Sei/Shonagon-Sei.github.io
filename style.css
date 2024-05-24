@@ -933,6 +933,22 @@ option.zoo{
   width: 30%;
 }
 
+.nubo .odType{
+  font-family: cslr;
+  position: absolute;
+  text-align: center;
+  display: inline-block;
+  height: 12px;
+  font-size: 8px;
+  transform: translate(-15px, -36.5px);
+  paint-order: stroke fill;
+  color: #fff;
+  -webkit-text-stroke: 2px #002f69;
+  width: 30%;
+  letter-spacing: -.1px;
+  transform-origin: center;
+}
+
 .rec1.TK, .rec.TK{
   transform: translate(257px, -21px);
   text-align: left;

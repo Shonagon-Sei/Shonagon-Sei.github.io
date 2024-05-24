@@ -1,4 +1,4 @@
-
+/// <reference lib="es2021" />
 
 function typeSet() {
   var type = document.getElementById('cts');
@@ -58,6 +58,7 @@ function typeSet() {
   var ip2 = document.getElementById('cn');
   var ip3 = document.getElementById('race');
   var ip4 = document.getElementById('shield');
+  var ipsub = document.getElementById('odst');
 
   var ovlab = document.getElementById('ovlab');
   var overDress = document.getElementById('ov');
@@ -74,6 +75,7 @@ function typeSet() {
   fselect.addEventListener('change', update);
   sselect.addEventListener('change', update);
   glitter.addEventListener('change', update);
+  
 
   function update() {
     var select1 = type.value;
@@ -341,6 +343,7 @@ function typeSet() {
   ip2.dispatchEvent(new Event('input'))
   ip3.dispatchEvent(new Event('input'))
   teb.dispatchEvent(new Event('input'))
+  ipsub.dispatchEvent(new Event('input'))
   }
 
   
@@ -423,6 +426,7 @@ window.addEventListener('DOMContentLoaded', function() {
   encounter.addEventListener('change', update());
   nation.addEventListener('change', update());
   dual.addEventListener('change', update());
+  type.addEventListener('change', update())
 
   
 
@@ -458,7 +462,7 @@ window.addEventListener('DOMContentLoaded', function() {
       gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
       gsimage.src = `assets/dual nation/grade/s${sselect.value}.png`
     }
-    else if(!encounter.checked && !overDress.checked){
+    else if(!encounter.checked && !overDress.checked && !type.value.includes('o') && type.value != 'ma' && type.value != 'tk'){
       bg1.src = `assets/grade/${nation.value}.png`
       image11.src = "assets/none_.png"
       bg2.src = "assets/none_.png"

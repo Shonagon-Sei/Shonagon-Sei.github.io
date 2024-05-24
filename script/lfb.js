@@ -12,6 +12,9 @@ var ipillust = document.getElementById('il');
 var ipset = document.getElementById('s');
 var ipflavor = document.getElementById('flb');
 
+var ipsub = document.getElementById('odst');
+var subtype = document.getElementById('odType');
+
 var darkMode = document.getElementById('dark');
 
 var illust = document.getElementById('illust');
@@ -102,6 +105,89 @@ ipillust.addEventListener('input', function() {
   illust.textContent = "Illust / " + ipillust.value;   
   illusto.textContent = "Illust / " + ipillust.value;   
 });
+
+ipsub.addEventListener('input', function(){
+  if (type.value === 'no'){
+    if(ipsub.value == ""){
+      subtype.textContent = 'NORMAL ORDER'
+      subtype.style.letterSpacing = `-.1px`
+      subtype.style.transform = `translate(-15px, -36.5px) scaleX(1) scaleY(1)`
+      return
+    }
+    const textLegnth = getTextWidth(`NORMAL ORDER/${ipsub.value}`, "12px cslr", "-.1px");
+    console.log(textLegnth)
+    //89
+    if (textLegnth > 89){
+      var scale = 89 / textLegnth
+      var tlx = (textLegnth - 89) * scale
+      console.log(scale)  
+    }else{
+      scale = 1
+      var tlx = 0;
+    }    
+    //var scl = (textLegnth / 89) * 90
+    subtype.textContent = `NORMAL ORDER/${ipsub.value}`
+    //subtype.style.scale = `${scale} 1`
+    subtype.style.transform = `translate(${-15}px, -36.5px) scaleX(${scale}) scaleY(1)`
+    subtype.style.webkitTextStroke = '2px #002f69'
+  }else if (type.value === 'bo'){
+    if(ipsub.value == ""){
+      subtype.textContent = 'BLITZ ORDER'
+      subtype.style.transform = `translate(-15px, -36.5px) scaleX(1.1) scaleY(1)`
+      subtype.style.letterSpacing = `.5px`
+      subtype.style.webkitTextStroke = '2px #901d22'
+      return
+    }
+    const textLegnth = getTextWidth(`BLITZ ORDER/${ipsub.value}`, "12px cslr", "-.1px");
+    console.log(textLegnth)
+    //89
+    if (textLegnth > 89){
+      var scale = 89 / textLegnth
+      console.log(scale)  
+    }else if (textLegnth < 89){
+      var scale = 89 / textLegnth
+      console.log(scale)  
+    }
+    else{
+      scale = 1
+      var tlx = 0;
+    }    
+    //var scl = (textLegnth / 89) * 90
+    subtype.textContent = `BLITZ ORDER/${ipsub.value}`
+    //subtype.style.scale = `${scale} 1`
+    subtype.style.transform = `translate(${-15}px, -36.5px) scaleX(${scale}) scaleY(1)`
+    subtype.style.letterSpacing = `-.1px`
+    subtype.style.webkitTextStroke = '2px #901d22'
+  }
+  else if (type.value === 'so'){
+    if(ipsub.value == ""){
+      subtype.textContent = 'SET ORDER'
+      subtype.style.transform = `translate(-15px, -36.5px) scaleX(1.1) scaleY(1)`
+      subtype.style.letterSpacing = `.5px`
+      subtype.style.webkitTextStroke = '2px #243033'
+      return
+    }
+    const textLegnth = getTextWidth(`SET ORDER/${ipsub.value}`, "12px cslr", "-.1px");
+    console.log(textLegnth)
+    //89
+    if (textLegnth > 89){
+      var scale = 89 / textLegnth 
+    }else if (textLegnth < 89){
+      var scale = 89 / textLegnth  
+    }
+    else{
+      scale = 1
+      var tlx = 0;
+    }    
+    //var scl = (textLegnth / 89) * 90
+    subtype.textContent = `SET ORDER/${ipsub.value}`
+    //subtype.style.scale = `${scale} 1`
+    subtype.style.transform = `translate(${-15}px, -36.5px) scaleX(${scale}) scaleY(1)`
+    subtype.style.letterSpacing = `-.1px`
+    subtype.style.webkitTextStroke = '2px #243033'
+  }
+
+})
 
 ipflavor.addEventListener('input', function() {
   var list = []
@@ -1385,11 +1471,12 @@ function clanId(clan){
   return c
 }
 
-function getTextWidth(text, font) {
+function getTextWidth(text, font, spacing = '0px') {
   // re-use canvas object for better performance
   const canvas = getTextWidth.canvas || (getTextWidth.canvas = document.createElement("canvas"));
   const context = canvas.getContext("2d");
   context.font = font;
+  context.letterSpacing = spacing;
   const metrics = context.measureText(text);
   return metrics.width;
 }
