@@ -111,6 +111,7 @@ ipsub.addEventListener('input', function(){
     if(ipsub.value == ""){
       subtype.textContent = 'NORMAL ORDER'
       subtype.style.letterSpacing = `-.1px`
+      subtype.style.webkitTextStroke = '2px #002f69'
       subtype.style.transform = `translate(-15px, -36.5px) scaleX(1) scaleY(1)`
       return
     }
