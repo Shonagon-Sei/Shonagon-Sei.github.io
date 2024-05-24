@@ -415,6 +415,7 @@ window.addEventListener('DOMContentLoaded', function() {
   var sselect = document.getElementById('sns');
   var gfimage = document.getElementById('dnfgrade');
   var gsimage = document.getElementById('dnsgrade');
+  var overDress = document.getElementById('ov');
   grade.addEventListener('change', update);
   csk.addEventListener('change', update);
   ask.addEventListener('change', update);
@@ -457,8 +458,12 @@ window.addEventListener('DOMContentLoaded', function() {
       gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
       gsimage.src = `assets/dual nation/grade/s${sselect.value}.png`
     }
-    else{
+    else if(!encounter.checked && !overDress.checked){
       bg1.src = `assets/grade/${nation.value}.png`
+      image11.src = "assets/none_.png"
+      bg2.src = "assets/none_.png"
+    }else{
+      bg1.src = `assets/none_.png`
       image11.src = "assets/none_.png"
       bg2.src = "assets/none_.png"
     }
