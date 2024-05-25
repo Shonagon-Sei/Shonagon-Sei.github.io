@@ -444,10 +444,10 @@ ip2.addEventListener('input', function() {
       cn_.style.transform = 'translate(0, -55)';
     
       cno.style.transform = "scaleX(" + _sc_ + ")" + `scaleY(1) translate(${-tlx}px, 3px) skewX(-18deg)`;
+      //cno.style.width = scl + "px";
+      //cno.style.transform = "";
       cno.style.width = scl + "px";
-      cno.style.transform = "";
-      cno.style.width = scl + "px";
-      console.log(tpx_);
+      //console.log(tpx_);
     }
     
     
