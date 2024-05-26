@@ -398,6 +398,17 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+window.addEventListener('DOMContentLoaded', function() {
+  var rarity = document.getElementById('rare');
+  var rimage = document.getElementById('rarity');
+  rarity.addEventListener('change', update);
+
+  function update(){
+    rimage.src = `assets/rarity/${rarity.value}.png`
+  }
+  
+})
+
 //Grade//
 window.addEventListener('DOMContentLoaded', function() {
   var type = document.getElementById('cts');

@@ -48,7 +48,7 @@
         <img class="crs" id='crs' src="assets/c_1_.png">
         <img class="sh" id='sh' src="assets/none_.png">
         <img class="trigger" id="trigger" src="assets/none_.png">
-        
+        <img class="r" id="rarity" src="assets/rarity/c.png">
         
         <img class="flavorFrame" id="flavorFrame" src="assets/none_.png">
         
@@ -341,6 +341,18 @@
           <label for="odst">Order Subtype</label>
           <input type="text" id="odst" class="cn" placeholder="Subtype"></textarea>
 
+          <label id="raritylab" for="rare">Rarity</label>
+          <select id="rare">
+            <option value="sp">SP</option>
+            <option value="rrr">RRR</option>
+            <option value="rr">RR</option>
+            <option value="r">R</option>
+            <option value="c" selected="selected">C</option>
+            <option value="td">TD</option>
+            <option value="sd">SD</option>
+            <option value="pr">PR</option>
+          </select>
+
           <label class="mcui-checkbox" id="ovlab">
             <input type="checkbox" id="ov">
             <div>
@@ -397,13 +409,13 @@
 
           <div class="side">
             <div class="vert left">
-              <label>Illust</label>
-              <input type="text" class="il" id="il" placeholder="Illustrator"></textarea>
-            </div>
-            <div class="vert right">
               <label>Set</label>
               <input type="text" class="s" id="s" placeholder="Card Set"></textarea>
             </div>
+            <div class="vert right">
+              <label>Illust</label>
+              <input type="text" class="il" id="il" placeholder="Illustrator"></textarea>
+            </div>           
           </div>
 
         </div>

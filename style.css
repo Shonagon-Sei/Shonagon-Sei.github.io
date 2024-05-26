@@ -539,6 +539,19 @@ option.zoo{
   user-select: none;
 }
 
+.r{
+  position: absolute;
+  z-index: 6;
+  display: flex;
+  width: 420.75px;
+  height: 613.5px;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  transform: translate(0px, -1px);
+}
+
 .crs,
 .trigger
 {
@@ -719,9 +732,6 @@ option.zoo{
   align-self:flex-start;
   transform: translate(25px, -8px);
   color: #ffffff;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin-top: 0;
   margin-bottom: 0;
 }
