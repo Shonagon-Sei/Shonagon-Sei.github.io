@@ -120,6 +120,7 @@ document.getElementById('imp').addEventListener('click', function() {
 
 document.getElementById('custom').addEventListener('click', function() {
   const fileInput = document.createElement('input');
+  var bg1 = document.getElementById('ficon'); 
   fileInput.type = 'file';
   fileInput.accept = 'image/*';
 
@@ -134,6 +135,7 @@ document.getElementById('custom').addEventListener('click', function() {
     };
 
     reader.readAsDataURL(file);
+    bg1.style.display = 'none'
   });
 
   fileInput.click();
