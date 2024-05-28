@@ -12,6 +12,12 @@
   font-family: pslxol;
 }
 
+
+@font-face {
+  src: url("fonts/DSNSR___.TTF");
+  font-family: DSNSR;
+}
+
 @font-face {
   src: url("fonts/FTLTLT.TTF");
   font-family: FTL;
@@ -364,6 +370,7 @@ option.zoo{
   padding-bottom: 0px;
 }
 
+
 .mskill{
   height:16px;
   margin-top: -1.2px;
@@ -457,14 +464,14 @@ option.zoo{
 
 .skill.SP{
   height: 17.5px;
-  margin-top: -0.95px;
-  margin-bottom: -0.95px;
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 
 .Iskill.SP{
   height: 17px;
-  margin-top: -.7px;
-  margin-bottom: -.7px;
+  margin-top: -2px;
+  margin-bottom: -2px;
 }
 
 .img_ {
@@ -688,10 +695,10 @@ option.zoo{
 }
 
 .nubo .cns {
-  font-family: imp;
+  font-family: pslxol;
   height: 100%;
   width: 250px;
-  font-size: 18px;
+  font-size: 24px;
   color: #000000;
   white-space: nowrap;
   overflow: hidden;
@@ -718,7 +725,6 @@ option.zoo{
   overflow-wrap: break-word;
   align-self: flex-end;
   line-height: 15.8px;
-  transform: translate(0, 1px);
 }
 
 .nub .sec{
@@ -744,9 +750,7 @@ option.zoo{
   transform: translate(0, -47px);
 }
 
-#seo > span > img{
-  transform: translate(0, -2px);
-}
+
 
 .nub .pw,
 .nub .pw1 {
@@ -913,8 +917,8 @@ option.zoo{
 
 .nub .se.SP{
   width: 92%;
-  font-family: cslb;
-  font-size: 12px;
+  font-family: pslxim;
+  font-size: 18px;
   text-align: justify;
   paint-order: stroke fill;
   color: #fff;
@@ -999,18 +1003,19 @@ option.zoo{
 }
 
 .nubo .odType{
-  font-family: cslr;
+  font-family: DSNSR;
+  font-weight:100;
   position: absolute;
   text-align: center;
   display: inline-block;
+  letter-spacing: 0.3px;
   height: 12px;
-  font-size: 8px;
-  transform: translate(-15px, -36.5px);
+  font-size: 12px;
+  transform: translate(-14px, -39.5px);
   paint-order: stroke fill;
   color: #fff;
   -webkit-text-stroke: 2px #002f69;
   width: 30%;
-  letter-spacing: -.1px;
   transform-origin: center;
 }
 

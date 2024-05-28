@@ -99,82 +99,78 @@ ipillust.addEventListener('input', function() {
 ipsub.addEventListener('input', function(){
   if (type.value === 'no'){
     if(ipsub.value == ""){
-      subtype.textContent = 'NORMAL ORDER'
-      subtype.style.letterSpacing = `-.1px`
+      subtype.innerHTML = 'นอมอลออเดอร์'
       subtype.style.webkitTextStroke = '2px #002f69'
-      subtype.style.transform = `translate(-15px, -36.5px) scaleX(1) scaleY(1)`
+      subtype.style.transform = `translate(-14.2px, -39.5px) scaleX(1) scaleY(1)`
       return
     }
-    const textLegnth = getTextWidth(`NORMAL ORDER/${ipsub.value}`, "12px cslr", "-.1px");
+    const textLegnth = getTextWidth(`นอมอลออเดอร์/${ipsub.value}`, "12px DSNSR", "0.3px");
     console.log(textLegnth)
-    //89
-    if (textLegnth > 89){
-      var scale = 89 / textLegnth
-      var tlx = (textLegnth - 89) * scale
+    //59
+    if (textLegnth > 59){
+      var scale = 59 / textLegnth
+      var tlx = (textLegnth - 59) * scale
       console.log(scale)  
     }else{
       scale = 1
       var tlx = 0;
     }    
-    //var scl = (textLegnth / 89) * 90
-    subtype.textContent = `NORMAL ORDER/${ipsub.value}`
+    //var scl = (textLegnth / 59) * 90
+    subtype.innerHTML = `นอมอลออเดอร์/${ipsub.value}`
     //subtype.style.scale = `${scale} 1`
-    subtype.style.transform = `translate(${-15}px, -36.5px) scaleX(${scale}) scaleY(1)`
+    subtype.style.transform = `translate(-14.2px, -39.5px) scaleX(${scale}) scaleY(1)`
     subtype.style.webkitTextStroke = '2px #002f69'
-  }else if (type.value === 'bo'){
+  }
+  else if (type.value === 'bo'){
     if(ipsub.value == ""){
-      subtype.textContent = 'BLITZ ORDER'
-      subtype.style.transform = `translate(-15px, -36.5px) scaleX(1.1) scaleY(1)`
-      subtype.style.letterSpacing = `.5px`
+      subtype.textContent = 'บลิทช์ออเดอร์'
+      subtype.style.transform = `translate(-14.2px, -39.5px) scaleX(1.1) scaleY(1)`
       subtype.style.webkitTextStroke = '2px #901d22'
       return
     }
-    const textLegnth = getTextWidth(`BLITZ ORDER/${ipsub.value}`, "12px cslr", "-.1px");
+    const textLegnth = getTextWidth(`บลิทช์ออเดอร์/${ipsub.value}`, "12px DSNSR", "0.3px");
     console.log(textLegnth)
-    //89
-    if (textLegnth > 89){
-      var scale = 89 / textLegnth
+    //59
+    if (textLegnth > 59){
+      var scale = 59 / textLegnth
       console.log(scale)  
-    }else if (textLegnth < 89){
-      var scale = 89 / textLegnth
+    }else if (textLegnth < 59){
+      var scale = 59 / textLegnth
       console.log(scale)  
     }
     else{
       scale = 1
       var tlx = 0;
     }    
-    //var scl = (textLegnth / 89) * 90
-    subtype.textContent = `BLITZ ORDER/${ipsub.value}`
+    //var scl = (textLegnth / 59) * 90
+    subtype.textContent = `บลิทช์ออเดอร์/${ipsub.value}`
     //subtype.style.scale = `${scale} 1`
-    subtype.style.transform = `translate(${-15}px, -36.5px) scaleX(${scale}) scaleY(1)`
-    subtype.style.letterSpacing = `-.1px`
+    subtype.style.transform = `translate(-14.2px, -39.5px) scaleX(${scale}) scaleY(1)`
     subtype.style.webkitTextStroke = '2px #901d22'
   }
   else if (type.value === 'so'){
     if(ipsub.value == ""){
-      subtype.textContent = 'SET ORDER'
-      subtype.style.transform = `translate(-15px, -36.5px) scaleX(1.1) scaleY(1)`
-      subtype.style.letterSpacing = `.5px`
+      subtype.textContent = 'เซ็ทออเดอร์'
+      subtype.style.transform = `translate(-14.2px, -39.5px) scaleX(1.1) scaleY(1)`
       subtype.style.webkitTextStroke = '2px #243033'
       return
     }
-    const textLegnth = getTextWidth(`SET ORDER/${ipsub.value}`, "12px cslr", "-.1px");
+    const textLegnth = getTextWidth(`เซ็ทออเดอร์/${ipsub.value}`, "12px DSNSR", "0.3px");
     console.log(textLegnth)
-    //89
-    if (textLegnth > 89){
-      var scale = 89 / textLegnth 
-    }else if (textLegnth < 89){
-      var scale = 89 / textLegnth  
+    //59
+    if (textLegnth > 59){
+      var scale = 59 / textLegnth 
+    }else if (textLegnth < 59){
+      var scale = 59 / textLegnth  
     }
     else{
       scale = 1
       var tlx = 0;
     }    
-    //var scl = (textLegnth / 89) * 90
-    subtype.textContent = `SET ORDER/${ipsub.value}`
+    //var scl = (textLegnth / 59) * 90
+    subtype.textContent = `เซ็ทออเดอร์/${ipsub.value}`
     //subtype.style.scale = `${scale} 1`
-    subtype.style.transform = `translate(${-15}px, -36.5px) scaleX(${scale}) scaleY(1)`
-    subtype.style.letterSpacing = `-.1px`
+    subtype.style.transform = `translate(-14.2px, -39.5px) scaleX(${scale}) scaleY(1)`
     subtype.style.webkitTextStroke = '2px #243033'
   }
 

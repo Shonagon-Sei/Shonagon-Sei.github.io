@@ -444,16 +444,16 @@ window.addEventListener('DOMContentLoaded', function() {
     var _src_ = "assets/grade" + select + ".png";
 
     if (glitter.checked && !encounter.checked && !dual.checked){
-      _src_ = `assets/dual nation/number/${nation.value}${select}.png`
-      image11.src = "assets/none_.png"
+      //_src_ = `assets/dual nation/number/${nation.value}${select}.png`
+      //image11.src = "assets/none_.png"
       bg1.src = `assets/grade/glitter.png`
       bg2.src = "assets/none_.png"
 
     }
     else if(dual.checked && glitter.checked)
     {
-      _src_ = `assets/dual nation/number/f${fselect.value}${select}.png`
-      image11.src = `assets/dual nation/number/s${sselect.value}${select}.png`
+      //_src_ = `assets/dual nation/number/f${fselect.value}${select}.png`
+      //image11.src = `assets/dual nation/number/s${sselect.value}${select}.png`
       bg1.src = `assets/grade/glitter.png`
       bg2.src = "assets/none_.png"
       gfimage.src = "assets/none_.png"
@@ -463,29 +463,24 @@ window.addEventListener('DOMContentLoaded', function() {
     else if(dual.checked)
     {
       bg1.src = "assets/none_.png"
-      _src_ = `assets/dual nation/number/nonGlitter/f${fselect.value}${select}.png`
-      image11.src = `assets/dual nation/number/s${sselect.value}${select}.png`
+      //_src_ = `assets/dual nation/number/nonGlitter/f${fselect.value}${select}.png`
+      //image11.src = `assets/dual nation/number/s${sselect.value}${select}.png`
       gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
       gsimage.src = `assets/dual nation/grade/s${sselect.value}.png`
     }
-    else if(!encounter.checked && !overDress.checked && !type.value.includes('o') && type.value != 'ma' && type.value != 'tk'){
+    else if(!encounter.checked && !overDress.checked && type.value != 'ma' && type.value != 'tk'){
       bg1.src = `assets/grade/${nation.value}.png`
-      image11.src = "assets/none_.png"
+      //image11.src = "assets/none_.png"
       bg2.src = "assets/none_.png"
     }else{
       bg1.src = `assets/none_.png`
-      image11.src = "assets/none_.png"
+      //image11.src = "assets/none_.png"
       bg2.src = "assets/none_.png"
     }
 
     var src_ = "assets/" + csk.value + ".png";
     var src__ = "assets/" + ask.value + ".png";
-    var ty = type.value;
-    var ip2 = document.getElementById('cn');
 
-    
-
-    
     _src_ = _src_.slice(0, 7) + "TH/" + _src_.slice(7)
     src_ = src_.slice(0, 7) + "TH/" + src_.slice(7)
     
