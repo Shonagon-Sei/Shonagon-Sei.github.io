@@ -288,8 +288,8 @@ function typeSet() {
       nation.style.display = 'none'
       nslab.style.display = 'none'
       glitterlab.style.display = 'flex'
-      fimage.src = `assets/dual nation/f${fselect.value}.png`
-      simage.src = `assets/dual nation/s${sselect.value}.png`
+      fimage.src = `assets/TH/dual nation/f${fselect.value}.png`
+      simage.src = `assets/TH/dual nation/s${sselect.value}.png`
       ffimage.src = `assets/dual nation/flag/f${fselect.value}.png`
       fsimage.src = `assets/dual nation/flag/s${sselect.value}.png`
       gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
