@@ -230,6 +230,9 @@ function nationId(nation){
     case 'nl':
       n = 8
       break
+    case 'cu':
+      n = 0
+      break
   }
   return n
 }
