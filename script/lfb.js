@@ -75,23 +75,14 @@ ip1.addEventListener('input', function() {
   pw.textContent = ((ip1.value != '') ? ip1.value: '0' );
   pw1.textContent = ((ip1.value != '') ? ip1.value: '0');
 
-  
-
-
-  if (/[\u0E00-\u0E7F]/.test(ip2.value))
-  {
-    pw.style.transform = 'translate(83px, 0px) skewX(-13deg)'
-    pw1.style.transform = 'translate(83px, 0px) skewX(-13deg)'
-  }
-  else{
-    if(type.value === 'tk'){
+    if(type.value === 'tk' || type.value === 'nudsr'){
       pw.style.transform = 'translate(117px, -2px) skewX(-13deg)'
       pw1.style.transform = 'translate(117px, -2px) skewX(-13deg)'
     }else{
       pw.style.transform = 'translate(83px, -2px) skewX(-13deg)'
       pw1.style.transform = 'translate(83px, -2px) skewX(-13deg)'
     }
-  }
+  
   
 });
 
@@ -99,6 +90,16 @@ ip1.addEventListener('input', function() {
 ipset.addEventListener('input', function() {
   set.textContent = ipset.value;  
   seto.textContent = ipset.value;  
+
+  const textLegnth = getTextWidth(`${ipset.value}`, "9px bds");
+  var rimage = document.getElementById('rarity');
+  if (textLegnth > 56){
+    rimage.style.transform = `translate(${textLegnth - 56}px, -1px)`
+  }
+  else{
+    rimage.style.transform = ``
+  }
+  console.log(textLegnth)
 });
 
 ipillust.addEventListener('input', function() {
@@ -397,24 +398,9 @@ ip2.addEventListener('input', function() {
   cno.textContent = ((ip2.value != '') ? ip2.value: "Card Name");
 
 
-	if (/[\u0E00-\u0E7F]/.test(ip2.value))
-  {
-    cn.textContent = ip2.value;
-
-		cn.style.fontFamily = 'pslxol'
-    cn.style.fontSize = '24px'
-  	cn.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-13deg)";
-  	cn.style.width = scl + "px";
-    cn_.style.transform = 'translate(0px, -53px)';
+	
     
-  	cno.textContent = ip2.value;
-
-  	cno.style.transform = "scaleX(" + _sc_ + ")" + "scaleY(1) translate(0, 3px) skewX(-13deg)";
-  	cno.style.width = scl + "px";
-  	console.log(tpx_);
-  }else{
-    
-    if(type.value === 'tk'){
+    if(type.value === 'tk' || type.value === 'nudsr'){
       cn.classList.add('TK')
       cn.classList.remove('MA');
       note.style.display = 'none'
@@ -455,7 +441,7 @@ ip2.addEventListener('input', function() {
     
   
     
-  }
+  
   
   
       
@@ -476,7 +462,7 @@ ip3.addEventListener('input', function() {
   enrace1.textContent = ((ip3.value != '') ? ip3.value: "Card Race");
   enraceinner1.textContent = ((ip3.value != '') ? ip3.value: "Card Race");
 
-  if(type.value === 'tk'){
+  if(type.value === 'tk' || type.value === 'nudsr'){
     rec.classList.add('TK')
     rec1.classList.add('TK')
   }else{
@@ -702,7 +688,7 @@ teb.addEventListener('input', function() {
   var eb = document.getElementById('eb');
   var eb2 = document.getElementById('eb2');
 
-  if (sp.checked || type.value === 'tk'){
+  if (sp.checked || type.value === 'tk' || type.value === 'nudsr'){
     eb.style.display = 'none'
     se.classList.add('SP')
 
@@ -941,17 +927,7 @@ teb.addEventListener('input', function() {
       }
     }
     ipflavor.dispatchEvent(new Event('input'));
-  }
-  
-  if (/[\u0E00-\u0E7F]/.test(ip2.value))
-  {
-    se.style.fontFamily = 'pslxim'
-    se.style.fontSize = '18px'
-  }
-  else{
-    se.style.fontFamily = 'cslb'
-    se.style.fontSize = '12px'
-  }
+  }  
 
 });
 

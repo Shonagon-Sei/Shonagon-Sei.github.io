@@ -172,7 +172,7 @@ function typeSet() {
       dual.checked = false
       dualab.style.display = 'none'
       ovlab.style.display = 'none'
-    }else if (select1 === 'tk'){
+    }else if (select1 === 'tk' || select1 === 'nudsr'){
       tri = "none";
       tri1 = "flex";
       im = "assets/none_.png"
@@ -368,7 +368,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     
 
-    if(type.value === 'tk'){
+    if(type.value === 'tk' || type.value === 'nudsr'){
       image.classList.add('TK')
     }else{
       image.classList.remove('TK')
@@ -377,6 +377,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+//trigger
 window.addEventListener('DOMContentLoaded', function() {
   var trg = document.getElementById('trg');
   var image = document.getElementById('trigger');
@@ -398,6 +399,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+//rarity
 window.addEventListener('DOMContentLoaded', function() {
   var rarity = document.getElementById('rare');
   var rimage = document.getElementById('rarity');
@@ -446,7 +448,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
 
-    var _src_ = "assets/grade" + select + ".png";
+    var _src_ = "assets/grade" + select + ((type.value == 'nudsr') ? "dsr" : "") + ".png";
 
     if (glitter.checked && !encounter.checked && !dual.checked){
       _src_ = `assets/dual nation/number/${nation.value}${select}.png`
@@ -473,7 +475,7 @@ window.addEventListener('DOMContentLoaded', function() {
       gfimage.src = `assets/dual nation/grade/f${fselect.value}.png`
       gsimage.src = `assets/dual nation/grade/s${sselect.value}.png`
     }
-    else if(!encounter.checked && !overDress.checked && !type.value.includes('o') && type.value != 'ma' && type.value != 'tk'){
+    else if(!encounter.checked && !overDress.checked && !type.value.includes('o') && type.value != 'ma' && type.value != 'tk' && type.value != 'nudsr'){
       bg1.src = `assets/grade/${nation.value}.png`
       image11.src = "assets/none_.png"
       bg2.src = "assets/none_.png"
@@ -483,18 +485,9 @@ window.addEventListener('DOMContentLoaded', function() {
       bg2.src = "assets/none_.png"
     }
 
-    var src_ = "assets/" + csk.value + ".png";
-    var src__ = "assets/" + ask.value + ".png";
+    var src_ = "assets/" + csk.value + ((type.value == 'nudsr') ? "dsr" : "") + ".png";
+    var src__ = "assets/" + ask.value + ((type.value == 'nudsr' && ask.value != 'none_') ? "dsr" : "") + ".png";
     var ty = type.value;
-    var ip2 = document.getElementById('cn');
-
-    
-
-    if (/[\u0E00-\u0E7F]/.test(ip2.value)){
-      _src_ = _src_.slice(0, 7) + "TH/" + _src_.slice(7)
-      src_ = src_.slice(0, 7) + "TH/" + src_.slice(7)
-      src__ = src__.slice(0, 7) + "TH/" + src__.slice(7)
-    }
 
     image1.src = _src_;
     image.src = src_;

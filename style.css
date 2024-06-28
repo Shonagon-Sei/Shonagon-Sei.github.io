@@ -542,7 +542,7 @@ option.zoo{
 .r{
   position: absolute;
   z-index: 6;
-  display: flex;
+
   width: 420.75px;
   height: 613.5px;
   background-color: transparent;
@@ -726,6 +726,7 @@ option.zoo{
   margin-bottom: 0;
 }
 .nub .set, .nubo .set {
+  
   font-family: bds;
   position: absolute;
   font-size: 9px;
