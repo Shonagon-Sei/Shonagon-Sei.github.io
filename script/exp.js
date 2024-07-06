@@ -33,6 +33,15 @@ function div_img() {
   d_.style.border = '0';
   no.style.transform = "translate(0 , -1.2px)";
   //s.style.transform = "translate(0 , -1.2px)";
+
+  var svgElements = document.body.querySelectorAll('svg');
+  svgElements.forEach(function(item) {
+    item.setAttribute("width", item.getBoundingClientRect().width);
+    item.setAttribute("height", item.getBoundingClientRect().height);
+    item.style.width = null;
+    item.style.height= null;
+  });
+
   //
   var fileName = prompt('Please Enter File Name')
   html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
