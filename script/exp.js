@@ -44,7 +44,7 @@ function div_img() {
 
   //
   var fileName = prompt('Please Enter File Name')
-  html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
+  html2canvas(d_, { scale: 6.665 ,backgroundColor: null, allowTaint:true}).then(function(canvas) {
     var image = new Image();
     image.src = canvas.toDataURL();
 
