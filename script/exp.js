@@ -16,6 +16,8 @@ function div_img() {
   var rec1 = document.getElementById('rec1');
   var eb = document.getElementById('eb');
   var eb2 = document.getElementById('eb2');
+  var nName = document.getElementById('nname')
+var nName1 = document.getElementById('nname1')
 
   illust.style.transform = "translate(-12px, -9.2px)";
   set.style.transform = "translate(25px, -9.2px)";
@@ -26,6 +28,8 @@ function div_img() {
   cn.style.translate = `0px -2px`
   rec.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
+  nName.style.transform = `translate(242.75px, -37.2px)`
+  nName1.style.transform = `translate(242.75px, -37.2px)`
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
 
 
