@@ -552,6 +552,12 @@ option.zoo{
   transform: translate(0px, -1px);
 }
 
+
+.customNation, .poly{
+  position: absolute;
+  z-index: 6;
+}
+
 .crs,
 .trigger
 {
@@ -930,6 +936,20 @@ option.zoo{
   transform: translate(0, 7px) skewX(-18deg) ;
 }
 
+.nub .nname,
+.nub .nname1 {
+  font-family: cslr;
+  position: absolute;
+  height: 12px;
+  font-size: 9px;
+  transform: translate(242.75px, -36px);
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 30%;
+}
+
 .nub .rec,
 .nub .rec1 {
   font-family: cslr;
@@ -981,6 +1001,11 @@ option.zoo{
 }
 
 .nub .rec1 {
+  color: #000000;
+  -webkit-text-stroke: 1.5px #000;
+}
+
+.nub .nname1 {
   color: #000000;
   -webkit-text-stroke: 1.5px #000;
 }

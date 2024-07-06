@@ -70,6 +70,35 @@ var dual = document.getElementById('dual')
 var glitter = document.getElementById('glitter');
 var clan = document.getElementById('cl')
 
+//Custom Nations
+var outer = document.getElementById('outerColor')
+var inner = document.getElementById('innerColor')
+var labelIn1 = document.getElementById('inner')
+var outerIn1 = document.getElementById('outer1')
+var outerIn2 = document.getElementById('outer2')
+var nName = document.getElementById('nname')
+var nName1 = document.getElementById('nname1')
+var ipCustom = document.getElementById('customText')
+var stroke = document.getElementById('stroke')
+
+ipCustom.addEventListener('input', function(){
+  nName.textContent = ipCustom.value
+  nName1.textContent = ipCustom.value
+})
+
+function innerChange(){
+  labelIn1.attributes['stop-color'].value = inner.value;
+}
+
+function outerChange(){
+  outerIn1.attributes['stop-color'].value = outer.value;
+  outerIn2.attributes['stop-color'].value = outer.value;
+}
+
+function strokeChange(){
+  nName1.style.webkitTextStrokeColor = stroke.value
+}
+
 //Power | Update//
 ip1.addEventListener('input', function() {
   pw.textContent = ((ip1.value != '') ? ip1.value: '0' );

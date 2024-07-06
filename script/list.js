@@ -188,6 +188,44 @@ function typeSet() {
       ovlab.style.display = 'none'
     }
 
+    var outer = document.getElementById('outerColor')
+      var inner = document.getElementById('innerColor')
+      var labelIn1 = document.getElementById('inner')
+      var outerIn1 = document.getElementById('outer1')
+      var outerIn2 = document.getElementById('outer2')
+      var nName = document.getElementById('nname')
+      var nName1 = document.getElementById('nname1')
+      var svg = document.getElementById('customNation')
+      var ipCustom = document.getElementById('customText')
+      var ipCustoml = document.getElementById('customTextL')
+      var stroke = document.getElementById('stroke');
+      var strokel = document.getElementById('strokeL');
+      var divs = document.getElementById('customcolor')
+    var customGrade = document.getElementById('customGrade')
+    if (nation.value == 'cs'){
+      
+      ipCustom.style.display = ''
+      divs.style.display = ''
+      ipCustoml.style.display = ''
+      stroke.style.display = ''
+      strokel.style.display = ''
+      svg.style.display = ''
+      nName.style.display = ''
+      nName1.style.display = ''
+      customGrade.style.display = ''
+    }
+    else{
+      ipCustom.style.display = 'none'
+      divs.style.display = 'none'
+      ipCustoml.style.display = 'none'
+      stroke.style.display = 'none'
+      strokel.style.display = 'none'
+      svg.style.display = 'none'
+      nName.style.display = 'none'
+      nName1.style.display = 'none'
+      customGrade.style.display = 'none'
+    }
+
 
     if (encounter.checked && (select1 === "nu" || select1 === "gu")){
       
@@ -449,6 +487,16 @@ window.addEventListener('DOMContentLoaded', function() {
 
 
     var _src_ = "assets/grade" + select + ((type.value == 'nudsr') ? "dsr" : "") + ".png";
+    var src_ = "assets/" + csk.value + ((type.value == 'nudsr') ? "dsr" : "") + ".png";
+    var src__ = "assets/" + ask.value + ((type.value == 'nudsr' && ask.value != 'none_') ? "dsr" : "") + ".png";
+
+    if(nation.value == 'cs'){
+      bg1.src = "assets/none_.png"
+      image1.src = _src_;
+      image.src = src_;
+      image2.src = src__;
+      return;
+    }
 
     if (glitter.checked && !encounter.checked && !dual.checked){
       _src_ = `assets/dual nation/number/${nation.value}${select}.png`
@@ -485,8 +533,7 @@ window.addEventListener('DOMContentLoaded', function() {
       bg2.src = "assets/none_.png"
     }
 
-    var src_ = "assets/" + csk.value + ((type.value == 'nudsr') ? "dsr" : "") + ".png";
-    var src__ = "assets/" + ask.value + ((type.value == 'nudsr' && ask.value != 'none_') ? "dsr" : "") + ".png";
+    
     var ty = type.value;
 
     image1.src = _src_;

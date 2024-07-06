@@ -27,7 +27,20 @@
   <div class="main_">
     <div class="pv">
       <div id="img_" class="img_">
+        
         <img class="gn" id="gn" src="assets/nlnu.png">
+        <svg style="display: none;" class="customNation" id="customNation" height="613.5px" width="420.75px" xmlns="http://www.w3.org/2000/svg" >
+          <defs>
+            <linearGradient id="grad" gradientTransform="rotate(90)">
+              
+              <stop id="outer1" offset="5%" stop-color="#090979" />
+              <stop id="inner" offset="50%" stop-color="#00d4ff" />
+              <stop id="outer2" offset="95%" stop-color="#090979" />
+            </linearGradient>
+          </defs>
+          <polygon points="250,566 248,567 248,574 250,578 362,578 366,567 362,566" style="fill:url(#grad)"></polygon>
+        </svg>
+        <img class="gn" id="nlabel" src="assets/label.png" style="display: flex; z-index:9">
         <img class="dnf" id='dnf' src="assets/dual nation/fde.png">
         <img class="dns" id='dns' src="assets/dual nation/sde.png">
         <img class="dnfflag" id='dnfflag' src="assets/dual nation/flag/fde.png">
@@ -35,6 +48,7 @@
         <img class="frame" id="frame" src="assets/none_.png">
         <img class="dnfgrade" id='dnfgrade' src="assets/dual nation/grade/fde.png">
         <img class="dnsgrade" id='dnsgrade' src="assets/dual nation/grade/sde.png">
+        <img class="dnfgrade" id="customGrade" src="assets/none_.png" style="display: none;">
         <img class="encounter-clan" id='encounter-clan' src="assets/kgr.png">
 
         <img class="frame" id="ficon" src="assets/grade/nl.png">
@@ -61,6 +75,8 @@
           </div>
           <p class="_sh1" id="_sh1"></p>
           <p class="_sh" id="_sh"></p>
+          <p style="display: none;" class="nname1" id="nname1">Nation</p>
+          <p style="display: none;" class="nname" id="nname">Nation</p>
           <p class="rec1" id="rec1">Card Race</p>
           <p class="rec" id="rec">Card Race</p>
           <p class="enrec1" id="enrec1">Card Race</p>
@@ -217,6 +233,7 @@
             <option value="ks">Keter Sanctuary</option>
             <option value="sc">Stocheia</option>
             <option value="lm">Lyrical Monasterio</option>
+            <option value="cs">Custom Nation</option>
           </select>   
 
           <label class="mcui-checkbox" id="enclab">
@@ -422,6 +439,22 @@
             </div>           
           </div>
 
+          <label for="customText" id="customTextL" style="display: none;">Custom nation (Beta)</label>
+          <input type="text" id="customText" class="cn" placeholder="Custom Nation" style="display: none;"></textarea>
+
+          <div class="side" id="customcolor" style="display: none;">
+            <div class="vert left">
+              <label>Outer</label>
+              <input type="color" id="outerColor" onchange="outerChange()" style="width:100%" value="#ff0000" colorpick-eyedropper-active="true">
+            </div>
+            <div class="vert right">
+              <label>Inner</label>
+              <input type="color" id="innerColor" onchange="innerChange()" style="width:100%" value="#ff0000" colorpick-eyedropper-active="true">
+            </div>  
+                    
+          </div>
+          <label for="stroke" id="strokeL" style="display: none;">Stroke</label>
+            <input style="display: none;" type="color" id="stroke" onchange="strokeChange()" style="width:50%" value="#ff0000" colorpick-eyedropper-active="true"> 
         </div>
       </div>
     </div>
@@ -440,6 +473,7 @@
   <div class="config">
     <button class="imp" id="custom">Custom Preset</button>
     <button class="save" id="ccu">CCU Export</button>
+    <button class="save" id="customIcon">Custom Icon</button>
     <div class="space"></div>
     <label class="mcui-checkbox" id="darklab" style="display: none;">
       <input type="checkbox" id="dark" >
