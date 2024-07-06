@@ -201,6 +201,7 @@ function typeSet() {
       var stroke = document.getElementById('stroke');
       var strokel = document.getElementById('strokeL');
       var divs = document.getElementById('customcolor')
+      var nlabel = document.getElementById('nlabel')
     var customGrade = document.getElementById('customGrade')
     if (nation.value == 'cs'){
       
@@ -213,6 +214,7 @@ function typeSet() {
       nName.style.display = ''
       nName1.style.display = ''
       customGrade.style.display = ''
+      nlabel.style.display = ''
     }
     else{
       ipCustom.style.display = 'none'
@@ -224,6 +226,7 @@ function typeSet() {
       nName.style.display = 'none'
       nName1.style.display = 'none'
       customGrade.style.display = 'none'
+      nlabel.style.display = 'none'
     }
 
 
