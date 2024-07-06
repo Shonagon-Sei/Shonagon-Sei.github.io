@@ -67,6 +67,8 @@ var nName1 = document.getElementById('nname1')
     cn.style.translate = ''
     rec.style.transform = ''
     rec1.style.transform = ''
+    nname.style.transform = ''
+    nname1.style.transform = ''
     eb.style.transform = ''
     
   });
