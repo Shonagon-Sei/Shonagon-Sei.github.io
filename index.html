@@ -17,11 +17,11 @@
 
 <body>
 
-  <div id="h_1" class="h_1">
+ <!--  <div id="h_1" class="h_1">
 
     <p>Cardfight ! ! Vanguard - Quick Custom Maker <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'M4M573R0T');kofiwidget2.draw();</script> </p>
     
-  </div>
+  </div> -->
 
 
   <div class="main_">
@@ -32,17 +32,26 @@
         <div style="display: none; transform:translate(0px, 1.5px)" class="customNation" id="customNation" height="613.5px" width="420.75px">
         <svg  height="613.5px" width="420.75px" xmlns="http://www.w3.org/2000/svg" >
           <defs>
-            <linearGradient id="grad" gradientTransform="rotate(90)">
-              
+            <linearGradient id="grad" gradientTransform="rotate(90)">              
               <stop id="outer1" offset="5%" stop-color="#090979" />
               <stop id="inner" offset="50%" stop-color="#00d4ff" />
               <stop id="outer2" offset="95%" stop-color="#090979" />
             </linearGradient>
+            <linearGradient id="whiteBar">              
+              <stop offset="5%" stop-color="#FFFFFF" />
+              <stop id="WBin" offset="50%" stop-color="#9BB8F3" />
+              <stop offset="95%" stop-color="#FFFFFF" />
+            </linearGradient>
           </defs>
           <polygon points="250,566 248,567 248,574 250,578 362,578 366,567 362,566" style="fill:url(#grad)"></polygon>
+          <polygon points="46,548 57,534.6 371,534.6 380,547.2 371,560.5 246,560.5 238,561.5 180,561.5 172,560.5 59,560.5" style="fill:url(#whiteBar)"></"></polygon>
+          <polygon id="solidBar" points="182,559.7 175,558 60,558 50,547 57.5,536.5 369.5,536.5 376,547.2 369.5,558 246,558 239,559.7" style="fill:#003B99"></polygon>
         </svg>
       </div>
         <img class="gn" id="nlabel" src="assets/label.png" style="display: none; z-index:9">
+
+        <img class="gn" id="barIMG" src="assets/csnfnu.png" style="display: none; z-index:7">
+
         <img class="dnf" id='dnf' src="assets/dual nation/fde.png">
         <img class="dns" id='dns' src="assets/dual nation/sde.png">
         <img class="dnfflag" id='dnfflag' src="assets/dual nation/flag/fde.png">
@@ -50,7 +59,7 @@
         <img class="frame" id="frame" src="assets/none_.png">
         <img class="dnfgrade" id='dnfgrade' src="assets/dual nation/grade/fde.png">
         <img class="dnsgrade" id='dnsgrade' src="assets/dual nation/grade/sde.png">
-        <img class="dnfgrade" id="customGrade" src="assets/none_.png" style="display: none;">
+        <img class="dnfgrade" id="customGrade" src="assets/none_.png" style="display: none; z-index:6;">
         <img class="encounter-clan" id='encounter-clan' src="assets/kgr.png">
 
         <img class="frame" id="ficon" src="assets/grade/nl.png">
@@ -447,17 +456,38 @@
           <div class="side" id="customcolor" style="display: none;">
             <div class="vert left">
               <label>Outer</label>
-              <input type="color" id="outerColor" onchange="outerChange()" style="width:100%" value="#ff0000" colorpick-eyedropper-active="true">
+              <input type="color" id="outerColor" onchange="outerChange()" style="width:100%" value="#090979" colorpick-eyedropper-active="true">
             </div>
             <div class="vert right">
               <label>Inner</label>
-              <input type="color" id="innerColor" onchange="innerChange()" style="width:100%" value="#ff0000" colorpick-eyedropper-active="true">
+              <input type="color" id="innerColor" onchange="innerChange()" style="width:100%" value="#00d4ff" colorpick-eyedropper-active="true">
             </div>  
                     
           </div>
           <label for="stroke" id="strokeL" style="display: none;">Stroke</label>
-            <input style="display: none;" type="color" id="stroke" onchange="strokeChange()" style="width:50%" value="#ff0000" colorpick-eyedropper-active="true"> 
-        </div>
+            <input type="color" id="stroke" onchange="strokeChange()" style="display: none; width:47.5%;  height:6.5%;" value="#090979" colorpick-eyedropper-active="true"> 
+          <div class="side" id="customBG" style="display: none;">
+            <div class="vert left">
+              <label>Solid Bar</label>
+              <input type="color" id="WBG" onchange="BG()" style="width:100%" value="#003B99" colorpick-eyedropper-active="true">
+            </div>
+            <div class="vert right">
+              <label>Name Gradient</label>
+              <input type="color" id="Bar" onchange="Bar()" style="width:100%" value="#9BB8F3" colorpick-eyedropper-active="true">
+            </div>  
+                   
+            </div>
+            <label class="mcui-checkbox" id="flaglab" style="display: none;">
+              <input type="checkbox" id="flag">
+              <div>
+                <svg class="mcui-check" viewBox="-2 -2 35 35" aria-hidden="true">
+                  <title>checkmark-circle</title>
+                  <polyline points="7.57 15.87 12.62 21.07 23.43 9.93" />
+                </svg>
+              </div>
+              <div>Flag</div>
+            </label>
+          </div>
       </div>
     </div>
 
@@ -476,6 +506,7 @@
     <button class="imp" id="custom">Custom Preset</button>
     <button class="save" id="ccu">CCU Export</button>
     <button class="save" id="customIcon">Custom Icon</button>
+    <a class="down" id="gDownload" href="assets/Guide.png" download>Custom Guide</button>
     <div class="space"></div>
     <label class="mcui-checkbox" id="darklab" style="display: none;">
       <input type="checkbox" id="dark" >

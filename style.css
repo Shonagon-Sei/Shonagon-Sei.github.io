@@ -1007,7 +1007,7 @@ option.zoo{
 
 .nub .nname1 {
   color: #000000;
-  -webkit-text-stroke: 1.5px #000;
+  -webkit-text-stroke: 1.5px #070758;
 }
 
 .nub .enrec1 {
@@ -1047,6 +1047,19 @@ option.zoo{
   font-weight: 500;
   padding: 10px;
   border: #e6e6e6 4px solid;
+  background-color: #ffffff;
+  font-family: fcm;
+  color: #000000;
+}
+
+.down
+{
+  text-align: center;
+  width: 204px;
+  font-size: 22px;
+  height: 35%;
+  border: #e6e6e6 4px solid;
+  transform: translate(20px, 0px);
   background-color: #ffffff;
   font-family: fcm;
   color: #000000;

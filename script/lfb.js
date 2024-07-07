@@ -81,10 +81,24 @@ var nName1 = document.getElementById('nname1')
 var ipCustom = document.getElementById('customText')
 var stroke = document.getElementById('stroke')
 
+var WBar = document.getElementById('Bar')
+var WBG = document.getElementById('WBG')
+var SVGWbar = document.getElementById('WBin')
+var SBAR = document.getElementById('solidBar')
+
 ipCustom.addEventListener('input', function(){
   nName.textContent = ipCustom.value
   nName1.textContent = ipCustom.value
 })
+
+function BG(){
+  SBAR.style.fill = WBG.value;
+}
+
+function Bar(){
+  SVGWbar.attributes['stop-color'].value = WBar.value;
+}
+
 
 function innerChange(){
   labelIn1.attributes['stop-color'].value = inner.value;

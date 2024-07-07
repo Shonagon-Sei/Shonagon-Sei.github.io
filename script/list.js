@@ -32,7 +32,7 @@ function typeSet() {
   var image0 = document.getElementById('si');
   var image1 = document.getElementById('gs'); 
   var image2 = document.getElementById('si1');
-
+  var flagC = document.getElementById('flag');
   var race1 = document.getElementById('rec');
   var raceinner1 = document.getElementById('rec1');
 
@@ -75,6 +75,7 @@ function typeSet() {
   fselect.addEventListener('change', update);
   sselect.addEventListener('change', update);
   glitter.addEventListener('change', update);
+  flagC.addEventListener('change', update);
   
 
   function update() {
@@ -202,7 +203,12 @@ function typeSet() {
       var strokel = document.getElementById('strokeL');
       var divs = document.getElementById('customcolor')
       var nlabel = document.getElementById('nlabel')
-    var customGrade = document.getElementById('customGrade')
+      var cbar = document.getElementById('customBG');
+      var customGrade = document.getElementById('customGrade')
+      var barIMG = document.getElementById('barIMG')
+      var flaglab = document.getElementById('flaglab');
+      
+      
     if (nation.value == 'cs'){
       
       ipCustom.style.display = ''
@@ -213,8 +219,21 @@ function typeSet() {
       svg.style.display = ''
       nName.style.display = ''
       nName1.style.display = ''
-      customGrade.style.display = ''
+      customGrade.style.display = 'flex'
       nlabel.style.display = ''
+      cbar.style.display = ''
+      barIMG.style.display = ''
+      flaglab.style.display = ''
+
+      if(flagC.checked){
+        barIMG.src = `assets/cswf${type.value}.png`
+      }
+      else
+      {
+        barIMG.src = `assets/csnf${type.value}.png`
+      }
+
+      
     }
     else{
       ipCustom.style.display = 'none'
@@ -227,6 +246,9 @@ function typeSet() {
       nName1.style.display = 'none'
       customGrade.style.display = 'none'
       nlabel.style.display = 'none'
+      cbar.style.display = 'none'
+      barIMG.style.display = 'none'
+      flaglab.style.display = 'none'
     }
 
 
