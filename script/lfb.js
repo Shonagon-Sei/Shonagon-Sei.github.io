@@ -81,36 +81,60 @@ var nName1 = document.getElementById('nname1')
 var ipCustom = document.getElementById('customText')
 var stroke = document.getElementById('stroke')
 
+var outero = document.getElementById('outerColoro')
+var innero = document.getElementById('innerColoro')
+var labelIn1o = document.getElementById('innero')
+var outerIn1o = document.getElementById('outer1o')
+var outerIn2o = document.getElementById('outer2o')
+var nNameo = document.getElementById('nnameo')
+var nName1o = document.getElementById('nname1o')
+var strokeo = document.getElementById('strokeo')
+
 var WBar = document.getElementById('Bar')
 var WBG = document.getElementById('WBG')
 var SVGWbar = document.getElementById('WBin')
 var SBAR = document.getElementById('solidBar')
 
+var SVGWbaro = document.getElementById('WBino')
+var SBARo = document.getElementById('solidBaro')
+
+var csk = document.getElementById('csk');
+var ask = document.getElementById('ask');
+var rarity = document.getElementById('rare');
+
 ipCustom.addEventListener('input', function(){
   nName.textContent = ipCustom.value
   nName1.textContent = ipCustom.value
+  nNameo.textContent = ipCustom.value
+  nName1o.textContent = ipCustom.value
 })
 
 function BG(){
   SBAR.style.fill = WBG.value;
+  SBARo.style.fill = WBG.value;
 }
 
 function Bar(){
   SVGWbar.attributes['stop-color'].value = WBar.value;
+  SVGWbaro.attributes['stop-color'].value = WBar.value;
 }
 
 
 function innerChange(){
   labelIn1.attributes['stop-color'].value = inner.value;
+  labelIn1o.attributes['stop-color'].value = inner.value;
 }
 
 function outerChange(){
   outerIn1.attributes['stop-color'].value = outer.value;
   outerIn2.attributes['stop-color'].value = outer.value;
+  outerIn1o.attributes['stop-color'].value = outer.value;
+  outerIn2o.attributes['stop-color'].value = outer.value;
 }
 
 function strokeChange(){
   nName1.style.webkitTextStrokeColor = stroke.value
+  nName1o.style.webkitTextStrokeColor = stroke.value
 }
 
 //Power | Update//
@@ -1081,6 +1105,16 @@ class savefile{
     this.flavor
     this.set
     this.illust
+    //new
+    this.inner
+    this.outer
+    this.solid
+    this.gradient
+    this.stroke
+    this.nationName
+    this.rarity
+    this.ask
+    this.csk
   }
 }
 
@@ -1103,6 +1137,16 @@ function save() {
   save.set = ipset.value;
   save.illust = ipillust.value;
   save.flavor = ipflavor.value;
+  save.inner = inner.value;
+  save.outer = outer.value;
+  save.solid = WBar.value;
+  save.gradient = WBG.value;
+  save.stroke = stroke.value;
+  save.csk = csk.value;
+  save.ask = ask.value;
+  save.nationName = ipCustom.value;
+  save.rarity = rarity.value;
+
   const image = document.getElementById('dpim');
   save.image = image.src;
 
@@ -1161,6 +1205,16 @@ function load(){
       ipset.value = savefiles.set;
       ipillust.value = savefiles.illust;
 
+      inner.value = savefiles.inner;
+      outer.value = savefiles.outer;
+      WBar.value = savefiles.solid;
+      WBG.value = savefiles.gradient;
+      stroke.value = savefiles.stroke;
+      csk.value = savefiles.csk;
+      ask.value = savefiles.ask;
+      ipCustom.value = savefiles.nationName;
+      rarity.value = savefiles.rarity;
+
 
       const image = document.getElementById('dpim');
       image.src = savefiles.image
@@ -1173,7 +1227,13 @@ function load(){
       ipillust.dispatchEvent(new Event('input'));
       ipset.dispatchEvent(new Event('input'));
       ipflavor.dispatchEvent(new Event('input'));
+      ipCustom.dispatchEvent(new Event('input'));
       teb.dispatchEvent(new Event('input'));
+
+      BG()
+      Bar()
+      innerChange()
+      outerChange()
       
       var types = document.getElementById('cts');
       types.dispatchEvent(new Event('change'))

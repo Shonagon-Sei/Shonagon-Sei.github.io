@@ -196,7 +196,10 @@ function typeSet() {
       var outerIn2 = document.getElementById('outer2')
       var nName = document.getElementById('nname')
       var nName1 = document.getElementById('nname1')
+      var nNameo = document.getElementById('nnameo')
+      var nName1o = document.getElementById('nname1o')
       var svg = document.getElementById('customNation')
+      var svg2 = document.getElementById('customNationOrder')
       var ipCustom = document.getElementById('customText')
       var ipCustoml = document.getElementById('customTextL')
       var stroke = document.getElementById('stroke');
@@ -216,9 +219,25 @@ function typeSet() {
       ipCustoml.style.display = ''
       stroke.style.display = ''
       strokel.style.display = ''
-      svg.style.display = ''
-      nName.style.display = ''
-      nName1.style.display = ''
+      if(type.value == "nu" || type.value == "tu"){
+        svg.style.display = ''
+        svg2.style.display = 'none'
+        nlabel.src = 'assets/label.png'
+        nName.style.display = ''
+        nName1.style.display = ''
+        nNameo.style.display = 'none'
+        nName1o.style.display = 'none'
+      }else{
+        svg2.style.display = ''
+        svg.style.display = 'none'
+        nlabel.src = 'assets/labelo.png'
+        nName.style.display = 'none'
+        nName1.style.display = 'none'
+        nNameo.style.display = ''
+        nName1o.style.display = ''
+      }
+      
+      
       customGrade.style.display = 'flex'
       nlabel.style.display = ''
       cbar.style.display = ''
@@ -241,9 +260,13 @@ function typeSet() {
       ipCustoml.style.display = 'none'
       stroke.style.display = 'none'
       strokel.style.display = 'none'
+
+      svg2.style.display = 'none'
       svg.style.display = 'none'
       nName.style.display = 'none'
       nName1.style.display = 'none'
+      nNameo.style.display = 'none'
+      nName1o.style.display = 'none'
       customGrade.style.display = 'none'
       nlabel.style.display = 'none'
       cbar.style.display = 'none'

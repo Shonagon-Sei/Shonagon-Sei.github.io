@@ -48,6 +48,27 @@
           <polygon id="solidBar" points="182,559.7 175,558 60,558 50,547 57.5,536.5 369.5,536.5 376,547.2 369.5,558 246,558 239,559.7" style="fill:#003B99"></polygon>
         </svg>
       </div>
+      <div style="display: none; transform:translate(0px, 24px)" class="customNation" id="customNationOrder" height="613.5px" width="420.75px">
+        <svg  height="613.5px" width="420.75px" xmlns="http://www.w3.org/2000/svg" >
+          <defs>
+            <linearGradient id="grado" gradientTransform="rotate(90)">              
+              <stop id="outer1o" offset="5%" stop-color="#090979" />
+              <stop id="innero" offset="50%" stop-color="#00d4ff" />
+              <stop id="outer2o" offset="95%" stop-color="#090979" />
+            </linearGradient>
+            <linearGradient id="whiteBaro">              
+              <stop offset="5%" stop-color="#FFFFFF" />
+              <stop id="WBino" offset="50%" stop-color="#9BB8F3" />
+              <stop offset="95%" stop-color="#FFFFFF" />
+            </linearGradient>
+          </defs>
+          <!--<polygon points="250,566 248,567 248,574 250,578 362,578 366,567 362,566" style="fill:url(#grado)"></polygon>-->
+          <polygon points="160,566 157.5,567 157.5,574 160,578 257,578 261,571 261,568 258,566" style="fill:url(#grado)"></polygon>
+          <polygon points="46,548 57,534.6 371,534.6 380,547.2 371,560.5 246,560.5 238,561.5 180,561.5 172,560.5 59,560.5" style="fill:url(#whiteBaro)"></"></polygon>
+          <!-- <polygon id="solidBar" points="182,559.7 175,558 60,558 50,547 57.5,536.5 369.5,536.5 376,547.2 369.5,558 246,558 239,559.7" style="fill:#003B99"></polygon> -->
+          <polygon id="solidBaro" points="182,560.3 175,558.6 60,558.6 50,547.6 57.5,537.1 369.5,537.1 376,547.8 369.5,558.6 246,558.6 239,560.3" style="fill:#003B99"></polygon>
+        </svg>
+      </div>
         <img class="gn" id="nlabel" src="assets/label.png" style="display: none; z-index:9">
 
         <img class="gn" id="barIMG" src="assets/csnfnu.png" style="display: none; z-index:7">
@@ -110,6 +131,10 @@
           <div class="cns_" id="cnso_">
             <p class="cns" id="cnso">Card Name</p>
           </div>
+
+          <p style="display: none;" class="nname1o" id="nname1o">Nation</p>
+          <p style="display: none;" class="nnameo" id="nnameo">Nation</p>
+
           <p class="odType" id="odType">NORMAL ORDER</p>
           <p class="flavortext" id="flavortextO"></p>
           <p class="note" id="note">This is a Fanmade card. NOT FOR SALE</p>
@@ -506,7 +531,8 @@
     <button class="imp" id="custom">Custom Preset</button>
     <button class="save" id="ccu">CCU Export</button>
     <button class="save" id="customIcon">Custom Icon</button>
-    <a class="down" id="gDownload" href="assets/Guide.png" download>Custom Guide</button>
+    <a class="down" id="gDownload" href="assets/Guide.png" download>Custom Unit Guide</button>
+    <a class="down2" id="gDownload" href="assets/Guideo.png" download>Custom Order Guide</button>
     <div class="space"></div>
     <label class="mcui-checkbox" id="darklab" style="display: none;">
       <input type="checkbox" id="dark" >

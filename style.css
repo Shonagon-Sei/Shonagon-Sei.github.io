@@ -659,7 +659,7 @@ option.zoo{
   width: 100%;
   display: flex;
   justify-content: center;
-  transform: translate(0, -31px);
+  transform: translate(0, -32px);
 }
 
 .nubo .se{
@@ -950,6 +950,20 @@ option.zoo{
   width: 30%;
 }
 
+.nubo .nnameo,
+.nubo .nname1o {
+  font-family: cslr;
+  position: absolute;
+  height: 12px;
+  font-size: 9px;
+  transform: translate(148px, -13.5px);
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 30%;
+}
+
 .nub .rec,
 .nub .rec1 {
   font-family: cslr;
@@ -1010,6 +1024,11 @@ option.zoo{
   -webkit-text-stroke: 1.5px #070758;
 }
 
+.nubo .nname1o {
+  color: #000000;
+  -webkit-text-stroke: 1.5px #070758;
+}
+
 .nub .enrec1 {
   color: #000000;
   -webkit-text-stroke: 1.5px #000;
@@ -1060,6 +1079,19 @@ option.zoo{
   height: 35%;
   border: #e6e6e6 4px solid;
   transform: translate(20px, 0px);
+  background-color: #ffffff;
+  font-family: fcm;
+  color: #000000;
+}
+
+.down2
+{
+  text-align: center;
+  width: 204px;
+  font-size: 22px;
+  height: 35%;
+  border: #e6e6e6 4px solid;
+  transform: translate(40px, 0px);
   background-color: #ffffff;
   font-family: fcm;
   color: #000000;
