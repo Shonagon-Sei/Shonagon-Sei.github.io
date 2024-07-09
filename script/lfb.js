@@ -1234,6 +1234,7 @@ function load(){
       Bar()
       innerChange()
       outerChange()
+      strokeChange()
       
       var types = document.getElementById('cts');
       types.dispatchEvent(new Event('change'))
