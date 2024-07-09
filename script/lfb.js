@@ -776,6 +776,7 @@ teb.addEventListener('input', function() {
     effect = effect.replaceAll("class='sskill'", "class='sskill SP'")
     effect = effect.replaceAll("class='bskill'", "class='bskill SP'")
     effect = effect.replaceAll("class='brack'", "class='brack SP'")
+    effect = effect.replaceAll("class='quitt'", "class='quitt SP'")
     effect = effect.replaceAll(".png'", "SP.png'")
     se.style.color = "#FFFFFF"
     se.innerHTML = effect;
