@@ -333,6 +333,9 @@ function clanId(clan){
       break
     case 'aqf':
       c = 3
+      break
+    case 'csc':
+      c = 0
       break    
   }
   return c
