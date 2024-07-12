@@ -915,10 +915,10 @@ ip4.addEventListener('input', function() {
   sh3.textContent = ip4.value;  
   
   if (sv === 0) {
-    src = "assets/ssh.png";
+    src = "assets/TH/ssh.png";
   }
   else if (sv > 0 ) {
-    src = "assets/nsh.png";
+    src = "assets/TH/nsh.png";
   }
   else if (sv < 0 ) {
     src = "assets/none_.png";
