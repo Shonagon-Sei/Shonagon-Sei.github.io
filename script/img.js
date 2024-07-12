@@ -3,6 +3,7 @@
 var dropzone = document.getElementById('img_');
 var imageContainer = document.getElementById('imh');
 var droppedImage = document.getElementById('dpim');
+var lock = document.getElementById('lock');
 
 dropzone.addEventListener('dragenter', preventDefault, false);
 dropzone.addEventListener('dragover', preventDefault, false);
@@ -68,7 +69,7 @@ var startImagePosition = {};
 
 // Handle mousedown event
 function handleMouseDown(event) {
-  if (event.target !== droppedImage) return;
+  if ((event.target !== droppedImage) || lock.checked) return;
 
   isDragging = true;
   startCoords.x = event.clientX;
@@ -84,8 +85,12 @@ function handleMouseDown(event) {
 var zoomLevel = 100;
 
 document.getElementById("img_").addEventListener("wheel", function(event) {
-  event.preventDefault();
+  
 
+  if(lock.checked){
+    return
+  }
+  event.preventDefault();
   // Adjust the zoom level based on the scroll wheel delta
   zoomLevel += event.deltaY * -0.001;
 
@@ -95,6 +100,22 @@ document.getElementById("img_").addEventListener("wheel", function(event) {
   // Apply the zoom level as a CSS transform to the content
   document.getElementById("imh").style.transform = "scale(" + zoomLevel + ")";
 });
+
+/* var slider = document.getElementById("xOffset");
+let startScrollY = parseInt(dropzone.scrollTop, 10);
+let startScrollX = parseInt(dropzone.scrollLeft, 10);
+
+slider.oninput = function(){
+  
+  let scroll_obj = {
+    behavior: 'smooth'
+  };
+  console.log(startScrollX)
+
+  scroll_obj.left = startScrollX + (slider.value - 1);
+  console.log(scroll_obj.left)
+  dropzone.scroll(scroll_obj)
+} */
 
 //Import By Click//
 document.getElementById('imp').addEventListener('click', function() {

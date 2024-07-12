@@ -518,8 +518,8 @@ option.zoo{
   position: absolute;
   z-index: 3;
   display: flex;
-  width: 420.75px;
-  height: 613.5px;
+  width: 613.5px;
+  height: 420.75px;
   background-color: transparent;
   align-items: center;
   justify-content: center;
@@ -897,7 +897,7 @@ option.zoo{
   
   white-space: pre-wrap;
   overflow-wrap: break-word;
-  align-self: flex-end;
+  align-self: center;
   line-height: 15.8px;
   transform: translate(0, 2px);
 }
@@ -905,8 +905,8 @@ option.zoo{
 
 
 .nub .se_ {
-  height: 50%;
-  width: 100%;
+  height: 80%;
+  width: 50%;
   display: flex;
   justify-content: center;
   transform: translate(0, -70px);

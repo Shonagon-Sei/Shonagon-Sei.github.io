@@ -5,7 +5,7 @@
  * Website: https://lcweb.it
  * Licensed under the MIT license
  */
-
+var lock = document.getElementById('lock');
 (function() { 
    "use strict";
 
@@ -57,6 +57,9 @@
 
             $elem.addEventListener('mousedown', (e) => {
                 e.preventDefault();
+                if(lock.checked){
+                    return
+                }
                 curDown = true;
 
                 startScrollY = parseInt($elem.scrollTop, 10);
