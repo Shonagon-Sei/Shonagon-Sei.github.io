@@ -102,6 +102,8 @@ var csk = document.getElementById('csk');
 var ask = document.getElementById('ask');
 var rarity = document.getElementById('rare');
 
+var allCustoms = []
+
 ipCustom.addEventListener('input', function(){
   nName.textContent = ipCustom.value
   nName1.textContent = ipCustom.value
@@ -807,7 +809,9 @@ teb.addEventListener('input', function() {
     effect = effect.replaceAll('i/', ')</span>');
     eb.style.display = 'flex'
     se.classList.remove('SP')
-
+    for(const i of allCustoms){
+      effect = effect.replaceAll(`[${i.text}]`, `<span class=\'image-wrapper\'><img src=\'${i.image}\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>`)
+    }
     se.innerHTML = effect;
     seo.innerHTML = effect;
 
@@ -1116,6 +1120,13 @@ class savefile{
     this.rarity
     this.ask
     this.csk
+  }
+}
+
+class customIcon{
+  constructor(){
+    this.image
+    this.text
   }
 }
 

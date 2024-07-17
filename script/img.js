@@ -183,4 +183,28 @@ document.getElementById('customIcon').addEventListener('click', function() {
   fileInput.click();
 });
 
+document.getElementById('customNEWIcon').addEventListener('click', function() {
+  const fileInput = document.createElement('input');
+  fileInput.type = 'file';
+  fileInput.accept = 'image/*';
+
+  fileInput.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+      var fileName = prompt('Please Enter Keyword')
+      var icon = new customIcon();
+      icon.image = e.target.result;
+      icon.text = fileName
+      allCustoms.push(icon)
+      
+    };
+
+    reader.readAsDataURL(file);
+  });
+
+  fileInput.click();
+});
+
 
