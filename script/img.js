@@ -194,9 +194,14 @@ document.getElementById('customNEWIcon').addEventListener('click', function() {
 
     reader.onload = function(e) {
       var fileName = prompt('Please Enter Keyword')
+      var size = prompt('Please Enter Icon Size (S/M/L/XL) in caps')
+      while(size != 'S' && size != 'M' && size != 'L'&& size != 'XL'){
+        size = prompt('Please Enter Icon Size (S/M/L/XL) in caps')
+      }
       var icon = new customIcon();
       icon.image = e.target.result;
       icon.text = fileName
+      icon.size = size
       allCustoms.push(icon)
       
     };

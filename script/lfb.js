@@ -810,7 +810,22 @@ teb.addEventListener('input', function() {
     eb.style.display = 'flex'
     se.classList.remove('SP')
     for(const i of allCustoms){
-      effect = effect.replaceAll(`[${i.text}]`, `<span class=\'image-wrapper\'><img src=\'${i.image}\' alt=\'Image\' class=\'skill\' id=\'auto\'></span>`)
+      var sus = ""
+      switch(i.size){
+        case 'S':
+          sus = "sskill"
+          break
+        case 'M':
+          sus = "skill"
+          break
+        case 'L':
+          sus = 'bskill'
+          break
+        case 'XL':
+          sus = "divine"
+          break
+      }
+      effect = effect.replaceAll(`[${i.text}]`, `<span class=\'image-wrapper\'><img src=\'${i.image}\' alt=\'Image\' class=\'${sus}\' id=\'auto\'></span>`)
     }
     se.innerHTML = effect;
     seo.innerHTML = effect;
@@ -1127,6 +1142,7 @@ class customIcon{
   constructor(){
     this.image
     this.text
+    this.size
   }
 }
 
