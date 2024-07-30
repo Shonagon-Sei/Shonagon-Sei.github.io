@@ -379,6 +379,12 @@ ipflavor.addEventListener('input', function() {
         case 3:
           flavor.src = "assets/flavor/Bflavor.png";
           break;
+        case 4:
+          flavor.src = "assets/flavor/Bflavor.png";
+          break;
+        case 5:
+          flavor.src = "assets/flavor/Bflavor.png";
+          break;
       }
 
     
@@ -403,6 +409,12 @@ ipflavor.addEventListener('input', function() {
           flavor.src = "assets/flavor/2Mflavor.png";
           break;
         case 3:
+          flavor.src = "assets/flavor/2Bflavor.png";
+          break;
+        case 4:
+          flavor.src = "assets/flavor/2Bflavor.png";
+          break;
+        case 5:
           flavor.src = "assets/flavor/2Bflavor.png";
           break;
       }  
