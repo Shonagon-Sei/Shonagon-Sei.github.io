@@ -266,10 +266,12 @@ ipflavor.addEventListener('input', function() {
     list.push(i)
   }
 
-  const textLegnth = Math.ceil(getTextWidth(list.reduce(
+  var theText = getTextWidth(list.sort(
     function (a, b) {
-        return a.length > b.length ? a : b;
-    }), "16px FTL") / 100);
+        return b.length - a.length;
+    }
+)[0], "16px FTL") / 100
+  const textLegnth = Math.ceil(theText);
 
   if (type.value === 'tu' || type.value === 'nu' || type.value === 'gu')
   {
@@ -289,6 +291,12 @@ ipflavor.addEventListener('input', function() {
           flavor.src = "assets/flavor/Mflavor.png";
           break;
         case 3:
+          flavor.src = "assets/flavor/Bflavor.png";
+          break;
+        case 4:
+          flavor.src = "assets/flavor/Bflavor.png";
+          break;
+        case 5:
           flavor.src = "assets/flavor/Bflavor.png";
           break;
       }
@@ -322,6 +330,12 @@ ipflavor.addEventListener('input', function() {
           flavor.src = "assets/flavor/2Mflavor.png";
           break;
         case 3:
+          flavor.src = "assets/flavor/2Bflavor.png";
+          break;
+        case 4:
+          flavor.src = "assets/flavor/2Bflavor.png";
+          break;
+        case 5:
           flavor.src = "assets/flavor/2Bflavor.png";
           break;
       }
