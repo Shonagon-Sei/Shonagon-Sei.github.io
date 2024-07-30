@@ -280,23 +280,17 @@ ipflavor.addEventListener('input', function() {
     const linesofFlav = Math.round((flavText.offsetHeight / 16));
 
     if (linesofFlav == 1){
-      switch(textLegnth){
-        case 0:
+      switch(true){
+        case textLegnth == 0:
           flavor.src = "assets/none_.png";
           break;
-        case 1:
+        case textLegnth == 1:
           flavor.src = "assets/flavor/Sflavor.png";
           break;
-        case 2:
+        case textLegnth == 2:
           flavor.src = "assets/flavor/Mflavor.png";
           break;
-        case 3:
-          flavor.src = "assets/flavor/Bflavor.png";
-          break;
-        case 4:
-          flavor.src = "assets/flavor/Bflavor.png";
-          break;
-        case 5:
+        case textLegnth >= 3:
           flavor.src = "assets/flavor/Bflavor.png";
           break;
       }
@@ -319,23 +313,17 @@ ipflavor.addEventListener('input', function() {
       }
     }
     else{
-      switch(textLegnth){
-        case 0:
+      switch(true){
+        case textLegnth == 0:
           flavor.src = "assets/none_.png";
           break;
-        case 1:
+        case textLegnth == 1:
           flavor.src = "assets/flavor/2Sflavor.png";
           break;
-        case 2:
+        case textLegnth == 2:
           flavor.src = "assets/flavor/2Mflavor.png";
           break;
-        case 3:
-          flavor.src = "assets/flavor/2Bflavor.png";
-          break;
-        case 4:
-          flavor.src = "assets/flavor/2Bflavor.png";
-          break;
-        case 5:
+        case textLegnth >= 3:
           flavor.src = "assets/flavor/2Bflavor.png";
           break;
       }
@@ -366,23 +354,17 @@ ipflavor.addEventListener('input', function() {
     const linesofFlav = Math.round((flavTexto.offsetHeight / 16));
 
     if (linesofFlav == 1){
-      switch(textLegnth){
-        case 0:
+      switch(true){
+        case textLegnth == 0:
           flavor.src = "assets/none_.png";
           break;
-        case 1:
+        case textLegnth == 1:
           flavor.src = "assets/flavor/Sflavor.png";
           break;
-        case 2:
+        case textLegnth == 2:
           flavor.src = "assets/flavor/Mflavor.png";
           break;
-        case 3:
-          flavor.src = "assets/flavor/Bflavor.png";
-          break;
-        case 4:
-          flavor.src = "assets/flavor/Bflavor.png";
-          break;
-        case 5:
+        case textLegnth >= 3:
           flavor.src = "assets/flavor/Bflavor.png";
           break;
       }
@@ -398,26 +380,20 @@ ipflavor.addEventListener('input', function() {
       }
     }
     else{
-      switch(textLegnth){
-        case 0:
+      switch(true){
+        case textLegnth == 0:
           flavor.src = "assets/none_.png";
           break;
-        case 1:
+        case textLegnth == 1:
           flavor.src = "assets/flavor/2Sflavor.png";
           break;
-        case 2:
+        case textLegnth == 2:
           flavor.src = "assets/flavor/2Mflavor.png";
           break;
-        case 3:
+        case textLegnth >= 3:
           flavor.src = "assets/flavor/2Bflavor.png";
           break;
-        case 4:
-          flavor.src = "assets/flavor/2Bflavor.png";
-          break;
-        case 5:
-          flavor.src = "assets/flavor/2Bflavor.png";
-          break;
-      }  
+      }
       if (linesCount >= 1){
         flavor.style.transform = `translate(0, ${(201 - (linesCount * 16))}px)`  
         flavTexto.style.transform = `translate(0, ${(-91 - (linesCount * 16))}px)`
