@@ -22,6 +22,8 @@ var nName1 = document.getElementById('nname1')
   var scrollT = dpim.scrollTop
   var scrollL = dpim.scrollLeft
 
+  console.log(scrollL, scrollT)
+
   illust.style.transform = "translate(-12px, -9.2px)";
   set.style.transform = "translate(25px, -9.2px)";
   
