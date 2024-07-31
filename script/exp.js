@@ -19,8 +19,8 @@ function div_img() {
   var nName = document.getElementById('nname')
 var nName1 = document.getElementById('nname1')
 
-  var scrollT = dpim.scrollTop
-  var scrollL = dpim.scrollLeft
+  var scrollT = d_.scrollTop
+  var scrollL = d_.scrollLeft
 
   console.log(scrollL, scrollT)
 
