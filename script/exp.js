@@ -52,7 +52,7 @@ var nName1 = document.getElementById('nname1')
 
   //
   var fileName = prompt('Please Enter File Name')
-  html2canvas(d_, { scale: 6.665 ,backgroundColor: null, allowTaint:true, scrollX: scrollL, scrollY:scrollT}).then(function(canvas) {
+  html2canvas(d_, { scale: 6.665 ,backgroundColor: null, allowTaint:true}).then(function(canvas) {
     var image = new Image();
     image.src = canvas.toDataURL();
 
@@ -130,7 +130,7 @@ var nName1 = document.getElementById('nname1')
   dpim.scroll(scroll_obj)
   var fileName = prompt('Please Enter File Name')
 
-  html2canvas(d_, { scale: 6.665 ,backgroundColor: null}).then(function(canvas) {
+  html2canvas(d_, { scale: 6.665 ,backgroundColor: null, scrollX: scrollL, scrollY:scrollT}).then(function(canvas) {
     var image = new Image();
     image.src = canvas.toDataURL();
 
