@@ -1303,9 +1303,12 @@ function CCUExport(){
   /** @type{string}*/
   var effect = teb.value;
   var replacedEffect = effect
-  replacedEffect = replacedEffect.replaceAll('(VC)', '[VC]');
-  replacedEffect = replacedEffect.replaceAll('(RC)', '[RC]');
-  replacedEffect = replacedEffect.replaceAll('(GC)', '[GC]');
+  replacedEffect = replacedEffect.replaceAll('(VC)', ' [VC]');
+  replacedEffect = replacedEffect.replaceAll('(RC)', ' [RC]');
+  replacedEffect = replacedEffect.replaceAll('(GC)', ' [GC]');
+  replacedEffect = replacedEffect.replaceAll('[Power]', 'power ');
+  replacedEffect = replacedEffect.replaceAll('[Shield]', 'shield ');
+  replacedEffect = replacedEffect.replaceAll('COST', 'COST ');
   replacedEffect = replacedEffect.replaceAll('CB(', 'Counter Blast ');
   replacedEffect = replacedEffect.replaceAll('CC(', 'Counter Charge ');
   replacedEffect = replacedEffect.replaceAll('SB(', 'Soul Blast ');
@@ -1313,21 +1316,21 @@ function CCUExport(){
   replacedEffect = replacedEffect.replaceAll('EB(', 'Energy Blast ');
   replacedEffect = replacedEffect.replaceAll('EC(', 'Energy Charge '); 
   replacedEffect = replacedEffect.replaceAll('GB', 'Generation Break '); 
-  replacedEffect = replacedEffect.replaceAll('CB()', 'Counter Blast');
-  replacedEffect = replacedEffect.replaceAll('CC()', 'Counter Charge');
-  replacedEffect = replacedEffect.replaceAll('SB()', 'Soul Blast');
-  replacedEffect = replacedEffect.replaceAll('SC()', 'Soul Charge');
-  replacedEffect = replacedEffect.replaceAll('EB()', 'Energy Blast');
-  replacedEffect = replacedEffect.replaceAll('EC()', 'Energy Charge'); 
-  replacedEffect = replacedEffect.replaceAll('1)', '1')
-  replacedEffect = replacedEffect.replaceAll('2)', '2')
-  replacedEffect = replacedEffect.replaceAll('3)', '3')
-  replacedEffect = replacedEffect.replaceAll('4)', '4')
-  replacedEffect = replacedEffect.replaceAll('5)', '5')
-  replacedEffect = replacedEffect.replaceAll('6)', '6')
-  replacedEffect = replacedEffect.replaceAll('7)', '7')
-  replacedEffect = replacedEffect.replaceAll('8)', '8')
-  replacedEffect = replacedEffect.replaceAll('9)', '9')
+  replacedEffect = replacedEffect.replaceAll('CB()', 'Counter Blast ');
+  replacedEffect = replacedEffect.replaceAll('CC()', 'Counter Charge ');
+  replacedEffect = replacedEffect.replaceAll('SB()', 'Soul Blast ');
+  replacedEffect = replacedEffect.replaceAll('SC()', 'Soul Charge ');
+  replacedEffect = replacedEffect.replaceAll('EB()', 'Energy Blast ');
+  replacedEffect = replacedEffect.replaceAll('EC()', 'Energy Charge '); 
+  replacedEffect = replacedEffect.replaceAll('1)', '1 ')
+  replacedEffect = replacedEffect.replaceAll('2)', '2 ')
+  replacedEffect = replacedEffect.replaceAll('3)', '3 ')
+  replacedEffect = replacedEffect.replaceAll('4)', '4 ')
+  replacedEffect = replacedEffect.replaceAll('5)', '5 ')
+  replacedEffect = replacedEffect.replaceAll('6)', '6 ')
+  replacedEffect = replacedEffect.replaceAll('7)', '7 ')
+  replacedEffect = replacedEffect.replaceAll('8)', '8 ')
+  replacedEffect = replacedEffect.replaceAll('9)', '9 ')
   replacedEffect = replacedEffect.replaceAll('(', '[')
   replacedEffect = replacedEffect.replaceAll(')', ']')
   replacedEffect = replacedEffect.replaceAll("'", '');
@@ -1345,7 +1348,7 @@ function CCUExport(){
   
   if (dual.checked){
     //fns sns
-    strExport += `global.DCards[CardStat] = ${nationId(fns.value)}\n}\n`
+    strExport += `global.DCards[CardStat] = ${nationId(fns.value)}\n\n`
     strExport += `global.DCards2[CardStat] = ${nationId(sns.value)}\n}\n`
   }
   else
