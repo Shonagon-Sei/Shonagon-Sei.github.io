@@ -38,6 +38,7 @@ var nName1 = document.getElementById('nname1')
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
 
 
+  d_.style.border = '0';
 
   
   //s.style.transform = "translate(0 , -1.2px)";
