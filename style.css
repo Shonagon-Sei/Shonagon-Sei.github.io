@@ -891,7 +891,7 @@ option.zoo{
   font-size: 12px;
   color: #000000;
   text-align: justify;
-  
+  transform-origin: left; 
   white-space: pre-wrap;
   overflow-wrap: break-word;
   align-self: flex-end;

@@ -1,5 +1,6 @@
 //import * as windows1251 from './windows-1251.mjs';
 /// <reference lib="es2021" />
+
 //Input//
 var ip1 = document.getElementById('power');
 var ip2 = document.getElementById('cn');
@@ -101,6 +102,15 @@ var SBARo = document.getElementById('solidBaro')
 var csk = document.getElementById('csk');
 var ask = document.getElementById('ask');
 var rarity = document.getElementById('rare');
+
+var range = document.getElementById('test')
+
+range.addEventListener('input', function(){
+
+  se.style.letterSpacing = `${-(100 - range.value)/10}px`
+})
+  
+  
 
 var allCustoms = []
 
@@ -414,9 +424,6 @@ ipflavor.addEventListener('input', function() {
 
 //Card Name | Update//
 ip2.addEventListener('input', function() {
-
-  var tpx = ip2.value.length * 8;
-  var tpx_ = "";
   var scl = "250";
   var _sc_ = 1;
   var tlx = 0
@@ -457,13 +464,6 @@ ip2.addEventListener('input', function() {
       scl = 250
     }
     console.log(textLegnth)
-    /*
-    if (tpx > 220) {
-      tpx_ = (tpx - 200)/400;
-      scl = 250 + (tpx - 200)/.4
-      _sc_ = 1.08 - tpx_;
-    }
-    */
   }
   cn.textContent = ((ip2.value != '') ? ip2.value: "Card Name");
   cno.textContent = ((ip2.value != '') ? ip2.value: "Card Name");
