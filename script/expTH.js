@@ -17,7 +17,7 @@ function div_img() {
   var eb = document.getElementById('eb');
   var eb2 = document.getElementById('eb2');
   //var nName = document.getElementById('nname')
-  var nName1 = document.getElementById('nname1')
+  //var nName1 = document.getElementById('nname1')
 
   var scrollT = d_.scrollTop
   var scrollL = d_.scrollLeft
@@ -34,7 +34,7 @@ function div_img() {
   rec.style.transform = `translate(${((type.value === 'tk' || type.value === 'nudsr') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk' || type.value === 'nudsr') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   //nName.style.transform = `translate(242.75px, -37.2px)`
-  nName1.style.transform = `translate(242.75px, -37.2px)`
+  //nName1.style.transform = `translate(242.75px, -37.2px)`
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
 
 
@@ -73,7 +73,7 @@ function div_img() {
     rec.style.transform = ''
     rec1.style.transform = ''
     //nname.style.transform = ''
-    nname1.style.transform = ''
+    //nname1.style.transform = ''
     eb.style.transform = ''
     
   });
@@ -100,7 +100,7 @@ function div_img1() {
   var eb = document.getElementById('eb');
   var eb2 = document.getElementById('eb2');
   //var nName = document.getElementById('nname')
-  var nName1 = document.getElementById('nname1')
+  //var nName1 = document.getElementById('nname1')
 
   var scrollT = dpim.scrollTop
   var scrollL = dpim.scrollLeft
@@ -115,7 +115,7 @@ function div_img1() {
   rec.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   //nName.style.transform = `translate(242.75px, -37.2px)`
-  nName1.style.transform = `translate(242.75px, -37.2px)`
+  //nName1.style.transform = `translate(242.75px, -37.2px)`
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
   //
 
@@ -151,7 +151,7 @@ function div_img1() {
     rec.style.transform = ''
     rec1.style.transform = ''
     //nname.style.transform = ''
-    nname1.style.transform = ''
+    //nname1.style.transform = ''
     eb.style.transform = ''
     
   });
