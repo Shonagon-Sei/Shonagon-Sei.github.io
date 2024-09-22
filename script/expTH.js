@@ -33,7 +33,7 @@ function div_img() {
   cn.style.translate = `0px -2px`
   rec.style.transform = `translate(${((type.value === 'tk' || type.value === 'nudsr') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk' || type.value === 'nudsr') ? '257px, -21px' :  '242.75px, -22.2px')})`;
-  nName.style.transform = `translate(242.75px, -37.2px)`
+  //nName.style.transform = `translate(242.75px, -37.2px)`
   nName1.style.transform = `translate(242.75px, -37.2px)`
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
 
@@ -72,7 +72,7 @@ function div_img() {
     cn.style.translate = ''
     rec.style.transform = ''
     rec1.style.transform = ''
-    nname.style.transform = ''
+    //nname.style.transform = ''
     nname1.style.transform = ''
     eb.style.transform = ''
     
@@ -114,7 +114,7 @@ function div_img1() {
   cn.style.translate = `0px -2px`
   rec.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
   rec1.style.transform = `translate(${((type.value === 'tk') ? '257px, -21px' :  '242.75px, -22.2px')})`;
-  nName.style.transform = `translate(242.75px, -37.2px)`
+  //nName.style.transform = `translate(242.75px, -37.2px)`
   nName1.style.transform = `translate(242.75px, -37.2px)`
   eb.style.transform = `translate(0px, ${((type.value === 'ma') ? '18.8px':'-1.2px')})`
   //
@@ -150,7 +150,7 @@ function div_img1() {
     cn.style.translate = ''
     rec.style.transform = ''
     rec1.style.transform = ''
-    nname.style.transform = ''
+    //nname.style.transform = ''
     nname1.style.transform = ''
     eb.style.transform = ''
     
