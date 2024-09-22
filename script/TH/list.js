@@ -199,13 +199,13 @@ function typeSet() {
       else{
         $("#ns option[value='nl']").remove();
       }
-      var src_ = "assets/" + select2 + select1 + "e.png";
+      var src_ = "assets/TH/" + select2 + select1 + "e.png";
       race1.style.display = 'none'
       raceinner1.style.display = 'none'
       enrace1.style.display = 'block'
       enraceinner1.style.display = 'block'
       clanImage.style.display = 'flex'
-      clanImage.src = "assets/" + clan.value + '.png';
+      clanImage.src = "assets/TH" + clan.value + '.png';
       clan.style.display = 'flex'
       clanlabel.style.display = 'flex'
       image.src = src_;
