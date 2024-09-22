@@ -205,7 +205,7 @@ function typeSet() {
       enrace1.style.display = 'block'
       enraceinner1.style.display = 'block'
       clanImage.style.display = 'flex'
-      clanImage.src = "assets/TH" + clan.value + '.png';
+      clanImage.src = "assets/TH/" + clan.value + '.png';
       clan.style.display = 'flex'
       clanlabel.style.display = 'flex'
       image.src = src_;
