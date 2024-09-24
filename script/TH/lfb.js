@@ -89,6 +89,16 @@ ip1.addEventListener('input', function() {
 ipset.addEventListener('input', function() {
   set.textContent = ipset.value;  
   seto.textContent = ipset.value;  
+
+  const textLegnth = getTextWidth(`${ipset.value}`, "9px bds");
+  var rimage = document.getElementById('rarity');
+  if (textLegnth > 56){
+    rimage.style.transform = `translate(${textLegnth - 56}px, -1px)`
+  }
+  else{
+    rimage.style.transform = ``
+  }
+  console.log(textLegnth)
 });
 
 ipillust.addEventListener('input', function() {
