@@ -933,10 +933,6 @@ ip4.addEventListener('input', function() {
   else if (sv < 0 ) {
     src = "assets/none_.png";
   }
-  if (/[\u0E00-\u0E7F]/.test(ip2.value)){
-    src = src.slice(0, 7) + "TH/" + src.slice(7)
-
-  }
   sh1.src = src;
   
 });
