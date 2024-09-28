@@ -572,6 +572,10 @@ option.zoo{
   user-select: none;
 }
 
+.trigger{
+  transform: translate(0px, -15px);
+}
+
 .crs{
   transform: translate(7px, -2px);
 }

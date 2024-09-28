@@ -136,6 +136,8 @@ function typeSet() {
       tri = "flex";
       tri1 = "flex";
       im = `assets/${trigger1.value}.png`
+      trigger.style.display = tri;
+      trigger1.style.display = tri;
       se.style.display = 'flex'
       nuborder.style.display = 'none'
       crs.style.display = 'flex'
@@ -600,7 +602,7 @@ window.addEventListener('DOMContentLoaded', function() {
   
   function update() {
 
-    if (type.value == 'tu'){
+    if (type.value == 'tu' || type.value == 'vtu'){
       var select = trg.value;
       var src_ = "assets/" + select + ".png";
       image.src = src_;
