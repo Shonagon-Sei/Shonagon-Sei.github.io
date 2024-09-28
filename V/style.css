@@ -566,11 +566,14 @@ option.zoo{
   display: flex;
   width: 420.75px;
   height: 588.5px;
-  left: 134px;
   background-color: transparent;
   align-items: center;
   justify-content: center;
   user-select: none;
+}
+
+.crs{
+  transform: translate(7px, -2px);
 }
 
 .crs.TK{
@@ -589,9 +592,6 @@ option.zoo{
   user-select: none;
 }
 
-.crs{
-  transform: translate(0, -2px);
-}
 
 .nub ._sh,
 .nub ._sh1 {
@@ -996,6 +996,7 @@ option.zoo{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  paint-order: stroke fill;
   width: 30%;
 }
 

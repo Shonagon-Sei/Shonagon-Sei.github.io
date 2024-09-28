@@ -225,32 +225,43 @@ function typeSet() {
       clanName.innerText = selectedOption.text;
       if (vClan.value == 'kgr' || vClan.value == 'nrk' || vClan.value == 'nub' || vClan.value == 'mrk' || vClan.value == 'tcz'  ) {
         image.src = "assets/Dragon Empire Normal Unit Base.png"
+        clanName.style.color = '#ffffff'
+        clanName.style.webkitTextStroke = '1.5px #8d382f'
         return
       }
       if (vClan.value == 'rpd' || vClan.value == 'spd' || vClan.value == 'gpd' || vClan.value == 'ott' || vClan.value == 'gns' || vClan.value == 'agf'  ) {
         console.log('Bruh')
         image.src = "assets/United Sanctuary Normal Unit Base.png"
+        clanName.style.color = '#ffffff'
+        clanName.style.webkitTextStroke = '1.5px #aa7e2a'
         return
       }
       if (vClan.value == 'aqf' || vClan.value == 'gbl' || vClan.value == 'bmt' ) {
         image.src = "assets/Megallanica Normal Unit Base.png"
+        clanName.style.color = '#ffffff'
+        clanName.style.webkitTextStroke = '1.5px #424483'
         return
       }
       if (vClan.value == 'plm' || vClan.value == 'dir' || vClan.value == 'spk' || vClan.value == 'gcl'  ) {
         image.src = "assets/Dark Zone Normal Unit Base.png"
+        clanName.style.color = '#ffffff'
+        clanName.style.webkitTextStroke = '1.5px #4e364f'
         return
       }
       if (vClan.value == 'nvg' || vClan.value == 'dmp' || vClan.value == 'ljk'  ) {
         image.src = "assets/Star Gate Normal Unit Base.png"
+        clanName.style.color = '#000000'
+        clanName.style.webkitTextStroke = '1.5px #ffffff'
         if (vClan.value == 'ljk') {
-          clanName.style.color = '#000000'
-          clanName.style.textShadow =
-            '-1px -1px 0 #FF0000, 1px -1px 0 #FF0000, -1px 1px 0 #FF0000, 1px 1px 0 #FF0000';
+          
+          clanName.style.webkitTextStroke = '1.5px #FF0000'
         }
         return
       }
       if (vClan.value == 'neo' || vClan.value == 'mcl' || vClan.value == 'grn'  ) {
         image.src = "assets/Zoo Normal Unit Base.png"
+        clanName.style.color = '#ffffff'
+        clanName.style.webkitTextStroke = '1.5px #2a3f26'
         return
       }
     }
