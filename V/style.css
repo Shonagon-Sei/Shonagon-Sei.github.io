@@ -491,7 +491,7 @@ option.zoo{
   line-height: 14px;
   align-self: center;
   
-  transform: translate(0px, -100px);
+  transform: translate(0px, -90px);
   paint-order: stroke fill;
   color: #fff;
   -webkit-text-stroke: 1.5px #000;
@@ -604,7 +604,7 @@ option.zoo{
   height: 22px;
   width: 60px;
   font-size: 22px;
-  transform: translate(-1.75px, -357.5px) rotate(90deg);
+  transform: translate(-5.5px, -357.5px) rotate(90deg);
   color: #e5d1a2;
   white-space: nowrap;
   overflow: hidden;
