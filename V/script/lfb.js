@@ -1407,6 +1407,54 @@ function CCUExport(){
 
 document.getElementById('ccu').addEventListener('click', CCUExport);
 
+function VangProExport(){
+  var effect = teb.value;
+  var replacedEffect = effect
+  replacedEffect = replacedEffect.replaceAll('(VC)', ' (V)');
+  replacedEffect = replacedEffect.replaceAll('(RC)', ' (R)');
+  replacedEffect = replacedEffect.replaceAll('(GC)', ' (G)');
+  replacedEffect = replacedEffect.replaceAll('CONT', '[CONT]');
+  replacedEffect = replacedEffect.replaceAll('ACT', '[ACT]');
+  replacedEffect = replacedEffect.replaceAll('AUTO', '[AUTO]');
+  replacedEffect = replacedEffect.replaceAll('1/Turn', '[1/Turn]');
+  replacedEffect = replacedEffect.replaceAll('CB(', 'CB');
+  replacedEffect = replacedEffect.replaceAll('CC(', 'CC');
+  replacedEffect = replacedEffect.replaceAll('SB(', 'SB');
+  replacedEffect = replacedEffect.replaceAll('SC(', 'SC');
+  replacedEffect = replacedEffect.replaceAll('EB(', 'EB');
+  replacedEffect = replacedEffect.replaceAll('EC(', 'EC'); 
+  replacedEffect = replacedEffect.replaceAll('CB()', 'CB');
+  replacedEffect = replacedEffect.replaceAll('CC()', 'CC');
+  replacedEffect = replacedEffect.replaceAll('SB()', 'SB');
+  replacedEffect = replacedEffect.replaceAll('SC()', 'SC');
+  replacedEffect = replacedEffect.replaceAll('EB()', 'EB');
+  replacedEffect = replacedEffect.replaceAll('EC()', 'EC'); 
+  replacedEffect = replacedEffect.replaceAll('1)', '1 ')
+  replacedEffect = replacedEffect.replaceAll('2)', '2 ')
+  replacedEffect = replacedEffect.replaceAll('3)', '3 ')
+  replacedEffect = replacedEffect.replaceAll('4)', '4 ')
+  replacedEffect = replacedEffect.replaceAll('5)', '5 ')
+  replacedEffect = replacedEffect.replaceAll('6)', '6 ')
+  replacedEffect = replacedEffect.replaceAll('7)', '7 ')
+  replacedEffect = replacedEffect.replaceAll('8)', '8 ')
+  replacedEffect = replacedEffect.replaceAll('9)', '9 ')
+  replacedEffect = replacedEffect.replaceAll(',', '')
+
+  var textExport = `${ip2.value.replaceAll(',', '')}, ${nationIdVangPro(nation.value)}, ${race.value},${replacedEffect},${grade.value.replaceAll('_' , '').replaceAll('P', '')},${ip1.value},${((ip4.value != '') ? ip4.value : '0')}`
+
+  var test = textExport
+  function download(content, fileName, contentType) {
+    var a = document.createElement("a");
+    var file = new Blob([content], {type: contentType});
+    a.href = URL.createObjectURL(file);
+    a.download = fileName;
+    a.click();
+  }
+  download(test, `Proxy.txt`, 'text/plain');
+}
+
+document.getElementById('vpro').addEventListener('click', VangProExport);
+
 function ccu_img(fileName) {
   var d_ = document.getElementById('img_');
   var n_ = document.getElementById('nub');
@@ -1482,6 +1530,37 @@ function nationId(nation){
       break
     case 'cs':
       n = 0
+      break
+  }
+  return n
+}
+
+function nationIdVangPro(nation){
+  var n = '0'
+  switch(nation){
+    case 'ks':
+      n = '0'
+      break
+    case 'de':
+      n = '1'
+      break
+    case 'ds':
+      n = '2'
+      break
+    case 'sc':
+      n = '3'
+      break
+    case 'bg':
+      n = '4'
+      break
+    case 'lm':
+      n = '5'
+      break
+    case 'nl':
+      n = 'Other'
+      break
+    case 'cs':
+      n = 'Other'
       break
   }
   return n
