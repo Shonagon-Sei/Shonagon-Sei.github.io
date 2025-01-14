@@ -1408,7 +1408,6 @@ function CCUExport(){
 document.getElementById('ccu').addEventListener('click', CCUExport);
 
 function VangProExport(){
-  var fileName_ = prompt('Please Enter Card Number (If unsure just type in a placeholder text)')
   var effect = teb.value;
   var replacedEffect = effect
   replacedEffect = replacedEffect.replaceAll('(VC)', ' (V)');
@@ -1456,6 +1455,37 @@ function VangProExport(){
 
 
 document.getElementById('vangpro').addEventListener('click', VangProExport);
+
+function nationIdVangPro(nation){
+  var n = '0'
+  switch(nation){
+    case 'ks':
+      n = '0'
+      break
+    case 'de':
+      n = '1'
+      break
+    case 'ds':
+      n = '2'
+      break
+    case 'sc':
+      n = '3'
+      break
+    case 'bg':
+      n = '4'
+      break
+    case 'lm':
+      n = '5'
+      break
+    case 'nl':
+      n = 'Other'
+      break
+    case 'cs':
+      n = 'Other'
+      break
+  }
+  return n
+}
 
 function ccu_img(fileName) {
   var d_ = document.getElementById('img_');

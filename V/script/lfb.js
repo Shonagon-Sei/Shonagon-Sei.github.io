@@ -1492,36 +1492,7 @@ function nationId(nation){
   return n
 }
 
-function nationIdVangPro(nation){
-  var n = '0'
-  switch(nation){
-    case 'ks':
-      n = '0'
-      break
-    case 'de':
-      n = '1'
-      break
-    case 'ds':
-      n = '2'
-      break
-    case 'sc':
-      n = '3'
-      break
-    case 'bg':
-      n = '4'
-      break
-    case 'lm':
-      n = '5'
-      break
-    case 'nl':
-      n = 'Other'
-      break
-    case 'cs':
-      n = 'Other'
-      break
-  }
-  return n
-}
+
 
 function TriggerId(trigger){
   var t = 0
