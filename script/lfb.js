@@ -1439,8 +1439,9 @@ function VangProExport(){
   replacedEffect = replacedEffect.replaceAll('8)', '8 ')
   replacedEffect = replacedEffect.replaceAll('9)', '9 ')
   replacedEffect = replacedEffect.replaceAll(',', '')
+  replacedEffect = replacedEffect.replaceAll('\n', ' ')
 
-  var textExport = `${ip2.value.replaceAll(',', '')}, ${nationIdVangPro(nation.value)}, ${race.value},${replacedEffect},${grade.value.replaceAll('_' , '').replaceAll('P', '')},${ip1.value},${((ip4.value != '') ? ip4.value : '0')}`
+  var textExport = `${ip2.value.replaceAll(',', '')},${nationIdVangPro(nation.value)},${race.value},${replacedEffect},${grade.value.replaceAll('_' , '').replaceAll('P', '')},${ip1.value},${((ip4.value != '') ? ip4.value : '0')}`
 
   var test = textExport
   function download(content, fileName, contentType) {
