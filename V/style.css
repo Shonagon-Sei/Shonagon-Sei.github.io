@@ -901,8 +901,8 @@ option.zoo{
   white-space: pre-wrap;
   overflow-wrap: break-word;
   align-self: flex-end;
-  line-height: 14.8px;
-  transform: translate(0, 2px);
+  line-height: 18px;
+  transform: translate(0, -2px);
 }
 
 
