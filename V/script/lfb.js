@@ -61,6 +61,8 @@ var type = document.getElementById('cts');
 var grade = document.getElementById('g');
 
 var fselect = document.getElementById('fns');
+
+
 var sselect = document.getElementById('sns');
 
 var trigger = document.getElementById('trg_');
@@ -149,6 +151,10 @@ function strokeChange(){
   nName1.style.webkitTextStrokeColor = stroke.value
   nName1o.style.webkitTextStrokeColor = stroke.value
 }
+
+fselect.addEventListener('change', function(){
+  image.src = `assets/nations/${fselect.value}.png`
+})
 
 //Power | Update//
 ip1.addEventListener('input', function() {

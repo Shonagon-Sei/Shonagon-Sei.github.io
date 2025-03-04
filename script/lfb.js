@@ -1441,9 +1441,9 @@ function VangProExport(){
   replacedEffect = replacedEffect.replaceAll(',', '')
   replacedEffect = replacedEffect.replaceAll('\n', '\\n')
 
-  var textExport = `${ip2.value.replaceAll(',', '')},${nationIdVangPro(nation.value)},${race.value},${replacedEffect},${grade.value.replaceAll('_' , '').replaceAll('P', '')},${ip1.value},${((ip4.value != '') ? ip4.value : '0')}`
+  var textExport = `${ip2.value}#${nationIdVangPro(nation.value)}#${race.value}#${replacedEffect}#${grade.value.replaceAll('_' , '').replaceAll('P', '')}#${ip1.value}#${((ip4.value != '') ? ip4.value : '0')}`
 
-  var test = textExport
+  var test = textExports
   function download(content, fileName, contentType) {
     var a = document.createElement("a");
     var file = new Blob([content], {type: contentType});
